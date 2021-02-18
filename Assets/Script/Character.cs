@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class Character : MonoBehaviour
 {
@@ -12,17 +13,26 @@ public class Character : MonoBehaviour
     int routePosition;
     public int steps;
     public Text DiceText;
+    SphereCollider m_Collider;
+    public bool isMoving;
 
-    bool isMoving;
+
+    //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
+    
+     void Start()
+    {
+        m_Collider = GetComponent<SphereCollider>();
+
+    }
 
     //roll dice
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
         {
-            steps = DiceNumText.diceNumber;
+            //steps = DiceNumText.diceNumber;
 
-            //steps = Random.Range(1, 7);
+            steps = UnityEngine.Random.Range(1, 7);
             DiceText.text = steps.ToString();
             Debug.Log("Dice Number = " + steps);
 
@@ -46,7 +56,11 @@ public class Character : MonoBehaviour
             yield break;
         }
         isMoving = true;
-
+        if (isMoving == true)
+        {
+            m_Collider.enabled = false;
+        }
+        
         //moving method
         while (steps > 0)
         {
@@ -58,9 +72,15 @@ public class Character : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             steps--;
             routePosition++;
+
         }
         
         isMoving = false;
+
+        if (isMoving == false)
+        {
+            m_Collider.enabled = true;
+        }
 
     }
 
