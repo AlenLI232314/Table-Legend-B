@@ -18,11 +18,11 @@ public class Character : MonoBehaviour
     //roll dice
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q)&& !isMoving)
+        if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
         {
-            //steps = DiceNumText.diceNumber;
+            steps = DiceNumText.diceNumber;
 
-            steps = Random.Range(1, 7);
+            //steps = Random.Range(1, 7);
             DiceText.text = steps.ToString();
             Debug.Log("Dice Number = " + steps);
 
@@ -34,10 +34,7 @@ public class Character : MonoBehaviour
             {
                 Debug.Log("Need to reroll, too many steps you gonna take.");
             }
-
-
         }
-        
     }
 
     //set the method to tell character move when roll a dice
@@ -66,12 +63,9 @@ public class Character : MonoBehaviour
         isMoving = false;
 
     }
-        
-        bool MovingToNext(Vector3 goal)
-       {
+
+    bool MovingToNext(Vector3 goal)
+    {
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 4f * Time.deltaTime));
-         
-
-       }
-
+    }
 }
