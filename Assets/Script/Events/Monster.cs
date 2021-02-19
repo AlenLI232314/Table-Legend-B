@@ -5,7 +5,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public GameObject fightWarnning;
-    bool isMoving;
+    
     
 
     void Start()
@@ -16,9 +16,17 @@ public class Monster : MonoBehaviour
 
     void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.tag == "Player" && !isMoving)
+        if (player.gameObject.tag == "Player" )
         {
             fightWarnning.SetActive(true);
+            PasueGame();
         }
     }
+
+    void PasueGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    
 }

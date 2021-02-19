@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Random : MonoBehaviour
+public class Chest : MonoBehaviour
 {
-    public GameObject questionBlock;
+    public GameObject chestBlock;
 
 
 
     void Start()
     {
-        questionBlock.SetActive(false);
+        chestBlock.SetActive(false);
     }
 
 
@@ -19,7 +18,7 @@ public class Random : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
-            questionBlock.SetActive(true);
+            chestBlock.SetActive(true);
             PasueGame();
         }
     }
@@ -27,5 +26,4 @@ public class Random : MonoBehaviour
     {
         Time.timeScale = 0;
     }
-
 }

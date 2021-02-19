@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject shopBlock;
+
+
+
     void Start()
     {
-        
+        shopBlock.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void OnTriggerEnter(Collider player)
     {
-        
+        if (player.gameObject.tag == "Player")
+        {
+            shopBlock.SetActive(true);
+            PasueGame();
+        }
+    }
+
+    void PasueGame()
+    {
+        Time.timeScale = 0;
     }
 }
