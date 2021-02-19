@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 
-public class Character : MonoBehaviour
+public class Character : Entity
 {
     //tell the character the moving route
 
@@ -20,10 +20,11 @@ public class Character : MonoBehaviour
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
     
      void Start()
-    {
+     {
         m_Collider = GetComponent<SphereCollider>();
-
-    }
+        this.HP = 20;
+        this.isAlive = true;
+     }
 
     //roll dice
     void Update()
