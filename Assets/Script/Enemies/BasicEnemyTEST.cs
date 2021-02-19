@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BasicEnemyTEST : Entity
-{ 
-    
+{
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +19,6 @@ public class BasicEnemyTEST : Entity
     public void EnemySpawn()
     {
         this.HP = 4;
+        this.isAlive = true;
     }
-
 }
