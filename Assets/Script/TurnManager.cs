@@ -42,11 +42,11 @@ public class TurnManager : MonoBehaviour
     
     public void CheckIfDead()
     {
-        if (character.HP == 0)
+        if (character.HP <= 0)
         {
             character.Kill();
         }
-        if (basicEnemyTEST.HP == 0)
+        if (basicEnemyTEST.HP <= 0)
         {
             basicEnemyTEST.Kill();
         }

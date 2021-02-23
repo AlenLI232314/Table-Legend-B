@@ -3302,6 +3302,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 898186571}
+        m_MethodName: TakeDamage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 775288906}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1027004921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7041,6 +7063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 0}
 --- !u!4 &2224170438504807353
 Transform:
   m_ObjectHideFlags: 0
@@ -7302,6 +7325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 0}
 --- !u!23 &2804348968559382155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7647,6 +7671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 623635764}
 --- !u!4 &4011079130500475841
 Transform:
   m_ObjectHideFlags: 0
@@ -8143,6 +8168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 0}
 --- !u!1 &6915904626203451470
 GameObject:
   m_ObjectHideFlags: 0
@@ -8401,6 +8427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 0}
 --- !u!1 &7921965051632410040
 GameObject:
   m_ObjectHideFlags: 0
@@ -8447,6 +8474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 623635764}
 --- !u!33 &8134587045636087664
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8557,6 +8585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 623635764}
 --- !u!1 &8434752126582629328
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,6 +8632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 0}
 --- !u!1 &8449898917688928966
 GameObject:
   m_ObjectHideFlags: 0
@@ -8649,6 +8679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 623635764}
 --- !u!23 &8794066301150230048
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8773,6 +8804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 0}
 --- !u!33 &8891843168468424263
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8835,6 +8867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightWarnning: {fileID: 1946003002}
+  basicEnemyTEST: {fileID: 0}
 --- !u!4 &9221616521734519959
 Transform:
   m_ObjectHideFlags: 0

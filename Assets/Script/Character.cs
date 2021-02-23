@@ -8,6 +8,8 @@ using System;
 public class Character : Entity
 {
     //tell the character the moving route
+    //TODO: Make movement compatible with DifferentDiceSides code
+    //TODO: Make enemy base class, can make different enemies from there.
 
     public Route currentRoute;
     int routePosition;
