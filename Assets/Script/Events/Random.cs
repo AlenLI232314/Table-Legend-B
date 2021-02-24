@@ -28,4 +28,8 @@ public class Random : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    internal static int Range(int v)
+    {
+        throw new NotImplementedException();
+    }
 }
