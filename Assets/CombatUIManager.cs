@@ -52,6 +52,14 @@ public class CombatUIManager : MonoBehaviour
 
             playerHealthText.text = playerHealth.ToString();
         }
+        else
+        {
+            if(enemyHealth <= 0)
+            {
+                combatCanvas.SetActive(false);
+                boardCanvas.SetActive(true);
+            }
+        }
     }
 }
 
