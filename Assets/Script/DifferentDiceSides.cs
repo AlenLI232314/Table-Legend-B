@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Dice { Four, Six, Eight, Ten, Twelve, Twenty };
-public class DifferentDiceSides : MonoBehaviour
+public class DifferentDiceSides
 {
     public int FourSidedDieResult;
     public int SixSidedDieResult;

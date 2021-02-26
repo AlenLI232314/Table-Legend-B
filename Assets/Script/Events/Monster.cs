@@ -5,7 +5,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public GameObject fightWarnning;
-    //public BasicEnemyTEST basicEnemyTEST;
+    public BasicEnemyTEST basicEnemyTEST;
     
 
     void Start()
@@ -19,7 +19,7 @@ public class Monster : MonoBehaviour
         if (player.gameObject.tag == "Player" )
         {
             fightWarnning.SetActive(true);
-            //basicEnemyTEST.EnemySpawn();
+            basicEnemyTEST.EnemySpawn();
             PasueGame();
         }
     }

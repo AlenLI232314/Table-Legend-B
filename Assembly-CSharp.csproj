@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraManagement.cs" />
     <Compile Include="Assets\CombatUIManager.cs" />
     <Compile Include="Assets\Script\BlockInfo\ObjectClicker.cs" />
     <Compile Include="Assets\Script\BlockInfo\PopUpInfo.cs" />
@@ -637,9 +636,6 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/Unity/GAMESTUDIO II/Table-Legend-B/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>F:/Unity/GAMESTUDIO II/Table-Legend-B/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>F:/Unity/GAMESTUDIO II/Table-Legend-B/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -657,9 +653,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>F:/Unity/GAMESTUDIO II/Table-Legend-B/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>F:/Unity/GAMESTUDIO II/Table-Legend-B/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>F:/Unity/GAMESTUDIO II/Table-Legend-B/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

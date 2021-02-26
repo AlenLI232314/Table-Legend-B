@@ -9,7 +9,7 @@ public class Entity : MonoBehaviour, IDamageable<int>, IKillable
     public DifferentDiceSides diceSides;
     //TODO: Make OnKill close CombatUI
     //TODO: Check for any HealDamage, make function to heal damage.
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +18,15 @@ public class Entity : MonoBehaviour, IDamageable<int>, IKillable
 
     void Update()
     {
-        
+
     }
 
     public void DealDamage(int DamageDealt, Entity entity, Dice die)
     {
         diceSides.RollingDice(die);
-        DamageDealt = diceSides.GenericResult;
-        entity.TakeDamage(DamageDealt);
+        diceSides.GenericResult = DamageDealt;
+        entity.HP -= DamageDealt;
+        TakeDamage(DamageDealt);
     }
 
     public void Kill()
