@@ -34,6 +34,7 @@ public class CameraManagement : MonoBehaviour
         {
             animator.Play("WorldCamera");
         }
+
         worldCamera = !worldCamera;
 
     }

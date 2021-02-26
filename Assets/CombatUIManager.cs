@@ -7,6 +7,9 @@ public class CombatUIManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public CameraManagement cameras;
+    public SceneManage sceneManage;
+
     public GameObject combatCanvas;
     public GameObject boardCanvas;
 
@@ -27,6 +30,8 @@ public class CombatUIManager : MonoBehaviour
         playerHealthText.text = player.HP.ToString();
         enemyDamageText.text = enemyHealth.ToString();
 
+        
+        
     }
 
     // Update is called once per frame
@@ -37,7 +42,7 @@ public class CombatUIManager : MonoBehaviour
 
     public void attack()
     {
-        if (enemyHealth >= 0)
+        if (enemyHealth > 0)
         {
             playerDamage = UnityEngine.Random.Range(1, 6);
             playerDamageText.text = playerDamage.ToString();
@@ -51,6 +56,16 @@ public class CombatUIManager : MonoBehaviour
             player.HP -= enemyDamage;
 
             playerHealthText.text = player.HP.ToString();
+        }
+
+        if(enemyHealth <= 0)
+        {
+            cameras.changeCameras();
+            sceneManage.ResumeGame();
+            enemyHealth = 0;
+            combatCanvas.SetActive(false);
+            boardCanvas.SetActive(true);
+           
         }
     }
 }
