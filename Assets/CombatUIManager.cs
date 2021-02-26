@@ -13,7 +13,7 @@ public class CombatUIManager : MonoBehaviour
     public Text playerHealthText;
     public Text enemyHealthText;
 
-    public int playerHealth = 100;
+    public Entity player; 
     public int enemyHealth = 100;
 
     public int playerDamage;
@@ -24,7 +24,7 @@ public class CombatUIManager : MonoBehaviour
 
     void Start()
     {
-        playerHealthText.text = playerHealth.ToString();
+        playerHealthText.text = player.HP.ToString();
         enemyDamageText.text = enemyHealth.ToString();
 
     }
@@ -48,9 +48,9 @@ public class CombatUIManager : MonoBehaviour
             enemyDamage = UnityEngine.Random.Range(1, 6);
             enemyDamageText.text = enemyDamage.ToString();
 
-            playerHealth -= enemyDamage;
+            player.HP -= enemyDamage;
 
-            playerHealthText.text = playerHealth.ToString();
+            playerHealthText.text = player.HP.ToString();
         }
     }
 }
