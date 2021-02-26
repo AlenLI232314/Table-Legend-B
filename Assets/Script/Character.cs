@@ -17,10 +17,11 @@ public class Character : Entity
     public Text DiceText;
     SphereCollider m_Collider;
     public bool isMoving;
+    public string popUp;
 
 
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
-    
+
      void Start()
      {
         m_Collider = GetComponent<SphereCollider>();
@@ -48,6 +49,12 @@ public class Character : Entity
                 Debug.Log("Need to reroll, too many steps you gonna take.");
             }
         }
+
+        //if (Input.GetKeyDown(KeyCode.Q) && !isMoving)
+        //{
+        //    PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+        //    pop.PopUp(popUp);
+        //}
     }
 
     //set the method to tell character move when roll a dice
