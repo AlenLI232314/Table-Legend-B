@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\CameraManagement.cs" />
     <Compile Include="Assets\CombatUIManager.cs" />
+    <Compile Include="Assets\FollowPlayer.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\3rdPersonWithAimMode\ActivateOnKeypress.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerLookAt.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerMovement.cs" />

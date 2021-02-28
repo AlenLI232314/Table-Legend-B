@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraManagement : MonoBehaviour
 {
@@ -28,10 +29,12 @@ public class CameraManagement : MonoBehaviour
     {
         if (worldCamera)
         {
+            Time.timeScale = 1f;
             animator.Play("CombatCamera");
         }
         else if (!worldCamera)
         {
+            Time.timeScale = 1f;
             animator.Play("WorldCamera");
         }
 

@@ -469,6 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 51024707}
   - component: {fileID: 51024706}
+  - component: {fileID: 51024708}
   m_Layer: 0
   m_Name: CombatCamera
   m_TagString: Untagged
@@ -494,8 +495,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 898186566}
+  m_Follow: {fileID: 898186566}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 5
@@ -518,14 +519,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51024705}
-  m_LocalRotation: {x: -0.3840421, y: -0.2649191, z: 0.11602168, w: -0.8768515}
-  m_LocalPosition: {x: -128.263, y: -4.856, z: -12.747}
+  m_LocalRotation: {x: 0.33280393, y: 0.091328725, z: 0.028339993, w: 0.9381351}
+  m_LocalPosition: {x: -125.76, y: -5.3, z: -13.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1983812754}
   m_Father: {fileID: 761703898}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 38.262, y: 14.02, z: 8.345}
+--- !u!114 &51024708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51024705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a830ba15226cd8e4ab8ea3d22113d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 898186566}
+  initialPosition: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &99131430
 GameObject:
   m_ObjectHideFlags: 0
