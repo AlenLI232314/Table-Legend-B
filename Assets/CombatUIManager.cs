@@ -60,6 +60,7 @@ public class CombatUIManager : MonoBehaviour
 
         if(enemyHealth <= 0)
         {
+          
             cameras.changeCameras();
             sceneManage.ResumeGame();
             enemyHealth = 0;
