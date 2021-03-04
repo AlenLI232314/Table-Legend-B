@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using Cinemachine;
 
 public class Monster : MonoBehaviour
 {
     public GameObject fightWarnning;
     public BasicEnemyTEST basicEnemyTEST;
-    
+    public CinemachineVirtualCamera cam;
+    public static event  System.Action <CinemachineVirtualCamera> cameraEvent;
 
     void Start()
     {
-        fightWarnning.SetActive(false);   
+        fightWarnning.SetActive(false);
+        cam.gameObject.SetActive(false);
     }
 
 
@@ -18,16 +22,19 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
+            cameraEvent?.Invoke(cam);
             fightWarnning.SetActive(true);
             basicEnemyTEST.EnemySpawn();
-            PasueGame();
+            
+
+            //PasueGame();
         }
     }
 
-    void PasueGame()
-    {
-        Time.timeScale = 0;
-    }
+    //void PasueGame()
+    //{
+    //    Time.timeScale = 0;
+    //}
 
     
 }
