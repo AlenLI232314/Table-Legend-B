@@ -3,26 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
-public class Character : MonoBehaviour
+public class Character : Entity
 {
     //tell the character the moving route
+    //TODO: Make movement compatible with DifferentDiceSides code
+    //TODO: Make enemy base class, can make different enemies from there.
 
     public Route currentRoute;
     int routePosition;
     public int steps;
     public Text DiceText;
+    SphereCollider m_Collider;
+    public bool isMoving;
+    public string popUp;
 
-    bool isMoving;
+
+    //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
+
+     void Start()
+     {
+        m_Collider = GetComponent<SphereCollider>();
+        this.HP = 20;
+        this.isAlive = true;
+     }
 
     //roll dice
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q)&& !isMoving)
+        if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
         {
             //steps = DiceNumText.diceNumber;
 
-            steps = Random.Range(1, 7);
+            steps = UnityEngine.Random.Range(1, 7);
             DiceText.text = steps.ToString();
             Debug.Log("Dice Number = " + steps);
 
@@ -34,10 +48,13 @@ public class Character : MonoBehaviour
             {
                 Debug.Log("Need to reroll, too many steps you gonna take.");
             }
-
-
         }
-        
+
+        //if (Input.GetKeyDown(KeyCode.Q) && !isMoving)
+        //{
+        //    PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+        //    pop.PopUp(popUp);
+        //}
     }
 
     //set the method to tell character move when roll a dice
@@ -49,7 +66,11 @@ public class Character : MonoBehaviour
             yield break;
         }
         isMoving = true;
-
+        if (isMoving == true)
+        {
+            m_Collider.enabled = false;
+        }
+        
         //moving method
         while (steps > 0)
         {
@@ -61,17 +82,20 @@ public class Character : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             steps--;
             routePosition++;
+
         }
         
         isMoving = false;
 
+        if (isMoving == false)
+        {
+            m_Collider.enabled = true;
+        }
+
     }
-        
-        bool MovingToNext(Vector3 goal)
-       {
+
+    bool MovingToNext(Vector3 goal)
+    {
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 4f * Time.deltaTime));
-         
-
-       }
-
+    }
 }
