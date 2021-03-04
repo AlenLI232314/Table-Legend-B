@@ -10,7 +10,8 @@ public class Character : Entity
     //tell the character the moving route
     //TODO: Make movement compatible with DifferentDiceSides code
     //TODO: Make enemy base class, can make different enemies from there.
-
+    public AudioSource audioSource;
+    [SerializeField] AudioClip[] playerMove;
     public Route currentRoute;
     int routePosition;
     public int steps;
@@ -27,6 +28,7 @@ public class Character : Entity
         m_Collider = GetComponent<SphereCollider>();
         this.HP = 20;
         this.isAlive = true;
+        audioSource = GetComponent<AudioSource>();
      }
 
     //roll dice
@@ -35,10 +37,17 @@ public class Character : Entity
         if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
         {
             //steps = DiceNumText.diceNumber;
+            
 
             steps = UnityEngine.Random.Range(1, 7);
             DiceText.text = steps.ToString();
             Debug.Log("Dice Number = " + steps);
+
+           if(audioSource.isPlaying == false)
+            {
+                audioSource.PlayOneShot(playerMove[UnityEngine.Random.Range(0, playerMove.Length)]);
+            }
+           
 
             if (routePosition + steps < currentRoute.childSquareList.Count)
             {

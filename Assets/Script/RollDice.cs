@@ -9,11 +9,13 @@ public class RollDice : MonoBehaviour
 	static Rigidbody rb;
 	public static Vector3 diceVelocity;
 	public bool isMoving;
-
+	public AudioSource audioSource;
+	[SerializeField] private AudioClip[] diceRolls;
 	// Use this for initialization
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -32,6 +34,7 @@ public class RollDice : MonoBehaviour
 			rb.AddForce(transform.up * 800);
 			rb.AddTorque(dirX, dirY, dirZ);
 			isMoving = false;
+			audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
 		}
 	}
 }
