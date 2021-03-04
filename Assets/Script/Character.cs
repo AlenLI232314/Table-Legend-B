@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class Character : MonoBehaviour
 {
     //tell the character the moving route
-
+    public AudioSource audioSource;
+    [SerializeField] private AudioClip[] playerMove;
     public Route currentRoute;
     int routePosition;
     public int steps;

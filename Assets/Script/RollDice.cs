@@ -7,11 +7,14 @@ public class RollDice : MonoBehaviour
 	// Start is called before the first frame update
 	static Rigidbody rb;
 	public static Vector3 diceVelocity;
+	public AudioSource audioSource;
+	[SerializeField] private AudioClip[] diceRolls;
 
 	// Use this for initialization
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -21,6 +24,7 @@ public class RollDice : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.E))
 		{
+			audioSource.PlayOneShot(diceRolls[Random.Range(0, diceRolls.Length)]);
 			DiceNumText.diceNumber = 0;
 			float dirX = Random.Range(0, 500);
 			float dirY = Random.Range(0, 500);
