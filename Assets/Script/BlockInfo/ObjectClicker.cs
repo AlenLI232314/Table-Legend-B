@@ -6,8 +6,42 @@ public class ObjectClicker : MonoBehaviour
 {
 
     public string popUp;
-     void Update()
+    public float panSpeed = 20f;
+    public float panBorderThickness = 10f;
+    public Vector2 panLimit;
+    public float scrollSpeed = 2f;
+    void Update()
     {
+
+        Vector3 pos = transform.position;
+        if (Input.mousePosition.y >= Screen.height - panBorderThickness)
+        {
+            pos.z += panSpeed * Time.deltaTime;
+        }
+
+        if (Input.mousePosition.y <= Screen.height - panBorderThickness)
+        {
+            pos.z -= panSpeed * Time.deltaTime;
+        }
+
+        if (Input.mousePosition.x >= Screen.width - panBorderThickness)
+        {
+            pos.z += panSpeed * Time.deltaTime;
+        }
+
+        if (Input.mousePosition.x <= Screen.width - panBorderThickness)
+        {
+            pos.z -= panSpeed * Time.deltaTime;
+        }
+
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        pos.y += scroll * scrollSpeed * Time.deltaTime;
+
+        pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x);
+        pos.z = Mathf.Clamp(pos.z, -panLimit.y, panLimit.y);
+
+
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -18,23 +52,27 @@ public class ObjectClicker : MonoBehaviour
                 if (hit.transform != null)
                 {
                     PrintName(hit.transform.gameObject);
-                    //PopUpWIndow();
+                    //    PopUpWIndow();
+                    //}
                 }
             }
+
+
+
+
         }
 
-       
-    }
+        void PrintName(GameObject block)
+        {
+            print(block.name);
+        }
 
-     void PrintName(GameObject block)
-    {
-        print(block.name);
-    }
+        void PopUpWIndow()
+        {
+            PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+            pop.PopUp(popUp);
+        }
 
-    // void PopUpWIndow()
-    //{
-    //    PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
-    //    pop.PopUp(popUp);
-    //}
+    }
 
 }
