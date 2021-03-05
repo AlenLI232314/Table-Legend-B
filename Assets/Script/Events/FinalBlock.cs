@@ -5,6 +5,7 @@ using UnityEngine;
 public class FinalBlock : MonoBehaviour
 {
     public GameObject finalBlock;
+    public GameObject boardUI;
 
 
 
@@ -20,6 +21,7 @@ public class FinalBlock : MonoBehaviour
         {
             finalBlock.SetActive(true);
             PasueGame();
+            boardUI.SetActive(false);
         }
 
         

@@ -23,15 +23,22 @@ public class RollDice : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.E))
 		{
-			//DiceNumText.diceNumber = 0;
-			float dirX = UnityEngine.Random.Range(0, 500);
-			float dirY = UnityEngine.Random.Range(0, 500);
-			float dirZ = UnityEngine.Random.Range(0, 500);
-			transform.position = new Vector3(0, 3, 0);
-			transform.rotation = Quaternion.identity;
-			rb.AddForce(transform.up * 800);
-			rb.AddTorque(dirX, dirY, dirZ);
-			isMoving = false;
+			Roll();
 		}
+	}
+
+	//Called when 'E' or the roll button is press. Rolls the dice
+	public void Roll()
+    {
+		//DiceNumText.diceNumber = 0;
+		float dirX = UnityEngine.Random.Range(0, 500);
+		float dirY = UnityEngine.Random.Range(0, 500);
+		float dirZ = UnityEngine.Random.Range(0, 500);
+		transform.position = new Vector3(0, 3, 0);
+		transform.rotation = Quaternion.identity;
+		rb.AddForce(transform.up * 800);
+		rb.AddTorque(dirX, dirY, dirZ);
+		isMoving = false;
+
 	}
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Random : MonoBehaviour
 {
     public GameObject questionBlock;
-
+    public GameObject boardUI;
 
 
     void Start()
@@ -20,6 +20,8 @@ public class Random : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             questionBlock.SetActive(true);
+            boardUI.SetActive(false);
+
             PasueGame();
         }
     }

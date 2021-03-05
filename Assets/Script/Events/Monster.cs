@@ -10,6 +10,7 @@ public class Monster : MonoBehaviour
     public BasicEnemyTEST basicEnemyTEST;
     public CinemachineVirtualCamera cam;
     public static event  System.Action <CinemachineVirtualCamera> cameraEvent;
+    public GameObject boardUI;
 
     void Start()
     {
@@ -25,6 +26,8 @@ public class Monster : MonoBehaviour
             cameraEvent?.Invoke(cam);
             fightWarnning.SetActive(true);
             basicEnemyTEST.EnemySpawn();
+            boardUI.SetActive(false);
+
             
 
             //PasueGame();
