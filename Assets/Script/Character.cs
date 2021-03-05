@@ -14,7 +14,7 @@ public class Character : Entity
     public Route currentRoute;
     int routePosition;
     public int steps;
-    public TextMeshProUGUI DiceText;
+    public TextMeshProUGUI DiceText, HealthText;
     SphereCollider m_Collider;
     public bool isMoving;
     public string popUp;
@@ -32,6 +32,7 @@ public class Character : Entity
     //roll dice
     void Update()
     {
+        HealthText.SetText(this.HP.ToString());
         if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
         {
             Roll();

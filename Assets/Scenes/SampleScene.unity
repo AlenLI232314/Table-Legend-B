@@ -2559,6 +2559,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1444017100906239678, guid: cbd03febfd3825d4b848947c1edd3592, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbd03febfd3825d4b848947c1edd3592, type: 3}
+--- !u!114 &545922034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1444017101406560440, guid: cbd03febfd3825d4b848947c1edd3592,
+    type: 3}
+  m_PrefabInstance: {fileID: 545079467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &600662833
 GameObject:
   m_ObjectHideFlags: 0
@@ -4375,6 +4387,7 @@ MonoBehaviour:
   currentRoute: {fileID: 3371701591507512694}
   steps: 0
   DiceText: {fileID: 90429916}
+  HealthText: {fileID: 545922034}
   isMoving: 0
   popUp: 
 --- !u!1 &939387173
