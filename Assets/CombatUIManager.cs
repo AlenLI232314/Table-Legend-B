@@ -7,14 +7,18 @@ public class CombatUIManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public CameraManagement cameras;
+    public SceneManage sceneManage;
+    public BasicEnemyTEST monster;
+
     public GameObject combatCanvas;
     public GameObject boardCanvas;
 
     public Text playerHealthText;
     public Text enemyHealthText;
 
-    public int playerHealth = 100;
-    public int enemyHealth = 100;
+    public Entity player; 
+    public int enemyHealth;
 
     public int playerDamage;
     public int enemyDamage;
@@ -24,20 +28,23 @@ public class CombatUIManager : MonoBehaviour
 
     void Start()
     {
-        playerHealthText.text = playerHealth.ToString();
+        playerHealthText.text = player.HP.ToString();
         enemyDamageText.text = enemyHealth.ToString();
-
+        enemyHealth = monster.HP;
+        enemyHealthText.text = enemyHealth.ToString();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        enemyHealthText.text = enemyHealth.ToString();
 
     }
 
     public void attack()
     {
-        if (enemyHealth >= 0)
+        if (enemyHealth > 0)
         {
             playerDamage = UnityEngine.Random.Range(1, 6);
             playerDamageText.text = playerDamage.ToString();
@@ -48,9 +55,20 @@ public class CombatUIManager : MonoBehaviour
             enemyDamage = UnityEngine.Random.Range(1, 6);
             enemyDamageText.text = enemyDamage.ToString();
 
-            playerHealth -= enemyDamage;
+            player.HP -= enemyDamage;
 
-            playerHealthText.text = playerHealth.ToString();
+            playerHealthText.text = player.HP.ToString();
+        }
+
+        if(enemyHealth <= 0)
+        {
+          
+            cameras.changeCameras();
+            sceneManage.ResumeGame();
+            enemyHealth = monster.HP;
+            combatCanvas.SetActive(false);
+            boardCanvas.SetActive(true);
+           
         }
     }
 }
