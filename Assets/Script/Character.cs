@@ -14,25 +14,47 @@ public class Character : Entity
     public Route currentRoute;
     int routePosition;
     public int steps;
-    public TextMeshProUGUI DiceText, HealthText;
+    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText;
     SphereCollider m_Collider;
     public bool isMoving;
     public string popUp;
+
+    //Player stats (aside from HP, which is defined below)
+    private int gold, xp, level, turnNumber;
 
 
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
 
      void Start()
      {
+        turnNumber = 1;
+        xp = 23;
+        level = 01;
         m_Collider = GetComponent<SphereCollider>();
         this.HP = 20;
         this.isAlive = true;
+        gold = 10;
+        TurnsText.SetText("01");
      }
+
+    //Called in the update method; assigns player UI elements to their correct values
+    void UpdatePlayerStats()
+    {
+        HealthText.SetText(this.HP.ToString());
+        
+        GoldText.SetText(gold.ToString());
+
+        XPText.SetText(xp.ToString());
+        LevelText.SetText(level.ToString());
+
+        TurnsText.SetText(turnNumber.ToString());
+    }
 
     //roll dice
     void Update()
     {
-        HealthText.SetText(this.HP.ToString());
+        UpdatePlayerStats();
+
         if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
         {
             Roll();
@@ -56,6 +78,7 @@ public class Character : Entity
 
         if (routePosition + steps < currentRoute.childSquareList.Count)
         {
+            turnNumber++;
             StartCoroutine(Move());
         }
         else
