@@ -10,12 +10,16 @@ public class Monster : MonoBehaviour
     public BasicEnemyTEST basicEnemyTEST;
     public CinemachineVirtualCamera cam;
     public static event  System.Action <CinemachineVirtualCamera> cameraEvent;
+
+    public AudioSource audioSource;
+
     public GameObject boardUI;
 
     void Start()
     {
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -26,9 +30,12 @@ public class Monster : MonoBehaviour
             cameraEvent?.Invoke(cam);
             fightWarnning.SetActive(true);
             basicEnemyTEST.EnemySpawn();
+
+            audioSource.PlayOneShot(battleBegin);
+
             boardUI.SetActive(false);
 
-            
+
 
             //PasueGame();
         }
