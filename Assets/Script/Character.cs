@@ -19,6 +19,9 @@ public class Character : Entity
     public bool isMoving;
     public string popUp;
 
+    public AudioSource audioSource;
+    [SerializeField] private AudioClip[] playerMove;
+    [SerializeField] private AudioClip[] diceRolls;
     //Player stats (aside from HP, which is defined below)
     private int gold, xp, level, turnNumber;
 
@@ -33,7 +36,7 @@ public class Character : Entity
         m_Collider = GetComponent<SphereCollider>();
         this.HP = 20;
         this.isAlive = true;
-
+        audioSource = GetComponent<AudioSource>();
         
 
         gold = 10;
@@ -104,11 +107,12 @@ public class Character : Entity
     {
         UpdatePlayerStats();
         //steps = DiceNumText.diceNumber;
+        //DiceRollSFX here
 
         steps = UnityEngine.Random.Range(1, 7);
         DiceText.SetText(steps.ToString());
         Debug.Log("Dice Number = " + steps);
-
+        audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
         if (routePosition + steps < currentRoute.childSquareList.Count)
         {
             turnNumber++;
@@ -139,6 +143,8 @@ public class Character : Entity
         while (steps > 0)
         {
             Vector3 nextPos = currentRoute.childSquareList[routePosition + 1].position;
+            //sound here maybe for steps
+            audioSource.PlayOneShot(playerMove[UnityEngine.Random.Range(0, playerMove.Length)]);
             while (MovingToNext(nextPos))
             {
                 yield return null;

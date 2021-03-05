@@ -7,7 +7,11 @@ public class Chest : MonoBehaviour
     public GameObject chestBlock;
     public AudioSource audioSource;
     [SerializeField] private AudioClip[] money;
+
+    [SerializeField] private AudioClip[] chest;
+=======
     public GameObject boardUI;
+
 
 
     void Start()
@@ -23,6 +27,7 @@ public class Chest : MonoBehaviour
         {
             chestBlock.SetActive(true);
             PasueGame();
+            audioSource.PlayOneShot(chest[UnityEngine.Random.Range(0, chest.Length)]);
             audioSource.PlayOneShot(money[UnityEngine.Random.Range(0, money.Length)]);
             boardUI.SetActive(false);
         }
