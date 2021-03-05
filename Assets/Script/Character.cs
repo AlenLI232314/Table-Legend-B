@@ -14,7 +14,7 @@ public class Character : Entity
     public Route currentRoute;
     int routePosition;
     public int steps;
-    public Text DiceText;
+    public TextMeshProUGUI DiceText;
     SphereCollider m_Collider;
     public bool isMoving;
     public string popUp;
@@ -34,20 +34,7 @@ public class Character : Entity
     {
         if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
         {
-            //steps = DiceNumText.diceNumber;
-
-            steps = UnityEngine.Random.Range(1, 7);
-            DiceText.text = steps.ToString();
-            Debug.Log("Dice Number = " + steps);
-
-            if (routePosition + steps < currentRoute.childSquareList.Count)
-            {
-                StartCoroutine(Move());
-            }
-            else
-            {
-                Debug.Log("Need to reroll, too many steps you gonna take.");
-            }
+            Roll();
         }
 
         //if (Input.GetKeyDown(KeyCode.Q) && !isMoving)
@@ -55,6 +42,25 @@ public class Character : Entity
         //    PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
         //    pop.PopUp(popUp);
         //}
+    }
+
+    //Rolls the dice. Called when the player either presses the roll button or the E key
+    public void Roll()
+    {
+        //steps = DiceNumText.diceNumber;
+
+        steps = UnityEngine.Random.Range(1, 7);
+        DiceText.SetText(steps.ToString());
+        Debug.Log("Dice Number = " + steps);
+
+        if (routePosition + steps < currentRoute.childSquareList.Count)
+        {
+            StartCoroutine(Move());
+        }
+        else
+        {
+            Debug.Log("Need to reroll, too many steps you gonna take.");
+        }
     }
 
     //set the method to tell character move when roll a dice
