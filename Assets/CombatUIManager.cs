@@ -26,6 +26,8 @@ public class CombatUIManager : MonoBehaviour
     public Text playerDamageText;
     public Text enemyDamageText;
 
+    public GameObject boardUI;
+
     void Start()
     {
         playerHealthText.text = player.HP.ToString();
@@ -68,6 +70,8 @@ public class CombatUIManager : MonoBehaviour
             enemyHealth = monster.HP;
             combatCanvas.SetActive(false);
             boardCanvas.SetActive(true);
+            boardUI.SetActive(true);
+
            
         }
     }
