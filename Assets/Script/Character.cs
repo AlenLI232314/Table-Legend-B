@@ -27,12 +27,40 @@ public class Character : Entity
         m_Collider = GetComponent<SphereCollider>();
         this.HP = 20;
         this.isAlive = true;
+        
      }
 
     //roll dice
-    void Update()
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
+    //    {
+    //        //steps = DiceNumText.diceNumber;
+
+    //        steps = UnityEngine.Random.Range(1, 7);
+    //        DiceText.text = steps.ToString();
+    //        Debug.Log("Dice Number = " + steps);
+
+    //        if (routePosition + steps < currentRoute.childSquareList.Count)
+    //        {
+    //            StartCoroutine(Move());
+    //        }
+    //        else
+    //        {
+    //            Debug.Log("Need to reroll, too many steps you gonna take.");
+    //        }
+    //    }
+
+    //    //if (Input.GetKeyDown(KeyCode.Q) && !isMoving)
+    //    //{
+    //    //    PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+    //    //    pop.PopUp(popUp);
+    //    //}
+    //}
+
+    public void Roll()
     {
-        if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
+        if (!isMoving)
         {
             //steps = DiceNumText.diceNumber;
 
@@ -49,13 +77,9 @@ public class Character : Entity
                 Debug.Log("Need to reroll, too many steps you gonna take.");
             }
         }
-
-        //if (Input.GetKeyDown(KeyCode.Q) && !isMoving)
-        //{
-        //    PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
-        //    pop.PopUp(popUp);
-        //}
     }
+
+
 
     //set the method to tell character move when roll a dice
     IEnumerator Move()
