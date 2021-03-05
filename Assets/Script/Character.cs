@@ -82,19 +82,19 @@ public class Character : Entity
     //    //}
     //}
 
-    public void Roll()
-    {
+    //public void Roll()
+    //{
 
-        if (!isMoving)
+    //    if (!isMoving)
 
-        UpdatePlayerStats();
+    //    UpdatePlayerStats();
 
-        if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
+    //    if (Input.GetKeyDown(KeyCode.E)&& !isMoving)
 
-        {
-            Roll();
-        }
-    }
+    //    {
+    //        Roll();
+    //    }
+    //}
 
 
 
@@ -102,6 +102,7 @@ public class Character : Entity
     //Rolls the dice. Called when the player either presses the roll button or the E key
     public void Roll()
     {
+        UpdatePlayerStats();
         //steps = DiceNumText.diceNumber;
 
         steps = UnityEngine.Random.Range(1, 7);
