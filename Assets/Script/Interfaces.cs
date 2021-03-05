@@ -19,3 +19,14 @@ public interface IRollable
 {
     //prolly not needed, only dice are rollable
 }
+
+public interface IBuyable<T>
+{
+    void Buy(T buyPrice);
+    void Sell(T sellPrice);
+}
+
+public interface IUseable
+{
+    void Use();
+}
