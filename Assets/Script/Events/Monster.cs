@@ -11,6 +11,7 @@ public class Monster : MonoBehaviour
     public CinemachineVirtualCamera cam;
     public static event  System.Action <CinemachineVirtualCamera> cameraEvent;
     public GameObject boardUI;
+    public GameObject combatUICanvas;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class Monster : MonoBehaviour
             fightWarnning.SetActive(true);
             basicEnemyTEST.EnemySpawn();
             boardUI.SetActive(false);
+            combatUICanvas.SetActive(true);
 
             
 
