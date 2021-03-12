@@ -14,7 +14,7 @@ public class Character : Entity
     public Route currentRoute;
     int routePosition;
     public int steps;
-    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText;
+    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText;
     SphereCollider m_Collider;
     public bool isMoving;
     public string popUp;
@@ -45,7 +45,11 @@ public class Character : Entity
     void UpdatePlayerStats()
     {
         HealthText.SetText(this.HP.ToString());
-        
+
+        TavernHealthText.SetText(this.HP.ToString());
+
+        TavernGoldText.SetText(gold.ToString());
+
         GoldText.SetText(gold.ToString());
 
         XPText.SetText(xp.ToString());
@@ -105,7 +109,7 @@ public class Character : Entity
         UpdatePlayerStats();
         //steps = DiceNumText.diceNumber;
 
-        steps = UnityEngine.Random.Range(1, 7);
+        steps = 2;//UnityEngine.Random.Range(1, 7);
         DiceText.SetText(steps.ToString());
         Debug.Log("Dice Number = " + steps);
 

@@ -101,8 +101,11 @@
      <Compile Include="Assets\Script\Events\Monster.cs" />
      <Compile Include="Assets\Script\Events\Random.cs" />
      <Compile Include="Assets\Script\Events\Shop.cs" />
+     <Compile Include="Assets\Script\FoodItems.cs" />
+     <Compile Include="Assets\Script\Foods\Apple.cs" />
      <Compile Include="Assets\Script\HealthBar.cs" />
      <Compile Include="Assets\Script\Interfaces.cs" />
+     <Compile Include="Assets\Script\PlayerInventory.cs" />
      <Compile Include="Assets\Script\RollDice.cs" />
      <Compile Include="Assets\Script\Route.cs" />
      <Compile Include="Assets\Script\RouteTriggerTest.cs" />
@@ -664,9 +667,6 @@
  <Reference Include="Cinemachine">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -679,9 +679,6 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
  <Reference Include="com.unity.cinemachine.editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
@@ -690,6 +687,12 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

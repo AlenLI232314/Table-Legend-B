@@ -5,8 +5,7 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public GameObject shopBlock;
-
-
+    public GameObject boardUI;
 
     void Start()
     {
@@ -18,13 +17,14 @@ public class Shop : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
+            boardUI.SetActive(false);
             shopBlock.SetActive(true);
-            PasueGame();
+            //PauseGame();
         }
     }
 
-    void PasueGame()
-    {
-        Time.timeScale = 0;
-    }
+    //void PauseGame()
+    //{
+    //    Time.timeScale = 0;
+    //}
 }
