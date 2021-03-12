@@ -17,7 +17,7 @@ public class CombatUIManager : MonoBehaviour
     public Text playerHealthText;
     public Text enemyHealthText;
 
-    public Entity player; 
+    public Entity player;
     public int enemyHealth;
 
     public int playerDamage;
@@ -34,7 +34,7 @@ public class CombatUIManager : MonoBehaviour
         enemyDamageText.text = enemyHealth.ToString();
         enemyHealth = monster.HP;
         enemyHealthText.text = enemyHealth.ToString();
-        
+
     }
 
     // Update is called once per frame
@@ -54,17 +54,14 @@ public class CombatUIManager : MonoBehaviour
             enemyHealth -= playerDamage;
             enemyHealthText.text = enemyHealth.ToString();
 
-            enemyDamage = UnityEngine.Random.Range(1, 6);
-            enemyDamageText.text = enemyDamage.ToString();
+            StartCoroutine(turn());
 
-            player.HP -= enemyDamage;
-
-            playerHealthText.text = player.HP.ToString();
+           
         }
 
-        if(enemyHealth <= 0)
+        if (enemyHealth <= 0)
         {
-          
+
             cameras.changeCameras();
             sceneManage.ResumeGame();
             enemyHealth = monster.HP;
@@ -72,8 +69,22 @@ public class CombatUIManager : MonoBehaviour
             boardCanvas.SetActive(true);
             boardUI.SetActive(true);
 
-           
+
         }
+    }
+
+    public IEnumerator turn()
+    {
+        Debug.Log("Begin Waiting");
+        yield return new WaitForSecondsRealtime(5);
+        enemyDamage = UnityEngine.Random.Range(1, 6);
+        enemyDamageText.text = enemyDamage.ToString();
+
+        player.HP -= enemyDamage;
+
+        playerHealthText.text = player.HP.ToString();
+        Debug.Log("Stop Waiting");
+
     }
 }
 

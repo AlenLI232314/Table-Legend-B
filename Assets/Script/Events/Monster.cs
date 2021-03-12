@@ -28,7 +28,7 @@ public class Monster : MonoBehaviour
             fightWarnning.SetActive(true);
             basicEnemyTEST.EnemySpawn();
             boardUI.SetActive(false);
-            combatUICanvas.SetActive(true);
+            //combatUICanvas.SetActive(true);
 
             
 
