@@ -23,6 +23,9 @@ public class CombatUIManager : MonoBehaviour
     public int playerDamage;
     public int enemyDamage;
 
+    public int playerDamageMin;
+    public int playerDamageMax;
+
     public Text playerDamageText;
     public Text enemyDamageText;
 
@@ -48,7 +51,7 @@ public class CombatUIManager : MonoBehaviour
     {
         if (enemyHealth > 0)
         {
-            playerDamage = UnityEngine.Random.Range(1, 6);
+            playerDamage = UnityEngine.Random.Range(playerDamageMin, playerDamageMax);
             playerDamageText.text = playerDamage.ToString();
 
             enemyHealth -= playerDamage;

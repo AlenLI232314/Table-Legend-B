@@ -1762,6 +1762,8 @@ MonoBehaviour:
   enemyHealth: 2
   playerDamage: 0
   enemyDamage: 0
+  playerDamageMin: 0
+  playerDamageMax: 0
   playerDamageText: {fileID: 1308509076}
   enemyDamageText: {fileID: 600662835}
   boardUI: {fileID: 1051442930}
@@ -7619,14 +7621,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596554885}
-  m_LocalRotation: {x: -0.36602956, y: -0.27375415, z: 0.113584, w: -0.882145}
-  m_LocalPosition: {x: -127.14, y: 3.8296108, z: -21.699999}
+  m_LocalRotation: {x: 0.19191846, y: 0.72035354, z: -0.2196943, w: 0.6292794}
+  m_LocalPosition: {x: -135.9, y: 3.04, z: -8.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1373178362}
   m_Father: {fileID: 761703898}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 33.921, y: 97.72101, z: 0}
 --- !u!1001 &1596800685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10284,8 +10286,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132804921}
-  m_LocalRotation: {x: -0.36602956, y: -0.27375415, z: 0.113584, w: -0.882145}
-  m_LocalPosition: {x: -16.309998, y: 12.82, z: -13.98}
+  m_LocalRotation: {x: 0.19191846, y: 0.72035354, z: -0.2196943, w: 0.6292794}
+  m_LocalPosition: {x: -25.069992, y: 12.030389, z: -0.80000067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
