@@ -7,11 +7,14 @@ public class Random : MonoBehaviour
 {
     public GameObject questionBlock;
     public GameObject boardUI;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip OpenUI;
 
 
     void Start()
     {
         questionBlock.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -21,7 +24,7 @@ public class Random : MonoBehaviour
         {
             questionBlock.SetActive(true);
             boardUI.SetActive(false);
-
+            audioSource.PlayOneShot(OpenUI);
             PasueGame();
         }
     }
