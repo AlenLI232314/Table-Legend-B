@@ -118,6 +118,8 @@
     <Compile Include="Assets\Script\Route.cs" />
     <Compile Include="Assets\Script\RouteTriggerTest.cs" />
     <Compile Include="Assets\Script\SceneManage.cs" />
+    <Compile Include="Assets\Script\TitleScreen\ButtonEvents.cs" />
+    <Compile Include="Assets\Script\TitleScreen\TitleScreenDiceSpin.cs" />
     <Compile Include="Assets\Script\TurnManager.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
