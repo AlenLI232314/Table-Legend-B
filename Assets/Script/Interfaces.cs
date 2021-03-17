@@ -23,10 +23,17 @@ public interface IRollable
 public interface IBuyable<T>
 {
     void Buy(T buyPrice);
-    void Sell(T sellPrice);
+    //void Sell(T sellPrice);
 }
 
 public interface IUseable
 {
     void Use();
+}
+
+public interface IDamageModifyable<T>
+{
+    void DamageReduce(T damageReduce);
+    void DamageEnhance(T damageEnhance);
+    void DamageChangeDice();
 }

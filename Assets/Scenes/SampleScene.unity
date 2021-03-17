@@ -3144,7 +3144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &718918983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,7 +4745,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
       - m_Target: {fileID: 898186571}
-        m_MethodName: TakeDamage
+        m_MethodName: HealDamage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11238,6 +11238,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 11300321}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 0}
 --- !u!4 &2224170438504807353
 Transform:
   m_ObjectHideFlags: 0
@@ -11503,6 +11504,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 1785458}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 0}
 --- !u!23 &2804348968559382155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11851,6 +11853,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 1297901797}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 428471723}
 --- !u!4 &4011079130500475841
 Transform:
   m_ObjectHideFlags: 0
@@ -12354,6 +12357,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 365318464}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 0}
 --- !u!1 &6915904626203451470
 GameObject:
   m_ObjectHideFlags: 0
@@ -12617,6 +12621,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 1240567464}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 0}
 --- !u!1 &7921965051632410040
 GameObject:
   m_ObjectHideFlags: 0
@@ -12666,6 +12671,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 253555270}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 428471723}
 --- !u!33 &8134587045636087664
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12779,6 +12785,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 1633905321}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 428471723}
 --- !u!1 &8434752126582629328
 GameObject:
   m_ObjectHideFlags: 0
@@ -12828,6 +12835,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 939387174}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 0}
 --- !u!1 &8449898917688928966
 GameObject:
   m_ObjectHideFlags: 0
@@ -12877,6 +12885,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 1918200640}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 428471723}
 --- !u!23 &8794066301150230048
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13004,6 +13013,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 1310017656}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 0}
 --- !u!33 &8891843168468424263
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13069,6 +13079,7 @@ MonoBehaviour:
   basicEnemyTEST: {fileID: 623635764}
   cam: {fileID: 1423290273}
   boardUI: {fileID: 1051442930}
+  combatUICanvas: {fileID: 0}
 --- !u!4 &9221616521734519959
 Transform:
   m_ObjectHideFlags: 0
