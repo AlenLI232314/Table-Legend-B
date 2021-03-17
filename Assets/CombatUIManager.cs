@@ -14,6 +14,8 @@ public class CombatUIManager : MonoBehaviour
     public GameObject combatCanvas;
     public GameObject boardCanvas;
 
+    public Animator uICanAnim;
+
     public Text playerHealthText;
     public Text enemyHealthText;
 
@@ -25,6 +27,9 @@ public class CombatUIManager : MonoBehaviour
 
     public int playerDamageMin;
     public int playerDamageMax;
+
+    public int enemyDamageMin;
+    public int enemyDamageMax;
 
     public Text playerDamageText;
     public Text enemyDamageText;
@@ -79,15 +84,26 @@ public class CombatUIManager : MonoBehaviour
     public IEnumerator turn()
     {
         Debug.Log("Begin Waiting");
-        yield return new WaitForSecondsRealtime(5);
-        enemyDamage = UnityEngine.Random.Range(1, 6);
+        yield return new WaitForSecondsRealtime(5f);
+        enemyDamage = UnityEngine.Random.Range(enemyDamageMin, enemyDamageMax);
         enemyDamageText.text = enemyDamage.ToString();
 
         player.HP -= enemyDamage;
+
+        uICanAnim.SetBool("playerIsDamaged", true);
+
+       
 
         playerHealthText.text = player.HP.ToString();
         Debug.Log("Stop Waiting");
 
     }
+
+    public void damageReset()
+    {
+        uICanAnim.SetBool("playerIsDamaged", false);
+    }
+
+
 }
 

@@ -1643,6 +1643,7 @@ GameObject:
   - component: {fileID: 428471725}
   - component: {fileID: 428471724}
   - component: {fileID: 428471728}
+  - component: {fileID: 428471729}
   m_Layer: 5
   m_Name: Combat UI Canvas
   m_TagString: Untagged
@@ -1756,17 +1757,39 @@ MonoBehaviour:
   monster: {fileID: 623635764}
   combatCanvas: {fileID: 428471723}
   boardCanvas: {fileID: 718918982}
+  uICanAnim: {fileID: 428471729}
   playerHealthText: {fileID: 1526948430}
   enemyHealthText: {fileID: 32896846}
   player: {fileID: 898186571}
   enemyHealth: 2
   playerDamage: 0
   enemyDamage: 0
-  playerDamageMin: 0
-  playerDamageMax: 0
+  playerDamageMin: 1
+  playerDamageMax: 6
+  enemyDamageMin: 1
+  enemyDamageMax: 3
   playerDamageText: {fileID: 1308509076}
   enemyDamageText: {fileID: 600662835}
   boardUI: {fileID: 1051442930}
+--- !u!95 &428471729
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428471723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56318dcd2c39ebf45b9144be1c559ec8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &446085247
 GameObject:
   m_ObjectHideFlags: 0
@@ -12017,7 +12040,6 @@ MonoBehaviour:
   cam: {fileID: 1785458}
   boardUI: {fileID: 1051442930}
   combatUICanvas: {fileID: 428471723}
-  combatUICanvas: {fileID: 0}
   audioSource: {fileID: 2785285381755895042}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
 --- !u!82 &2785285381755895042
@@ -14488,7 +14510,6 @@ MonoBehaviour:
   cam: {fileID: 1918200640}
   boardUI: {fileID: 1051442930}
   combatUICanvas: {fileID: 428471723}
-  combatUICanvas: {fileID: 0}
   audioSource: {fileID: 8449898917688928969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
 --- !u!82 &8449898917688928969
@@ -14881,7 +14902,6 @@ MonoBehaviour:
   cam: {fileID: 1423290273}
   boardUI: {fileID: 1051442930}
   combatUICanvas: {fileID: 428471723}
-  combatUICanvas: {fileID: 0}
   audioSource: {fileID: 9162763357069619262}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
 --- !u!82 &9162763357069619262
