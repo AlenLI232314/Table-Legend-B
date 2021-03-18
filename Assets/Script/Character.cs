@@ -21,6 +21,7 @@ public class Character : Entity
     [SerializeField] protected AudioSource audioSource;
     [SerializeField] private AudioClip[] playerMove;
     [SerializeField] private AudioClip[] diceRolls;
+    [SerializeField] private Canvas deathCanvas;
     //Player stats (aside from HP, which is defined below)
     private int gold, xp, level, turnNumber;
 
@@ -54,6 +55,11 @@ public class Character : Entity
         LevelText.SetText(level.ToString());
 
         TurnsText.SetText(turnNumber.ToString());
+    }
+
+    private void Update()
+    {
+        checkHealth();
     }
 
     //roll dice
@@ -181,5 +187,13 @@ public class Character : Entity
         }
 
         StartCoroutine(Move());
+    }
+
+    public void checkHealth()
+    {
+        if(this.HP <= 0)
+        {
+            deathCanvas.gameObject.SetActive(true);
+        }
     }
 }

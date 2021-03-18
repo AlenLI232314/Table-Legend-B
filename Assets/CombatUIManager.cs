@@ -35,6 +35,10 @@ public class CombatUIManager : MonoBehaviour
     public Text enemyDamageText;
 
     public GameObject boardUI;
+    public GameObject playerAttack;
+
+    public Text turnText;
+
 
     void Start()
     {
@@ -62,6 +66,8 @@ public class CombatUIManager : MonoBehaviour
             enemyHealth -= playerDamage;
             enemyHealthText.text = enemyHealth.ToString();
 
+            uICanAnim.SetBool("enemyIsDamaged", true);
+
             StartCoroutine(turn());
 
            
@@ -83,7 +89,10 @@ public class CombatUIManager : MonoBehaviour
 
     public IEnumerator turn()
     {
+        playerAttack.SetActive(false);
         Debug.Log("Begin Waiting");
+        uICanAnim.SetBool("turnIsStarting", true);
+        turnText.text = "Enemy Turn!";
         yield return new WaitForSecondsRealtime(5f);
         enemyDamage = UnityEngine.Random.Range(enemyDamageMin, enemyDamageMax);
         enemyDamageText.text = enemyDamage.ToString();
@@ -97,11 +106,32 @@ public class CombatUIManager : MonoBehaviour
         playerHealthText.text = player.HP.ToString();
         Debug.Log("Stop Waiting");
 
+        turnReset();
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        turnText.text = "Player's Turn!";
+        uICanAnim.SetBool("turnIsStarting", true);
+
+        yield return new WaitForSecondsRealtime(2f);
+        turnReset();
+        playerAttack.SetActive(true);
+
     }
 
     public void damageReset()
     {
         uICanAnim.SetBool("playerIsDamaged", false);
+    }
+
+    public void enemyDamageReset()
+    {
+        uICanAnim.SetBool("enemyIsDamaged", false);
+    }
+
+    public void turnReset()
+    {
+        uICanAnim.SetBool("turnIsStarting", false);
     }
 
 
