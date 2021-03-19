@@ -5713,7 +5713,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gold: 0
+  Health: 0
   goldText: {fileID: 986127994}
+  healthText: {fileID: 545922034}
   character: {fileID: 898186571}
 --- !u!1 &1082569650
 GameObject:
