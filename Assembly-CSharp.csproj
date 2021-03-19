@@ -667,6 +667,9 @@
  <Reference Include="Cinemachine">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -679,6 +682,9 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="com.unity.cinemachine.editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
@@ -687,12 +693,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
