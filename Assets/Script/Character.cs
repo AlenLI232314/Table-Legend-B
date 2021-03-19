@@ -23,8 +23,10 @@ public class Character : Entity
     [SerializeField] private AudioClip[] playerMove;
     [SerializeField] private AudioClip[] diceRolls;
     [SerializeField] private Canvas deathCanvas;
+    [SerializeField] private int diceMinRoll;
+    [SerializeField] private int diceMaxRoll;
     //Player stats (aside from HP, which is defined below)
-    private int gold, xp, level, turnNumber;
+    public int gold, xp, level, turnNumber;
 
 
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
@@ -115,7 +117,7 @@ public class Character : Entity
         //steps = DiceNumText.diceNumber;
         audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
 
-        steps = UnityEngine.Random.Range(1, 7);
+        steps = UnityEngine.Random.Range(diceMinRoll, diceMaxRoll);
         DiceText.SetText(steps.ToString());
         Debug.Log("Dice Number = " + steps);
 
