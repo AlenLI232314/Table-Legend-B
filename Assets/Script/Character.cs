@@ -165,6 +165,7 @@ public class Character : Entity
 
         if (isMoving == false)
         {
+            DiceText.SetText("Roll!");
             m_Collider.enabled = true;
         }
 
