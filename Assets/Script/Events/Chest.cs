@@ -8,8 +8,10 @@ public class Chest : MonoBehaviour
     public AudioSource audioSource;
     [SerializeField] private AudioClip[] money;
     public GameObject boardUI;
+    public string popUp;
     [SerializeField] private Character character;
     [SerializeField] private int goldCount;
+
 
 
     void Start()
@@ -31,6 +33,11 @@ public class Chest : MonoBehaviour
             character.gold += goldCount;
 
         }
+    }
+    void OnMouseDown()
+    {
+        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+        pop.PopUp(popUp);
     }
     void PasueGame()
     {
