@@ -107,14 +107,16 @@ public class Character : Entity
         UpdatePlayerStats();
         //steps = DiceNumText.diceNumber;
         audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
+        Debug.Log("Dice Number = " + steps);
         steps = UnityEngine.Random.Range(1, 7);
         DiceText.SetText(steps.ToString());
-        Debug.Log("Dice Number = " + steps);
+       
 
         if (routePosition + steps < currentRoute.childSquareList.Count)
         {
-            turnNumber++;
-            StartCoroutine(Move());
+            turnNumber++; 
+            StartCoroutine(waitForSound());
+            //StartCoroutine(Move());
         }
         else
         {
@@ -153,6 +155,8 @@ public class Character : Entity
             audioSource.PlayOneShot(playerMove[UnityEngine.Random.Range(0, playerMove.Length)]);
             yield return new WaitForSeconds(0.1f);
             steps--;
+            DiceText.SetText(steps.ToString());
+
             routePosition++;
 
         }
@@ -161,6 +165,7 @@ public class Character : Entity
 
         if (isMoving == false)
         {
+            DiceText.SetText("Roll!");
             m_Collider.enabled = true;
         }
 
@@ -169,5 +174,17 @@ public class Character : Entity
     bool MovingToNext(Vector3 goal)
     {
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 4f * Time.deltaTime));
+    }
+
+    public IEnumerator waitForSound()
+    {
+        while (audioSource.isPlaying)
+        {
+            yield return null;
+        }
+
+
+
+        StartCoroutine(Move());
     }
 }
