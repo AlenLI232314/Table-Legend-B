@@ -5101,8 +5101,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ecf330d2fde7cbe49ba647cac3e93cdf, type: 3}
   - {fileID: 8300000, guid: aab004268524cda49976f8062cb897ad, type: 3}
   deathCanvas: {fileID: 1472105877}
-  diceMinRoll: 6
-  diceMaxRoll: 6
+  diceMinRoll: 1
+  diceMaxRoll: 1
   gold: 0
   xp: 0
   level: 0

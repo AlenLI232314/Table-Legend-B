@@ -78,14 +78,15 @@ public class CombatUIManager : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
-
+            turnReset();
+            playerAttack.SetActive(true);
             cameras.changeCameras();
             sceneManage.ResumeGame();
             enemyHealth = monster.HP;
             combatCanvas.SetActive(false);
             boardCanvas.SetActive(true);
             boardUI.SetActive(true);
-
+            
 
         }
     }

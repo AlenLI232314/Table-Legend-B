@@ -63,10 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraManagement.cs" />
-    <Compile Include="Assets\CombatUIManager.cs" />
-    <Compile Include="Assets\DeathSceneManagement.cs" />
-    <Compile Include="Assets\FollowPlayer.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\3rdPersonWithAimMode\ActivateOnKeypress.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerLookAt.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerMovement.cs" />
@@ -98,7 +94,10 @@
     <Compile Include="Assets\Script\BoardUI\MapView.cs" />
     <Compile Include="Assets\Script\BoardUI\TurnButton.cs" />
     <Compile Include="Assets\Script\BoardUI\XpButton.cs" />
+    <Compile Include="Assets\Script\CameraManagement.cs" />
     <Compile Include="Assets\Script\Character.cs" />
+    <Compile Include="Assets\Script\CombatUIManager.cs" />
+    <Compile Include="Assets\Script\DeathSceneManagement.cs" />
     <Compile Include="Assets\Script\DiceChecking.cs" />
     <Compile Include="Assets\Script\DiceNumText.cs" />
     <Compile Include="Assets\Script\DiceUI.cs" />
@@ -110,6 +109,7 @@
     <Compile Include="Assets\Script\Events\Monster.cs" />
     <Compile Include="Assets\Script\Events\Random.cs" />
     <Compile Include="Assets\Script\Events\Shop.cs" />
+    <Compile Include="Assets\Script\FollowPlayer.cs" />
     <Compile Include="Assets\Script\FoodItems.cs" />
     <Compile Include="Assets\Script\Foods\Apple.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
@@ -122,7 +122,7 @@
     <Compile Include="Assets\Script\TitleScreen\ButtonEvents.cs" />
     <Compile Include="Assets\Script\TitleScreen\TitleScreenDiceSpin.cs" />
     <Compile Include="Assets\Script\TurnManager.cs" />
-    <Compile Include="Assets\UIUpdate.cs" />
+    <Compile Include="Assets\Script\UIUpdate.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
