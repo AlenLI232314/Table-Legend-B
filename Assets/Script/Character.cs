@@ -13,6 +13,7 @@ public class Character : Entity
 
     public Route currentRoute;
     int routePosition;
+    public int health;
     public int steps;
     public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText;
     SphereCollider m_Collider;
@@ -34,7 +35,7 @@ public class Character : Entity
         xp = 23;
         level = 01;
         m_Collider = GetComponent<SphereCollider>();
-        this.HP = 20;
+        this.HP = health;
         this.isAlive = true;
 
         audioSource.GetComponent<AudioSource>();

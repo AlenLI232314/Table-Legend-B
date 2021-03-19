@@ -1532,7 +1532,7 @@ GameObject:
   - component: {fileID: 320398719}
   - component: {fileID: 320398718}
   m_Layer: 5
-  m_Name: NextLevelBtn
+  m_Name: TryAgainBttn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1601,19 +1601,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1472105874}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1113805621}
-        m_MethodName: EndGame
+      - m_Target: {fileID: 1472105879}
+        m_MethodName: restartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1622,7 +1611,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &320398719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4020,19 +4009,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1472105874}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1113805621}
-        m_MethodName: EndGame
+      - m_Target: {fileID: 1472105879}
+        m_MethodName: quitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4041,7 +4019,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &760539742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5088,6 +5066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 0
   currentRoute: {fileID: 3371701591507512694}
+  health: 1
   steps: 0
   DiceText: {fileID: 90429916}
   HealthText: {fileID: 545922034}
@@ -7950,6 +7929,7 @@ GameObject:
   - component: {fileID: 1472105877}
   - component: {fileID: 1472105876}
   - component: {fileID: 1472105875}
+  - component: {fileID: 1472105879}
   m_Layer: 5
   m_Name: Death Canvas
   m_TagString: Untagged
@@ -8037,6 +8017,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1472105879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472105874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac32a0c75b3a76e4d8121a2d44f1550d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1479733740
 GameObject:
   m_ObjectHideFlags: 0
@@ -8456,6 +8448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 0
   currentRoute: {fileID: 3371701591507512694}
+  health: 0
   steps: 0
   DiceText: {fileID: 90429916}
   HealthText: {fileID: 545922034}

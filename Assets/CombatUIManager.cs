@@ -53,7 +53,10 @@ public class CombatUIManager : MonoBehaviour
     void Update()
     {
         enemyHealthText.text = enemyHealth.ToString();
-
+        if (player.HP <= 0)
+        {
+            this.gameObject.SetActive(false);
+        } 
     }
 
     public void attack()
