@@ -114,8 +114,9 @@ public class Character : Entity
 
         if (routePosition + steps < currentRoute.childSquareList.Count)
         {
-            turnNumber++;
-            StartCoroutine(Move());
+            turnNumber++; 
+            StartCoroutine(waitForSound());
+            //StartCoroutine(Move());
         }
         else
         {
@@ -170,5 +171,17 @@ public class Character : Entity
     bool MovingToNext(Vector3 goal)
     {
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 4f * Time.deltaTime));
+    }
+
+    public IEnumerator waitForSound()
+    {
+        while (audioSource.isPlaying)
+        {
+            yield return null;
+        }
+
+
+
+        StartCoroutine(Move());
     }
 }

@@ -13,10 +13,16 @@ public class Monster : MonoBehaviour
     public GameObject boardUI;
     public GameObject combatUICanvas;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip battleStart;
+
+
     void Start()
     {
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -30,7 +36,7 @@ public class Monster : MonoBehaviour
             boardUI.SetActive(false);
             //combatUICanvas.SetActive(true);
 
-            
+            audioSource.PlayOneShot(battleStart);
 
             //PasueGame();
         }
