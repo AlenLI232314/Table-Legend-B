@@ -15,7 +15,7 @@ public class Character : Entity
     int routePosition;
     public int health;
     public int steps;
-    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText;
+    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText;
     SphereCollider m_Collider;
     public bool isMoving;
     public string popUp;
@@ -51,7 +51,11 @@ public class Character : Entity
     void UpdatePlayerStats()
     {
         HealthText.SetText(this.HP.ToString());
-        
+
+        TavernHealthText.SetText(this.HP.ToString());
+
+        TavernGoldText.SetText(gold.ToString());
+
         GoldText.SetText(gold.ToString());
 
         XPText.SetText(xp.ToString());
