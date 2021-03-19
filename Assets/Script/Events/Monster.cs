@@ -12,7 +12,6 @@ public class Monster : MonoBehaviour
     public static event  System.Action <CinemachineVirtualCamera> cameraEvent;
     public GameObject boardUI;
     public GameObject combatUICanvas;
-    public string popUp;
 
     void Start()
     {
@@ -37,16 +36,10 @@ public class Monster : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
-    {
-        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
-        pop.PopUp(popUp);
-    }
-
     //void PasueGame()
     //{
     //    Time.timeScale = 0;
     //}
 
-
+    
 }

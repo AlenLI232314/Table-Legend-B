@@ -6,7 +6,6 @@ public class FinalBlock : MonoBehaviour
 {
     public GameObject finalBlock;
     public GameObject boardUI;
-    public string popUp;
 
 
 
@@ -14,7 +13,7 @@ public class FinalBlock : MonoBehaviour
     {
         finalBlock.SetActive(false);
     }
-    
+
 
     void OnTriggerEnter(Collider player)
     {
@@ -27,12 +26,6 @@ public class FinalBlock : MonoBehaviour
 
         
     }
-    void OnMouseDown()
-    {
-        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
-        pop.PopUp(popUp);
-    }
-
     void PasueGame()
     {
         Time.timeScale = 0;
