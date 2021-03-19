@@ -13,6 +13,7 @@ public class Character : Entity
 
     public Route currentRoute;
     int routePosition;
+    public int health;
     public int steps;
     public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText;
     SphereCollider m_Collider;
@@ -21,8 +22,11 @@ public class Character : Entity
     [SerializeField] protected AudioSource audioSource;
     [SerializeField] private AudioClip[] playerMove;
     [SerializeField] private AudioClip[] diceRolls;
+    [SerializeField] private Canvas deathCanvas;
+    [SerializeField] private int diceMinRoll;
+    [SerializeField] private int diceMaxRoll;
     //Player stats (aside from HP, which is defined below)
-    private int gold, xp, level, turnNumber;
+    public int gold, xp, level, turnNumber;
 
 
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
@@ -33,7 +37,7 @@ public class Character : Entity
         xp = 23;
         level = 01;
         m_Collider = GetComponent<SphereCollider>();
-        this.HP = 20;
+        this.HP = health;
         this.isAlive = true;
 
         audioSource.GetComponent<AudioSource>();
@@ -54,6 +58,11 @@ public class Character : Entity
         LevelText.SetText(level.ToString());
 
         TurnsText.SetText(turnNumber.ToString());
+    }
+
+    private void Update()
+    {
+        checkHealth();
     }
 
     //roll dice
@@ -107,14 +116,14 @@ public class Character : Entity
         UpdatePlayerStats();
         //steps = DiceNumText.diceNumber;
         audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
-        Debug.Log("Dice Number = " + steps);
-        steps = UnityEngine.Random.Range(1, 7);
+
+        steps = UnityEngine.Random.Range(diceMinRoll, diceMaxRoll);
         DiceText.SetText(steps.ToString());
        
 
         if (routePosition + steps < currentRoute.childSquareList.Count)
         {
-            turnNumber++; 
+            turnNumber++;
             StartCoroutine(waitForSound());
             //StartCoroutine(Move());
         }
@@ -183,8 +192,14 @@ public class Character : Entity
             yield return null;
         }
 
-
-
         StartCoroutine(Move());
+    }
+
+    public void checkHealth()
+    {
+        if(this.HP <= 0)
+        {
+            deathCanvas.gameObject.SetActive(true);
+        }
     }
 }

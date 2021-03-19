@@ -9,6 +9,8 @@ public class Chest : MonoBehaviour
     [SerializeField] private AudioClip[] money;
     public GameObject boardUI;
     public string popUp;
+    [SerializeField] private Character character;
+    [SerializeField] private int goldCount;
 
 
 
@@ -16,6 +18,7 @@ public class Chest : MonoBehaviour
     {
         chestBlock.SetActive(false);
         audioSource = GetComponent<AudioSource>();
+        character = FindObjectOfType<Character>();
     }
 
 
@@ -27,6 +30,8 @@ public class Chest : MonoBehaviour
             PasueGame();
             audioSource.PlayOneShot(money[UnityEngine.Random.Range(0, money.Length)]);
             boardUI.SetActive(false);
+            character.gold += goldCount;
+
         }
     }
     void OnMouseDown()
