@@ -6,6 +6,7 @@ public class FinalBlock : MonoBehaviour
 {
     public GameObject finalBlock;
     public GameObject boardUI;
+    public string popUp;
 
 
 
@@ -24,7 +25,11 @@ public class FinalBlock : MonoBehaviour
             boardUI.SetActive(false);
         }
 
-        
+        void OnMouseDown()
+        {
+            PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+            pop.PopUp(popUp);
+        }
     }
     void PasueGame()
     {

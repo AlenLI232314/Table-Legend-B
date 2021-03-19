@@ -8,6 +8,8 @@ public class Chest : MonoBehaviour
     public AudioSource audioSource;
     [SerializeField] private AudioClip[] money;
     public GameObject boardUI;
+    public string popUp;
+
 
 
     void Start()
@@ -26,6 +28,11 @@ public class Chest : MonoBehaviour
             audioSource.PlayOneShot(money[UnityEngine.Random.Range(0, money.Length)]);
             boardUI.SetActive(false);
         }
+    }
+    void OnMouseDown()
+    {
+        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+        pop.PopUp(popUp);
     }
     void PasueGame()
     {

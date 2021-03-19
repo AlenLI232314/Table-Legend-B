@@ -12,6 +12,8 @@ public class Monster : MonoBehaviour
     public static event  System.Action <CinemachineVirtualCamera> cameraEvent;
     public GameObject boardUI;
     public GameObject combatUICanvas;
+    public string popUp;
+
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip battleStart;
@@ -41,11 +43,16 @@ public class Monster : MonoBehaviour
             //PasueGame();
         }
     }
+    void OnMouseDown()
+    {
+        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+        pop.PopUp(popUp);
+    }
 
     //void PasueGame()
     //{
     //    Time.timeScale = 0;
     //}
 
-    
+
 }

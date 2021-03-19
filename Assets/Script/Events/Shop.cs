@@ -5,6 +5,8 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public GameObject shopBlock;
+    public string popUp;
+
 
 
 
@@ -22,7 +24,11 @@ public class Shop : MonoBehaviour
             PasueGame();
         }
     }
-
+    void OnMouseDown()
+    {
+        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+        pop.PopUp(popUp);
+    }
     void PasueGame()
     {
         Time.timeScale = 0;
