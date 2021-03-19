@@ -107,9 +107,10 @@ public class Character : Entity
         UpdatePlayerStats();
         //steps = DiceNumText.diceNumber;
         audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
+        Debug.Log("Dice Number = " + steps);
         steps = UnityEngine.Random.Range(1, 7);
         DiceText.SetText(steps.ToString());
-        Debug.Log("Dice Number = " + steps);
+       
 
         if (routePosition + steps < currentRoute.childSquareList.Count)
         {
