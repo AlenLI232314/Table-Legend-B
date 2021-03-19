@@ -155,6 +155,8 @@ public class Character : Entity
             audioSource.PlayOneShot(playerMove[UnityEngine.Random.Range(0, playerMove.Length)]);
             yield return new WaitForSeconds(0.1f);
             steps--;
+            DiceText.SetText(steps.ToString());
+
             routePosition++;
 
         }
@@ -163,6 +165,7 @@ public class Character : Entity
 
         if (isMoving == false)
         {
+            DiceText.SetText("Roll!");
             m_Collider.enabled = true;
         }
 
