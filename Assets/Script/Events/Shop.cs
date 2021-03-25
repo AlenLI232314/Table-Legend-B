@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public GameObject shopBlock;
+    public GameObject boardUI;
     public string popUp;
 
 
@@ -20,8 +21,9 @@ public class Shop : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
+            boardUI.SetActive(false);
             shopBlock.SetActive(true);
-            PasueGame();
+            //PauseGame();
         }
     }
     void OnMouseDown()

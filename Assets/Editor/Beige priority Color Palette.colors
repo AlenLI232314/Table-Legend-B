@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12323, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Beige priority Color Palette
+  m_EditorClassIdentifier: 
+  m_Presets:
+  - m_Name: 
+    m_Color: {r: 0.93333334, g: 0.827451, b: 0.5294118, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.7647059, g: 0.6392157, b: 0.3019608, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.627451, g: 0.5019608, b: 0.16078432, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.47058824, g: 0.35686275, b: 0.043137256, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.3019608, g: 0.22352941, b: 0, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.40392157, g: 0.42352942, b: 0.64705884, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.2509804, g: 0.27450982, b: 0.5294118, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.15686275, g: 0.1764706, b: 0.43529412, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.07058824, g: 0.09019608, b: 0.3254902, a: 1}
+  - m_Name: 
+    m_Color: {r: 0.023529412, g: 0.039215688, b: 0.21176471, a: 1}
+  - m_Name: 
+    m_Color: {r: 0, g: 0, b: 0, a: 1}
