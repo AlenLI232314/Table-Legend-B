@@ -18,8 +18,22 @@ public class Monster : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip battleStart;
-    [SerializeField] private Vector3 originalScale;
 
+    [SerializeField] private Vector3 originalScale;
+    [SerializeField] private Vector3 newScale;
+    [SerializeField] private float offsetX;
+    [SerializeField] private float offsetY;
+    [SerializeField] private float offsetZ;
+
+    void OnEnable()
+    {
+        CombatUIManager.monsterEvent += OnMonsterEventHeard;
+    }
+
+    void OnDisable()
+    {
+        CombatUIManager.monsterEvent -= OnMonsterEventHeard;
+    }
 
     void Start()
     {
@@ -39,6 +53,7 @@ public class Monster : MonoBehaviour
         if (player.gameObject.tag == "Player" )
         {
             playerGO.transform.localScale = new Vector3 (.15f, .3f, .15f);
+            playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);
             cameraEvent?.Invoke(cam);
             fightWarnning.SetActive(true);
@@ -55,6 +70,12 @@ public class Monster : MonoBehaviour
     {
         PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
         pop.PopUp(popUp);
+    }
+
+    void OnMonsterEventHeard(BasicEnemyTEST monster)
+    {
+        playerGO.transform.position = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, playerGO.transform.position.z);
+        playerGO.transform.localScale = originalScale;
     }
 
     //void PasueGame()

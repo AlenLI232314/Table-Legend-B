@@ -39,6 +39,7 @@ public class CombatUIManager : MonoBehaviour
 
     public Text turnText;
 
+    public static event System.Action<BasicEnemyTEST> monsterEvent;
 
     void Start()
     {
@@ -86,7 +87,7 @@ public class CombatUIManager : MonoBehaviour
             combatCanvas.SetActive(false);
             boardCanvas.SetActive(true);
             boardUI.SetActive(true);
-            
+            monsterEvent?.Invoke(monster);
 
         }
     }
