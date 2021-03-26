@@ -5,11 +5,17 @@ using TMPro;
 
 public class PopUpInfo : MonoBehaviour
 {
-    public GameObject popUpBox;
+    public GameObject popUpBox, Character;
     public Animator animator;
     public TMP_Text popUpText;
 
     public List<GameObject> results;
+
+
+    void Start()
+    {
+        Character = GameObject.Find("Character");
+    }
 
 
     public void PopUp(string text)
@@ -56,28 +62,38 @@ public class PopUpInfo : MonoBehaviour
             if (randomNumber <= weight)
             {
                 //set event result
-                Debug.Log("Event result: " + weight);
+
+                //Debug.Log("Event result: " + weight);
+
 
             }
             else
             {
+
+                //Debug.Log("Event result: " + weight);
                 randomNumber -= weight;
             }
-            //}
-
-            //for (int i = 0; i <table.Length; i++)
-            //{
-            //    if(randomNumber<= table[i])
-            //    {
-
-            //    }
-            //    else
-            //    {
-            //        randomNumber -= table[i];
-            //    }
-            //}
-
-
         }
+
+        for (int i = 0; i < table.Length; i++)
+        {
+            if (randomNumber <= table[i])
+            {
+                Debug.Log(randomNumber);
+                
+            }
+            else
+            {
+                Debug.Log(randomNumber);
+                randomNumber -= table[i];
+            }
+        }
+
+        Debug.Log(randomNumber);
+        randomNumber = 2;
+        Character.GetComponent<Character>().ChanceEvent(randomNumber);
+
+
+
     }
 }

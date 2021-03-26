@@ -12,6 +12,8 @@ public class Character : Entity
     //TODO: Make enemy base class, can make different enemies from there.
 
     public Route currentRoute;
+
+    [SerializeField] private GameObject CombatUICanvas, DoubleDamagePanel, DamageDebuffPanel;
     int routePosition;
     public int health;
     public int steps;
@@ -33,6 +35,10 @@ public class Character : Entity
 
      void Start()
      {
+        //CombatUICanvas = GameObject.Find("Combat UI Canvas");
+        //DamageDebuffPanel = GameObject.Find("Damage Debuff Panel");
+        //DoubleDamagePanel = GameObject.Find("Double Damage Panel");
+
         turnNumber = 1;
         xp = 23;
         level = 01;
@@ -203,6 +209,27 @@ public class Character : Entity
         if(this.HP <= 0)
         {
             deathCanvas.gameObject.SetActive(true);
+        }
+    }
+
+    //Handles the stat effects given to the player when they land on a chance space, based on the int passed in
+    public void ChanceEvent(int eventNum)
+    {
+        switch(eventNum)
+        {
+            case 1:
+                CombatUICanvas.GetComponent<CombatUIManager>().DamageDebuff();
+                DamageDebuffPanel.SetActive(true);
+                break;
+            case 2:
+                CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
+                DoubleDamagePanel.SetActive(true);
+                break;
+
+            default:
+                //Nothing happens
+                Debug.Log("Text: The Goddess of luck igores you.");
+                break;
         }
     }
 }

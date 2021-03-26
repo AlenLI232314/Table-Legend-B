@@ -39,9 +39,12 @@ public class CombatUIManager : MonoBehaviour
 
     public Text turnText;
 
+    bool doubleDMG;
+
 
     void Start()
     {
+        doubleDMG = false;
         playerHealthText.text = player.HP.ToString();
         enemyDamageText.text = enemyHealth.ToString();
         enemyHealth = monster.HP;
@@ -136,6 +139,31 @@ public class CombatUIManager : MonoBehaviour
     public void turnReset()
     {
         uICanAnim.SetBool("turnIsStarting", false);
+    }
+
+    //Decreases the player's max attack. Called via random event
+    public void DamageDebuff()
+    {
+        playerDamageMax -= UnityEngine.Random.Range(1, 3);
+        
+       if (playerDamageMax <= 0)
+        {
+            playerDamageMax = 1;
+        }
+
+        if (playerDamageMin > playerDamageMax)
+        {
+            playerDamageMin = playerDamageMax;
+        }
+        Debug.Log("hi");
+    }
+
+    //Doubles the player's damage (doubles the min and max rolls)
+    public void DoubleDamage()
+    {
+        doubleDMG = true;
+        playerDamageMax *= 2;
+        playerDamageMin *= 2;
     }
 
 
