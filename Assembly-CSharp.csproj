@@ -48,7 +48,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-
       <HintPath>D:\Program Files\2019.4.20f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
@@ -102,6 +101,7 @@
      <Compile Include="Assets\Script\Events\FinalBlock.cs" />
      <Compile Include="Assets\Script\Events\Monster.cs" />
      <Compile Include="Assets\Script\Events\Random.cs" />
+     <Compile Include="Assets\Script\Events\RandomTemple.cs" />
      <Compile Include="Assets\Script\Events\Shop.cs" />
      <Compile Include="Assets\Script\FollowPlayer.cs" />
      <Compile Include="Assets\Script\FoodItems.cs" />
@@ -708,7 +708,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
