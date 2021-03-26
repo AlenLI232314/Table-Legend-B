@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Random : MonoBehaviour
 {
@@ -10,9 +10,11 @@ public class Random : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private AudioClip OpenUI;
-
     public string popUp;
 
+
+
+   
 
 
     void Start()
@@ -48,12 +50,4 @@ public class Random : MonoBehaviour
     }
 
 
-
-    internal static int Range(int v)
-
-    {
-
-        throw new NotImplementedException();
-
-    }
 }

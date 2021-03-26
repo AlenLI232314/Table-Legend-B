@@ -2535,7 +2535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &477376592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2826,6 +2826,10 @@ MonoBehaviour:
   popUpBox: {fileID: 1781851856}
   animator: {fileID: 1781851858}
   popUpText: {fileID: 1798287051}
+  results: []
+  table: 2300000019000000120000000d00000009000000
+  randomNumber: 0
+  total: 0
 --- !u!4 &541560888
 Transform:
   m_ObjectHideFlags: 0
@@ -3853,7 +3857,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &636701882
 GameObject:
@@ -5691,8 +5695,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ecf330d2fde7cbe49ba647cac3e93cdf, type: 3}
   - {fileID: 8300000, guid: aab004268524cda49976f8062cb897ad, type: 3}
   deathCanvas: {fileID: 1472105877}
-  diceMinRoll: 10
-  diceMaxRoll: 10
+  diceMinRoll: 4
+  diceMaxRoll: 4
   gold: 0
   xp: 0
   level: 0
@@ -7246,7 +7250,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 02aa01f40b88b0c4194d95f5a1e93af0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02aa01f40b88b0c4194d95f5a1e93af0,
         type: 3}
@@ -7573,7 +7577,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
         type: 3}
@@ -9530,7 +9534,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 08a8f5169bea1ef4b8daefdae1fe64f5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08a8f5169bea1ef4b8daefdae1fe64f5,
         type: 3}
@@ -10170,7 +10174,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1a6ec148b26bc0e40982201072f93757,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a6ec148b26bc0e40982201072f93757,
         type: 3}
@@ -10832,6 +10836,10 @@ MonoBehaviour:
   popUpBox: {fileID: 0}
   animator: {fileID: 0}
   popUpText: {fileID: 0}
+  results: []
+  table: 2300000019000000120000000d00000009000000
+  randomNumber: 0
+  total: 0
 --- !u!114 &1781851860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10879,7 +10887,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ac31d1b014d3ba046958c52c8eac19a5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac31d1b014d3ba046958c52c8eac19a5,
         type: 3}
@@ -11401,6 +11409,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 541560887}
+        m_MethodName: DrawNumber
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1830395662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11817,7 +11836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.35
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -12408,7 +12427,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
@@ -13560,7 +13579,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 48.981003, y: 29.339, z: -3.6190002}
 --- !u!114 &2132804926
 MonoBehaviour:
@@ -14240,6 +14259,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
   popUp: This looks like a temple, what secrets are hidden in it?
+  table: 2300000019000000120000000d00000009000000
+  randomNumber: 0
+  total: 0
 --- !u!82 &1014674484732054616
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15018,6 +15040,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
   popUp: This looks like a temple, what secrets are hidden in it?
+  table: 2300000019000000120000000d00000009000000
+  randomNumber: 0
+  total: 0
 --- !u!82 &2409330849542895585
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15955,6 +15980,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
   popUp: This looks like a temple, what secrets are hidden in it?
+  table: 2300000019000000120000000d00000009000000
+  randomNumber: 0
+  total: 0
 --- !u!82 &4431870863594686635
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16732,6 +16760,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
   popUp: This looks like a temple, what secrets are hidden in it?
+  table: 2300000019000000120000000d00000009000000
+  randomNumber: 0
+  total: 0
 --- !u!82 &6925671638065007837
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16932,6 +16963,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
   popUp: This looks like a temple, what secrets are hidden in it?
+  table: 2300000019000000120000000d00000009000000
+  randomNumber: 0
+  total: 0
 --- !u!82 &7048696142976810665
 AudioSource:
   m_ObjectHideFlags: 0
