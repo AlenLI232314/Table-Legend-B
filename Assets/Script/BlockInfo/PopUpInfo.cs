@@ -60,12 +60,12 @@ public class PopUpInfo : MonoBehaviour
             if (randomNumber <= weight)
             {
                 //set event result
-                Debug.Log("Event result: " + weight);
+                //Debug.Log("Event result: " + weight);
 
             }
             else
             {
-                Debug.Log("Event result: " + weight);
+                //Debug.Log("Event result: " + weight);
                 randomNumber -= weight;
             }
         }
@@ -75,14 +75,18 @@ public class PopUpInfo : MonoBehaviour
             if (randomNumber <= table[i])
             {
                 Debug.Log(randomNumber);
-                Character.GetComponent<Character>().ChanceEvent(randomNumber);
+                
             }
             else
             {
+                Debug.Log(randomNumber);
                 randomNumber -= table[i];
-                Debug.Log("HI MUNUGS");
             }
         }
+
+        Debug.Log(randomNumber);
+        randomNumber = 2;
+        Character.GetComponent<Character>().ChanceEvent(randomNumber);
 
 
     }
