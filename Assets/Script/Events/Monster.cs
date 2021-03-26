@@ -15,6 +15,7 @@ public class Monster : MonoBehaviour
     public GameObject combatUICanvas;
     public string popUp;
 
+    [SerializeField] private Vector3 transformOriginal;
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip battleStart;
@@ -24,6 +25,8 @@ public class Monster : MonoBehaviour
     [SerializeField] private float offsetX;
     [SerializeField] private float offsetY;
     [SerializeField] private float offsetZ;
+
+    [SerializeField] private float returnOffSety;
 
     void OnEnable()
     {
@@ -45,6 +48,15 @@ public class Monster : MonoBehaviour
 
         playerGO = GameObject.FindGameObjectWithTag("Player");
         originalScale = playerGO.transform.localScale;
+        transformOriginal = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, playerGO.transform.position.z);
+
+    
+    }
+
+    void Update()
+    {
+        transformOriginal = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, playerGO.transform.position.z);
+
     }
 
 
@@ -52,7 +64,7 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
-            playerGO.transform.localScale = new Vector3 (.15f, .3f, .15f);
+            playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);
             cameraEvent?.Invoke(cam);
@@ -74,7 +86,8 @@ public class Monster : MonoBehaviour
 
     void OnMonsterEventHeard(BasicEnemyTEST monster)
     {
-        playerGO.transform.position = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, playerGO.transform.position.z);
+        playerGO.transform.position = new Vector3(transformOriginal.x, 2.664f, transformOriginal.z);
+            //new Vector3(playerGO.transform.position.x - offsetX, playerGO.transform.position.y - offsetY, playerGO.transform.position.z - offsetZ);
         playerGO.transform.localScale = originalScale;
     }
 

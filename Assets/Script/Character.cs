@@ -16,7 +16,7 @@ public class Character : Entity
     public int health;
     public int steps;
     public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText;
-    SphereCollider m_Collider;
+    CapsuleCollider m_Collider;
     public bool isMoving;
     public string popUp;
     [SerializeField] protected AudioSource audioSource;
@@ -25,6 +25,7 @@ public class Character : Entity
     [SerializeField] private Canvas deathCanvas;
     [SerializeField] private int diceMinRoll;
     [SerializeField] private int diceMaxRoll;
+    [SerializeField] private Animator characterAnim;
     //Player stats (aside from HP, which is defined below)
     public int gold, xp, level, turnNumber;
 
@@ -36,7 +37,8 @@ public class Character : Entity
         turnNumber = 1;
         xp = 23;
         level = 01;
-        m_Collider = GetComponent<SphereCollider>();
+        m_Collider = GetComponent<CapsuleCollider>();
+        characterAnim = GetComponent<Animator>();
         this.HP = health;
         this.isAlive = true;
 
