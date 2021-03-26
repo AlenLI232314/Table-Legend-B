@@ -11,10 +11,12 @@ public class PopUpInfo : MonoBehaviour
 
     public List<GameObject> results;
 
+
     void Start()
     {
         Character = GameObject.Find("Character");
     }
+
 
     public void PopUp(string text)
     {
@@ -60,11 +62,14 @@ public class PopUpInfo : MonoBehaviour
             if (randomNumber <= weight)
             {
                 //set event result
+
                 //Debug.Log("Event result: " + weight);
+
 
             }
             else
             {
+
                 //Debug.Log("Event result: " + weight);
                 randomNumber -= weight;
             }
@@ -87,6 +92,7 @@ public class PopUpInfo : MonoBehaviour
         Debug.Log(randomNumber);
         randomNumber = 2;
         Character.GetComponent<Character>().ChanceEvent(randomNumber);
+
 
 
     }

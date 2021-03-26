@@ -120,7 +120,6 @@ public class Character : Entity
 
 
 
-    //Rolls the dice. Called when the player either presses the roll button or the E key
     public void Roll()
     {
         UpdatePlayerStats();
