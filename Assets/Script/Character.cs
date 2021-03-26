@@ -206,4 +206,19 @@ public class Character : Entity
             deathCanvas.gameObject.SetActive(true);
         }
     }
+
+    //Handles the stat effects given to the player when they land on a chance space, based on the int passed in
+    public void ChanceEvent(int eventNum)
+    {
+        switch(eventNum)
+        {
+            case 9:
+                
+                break;
+            default:
+                //Nothing happens
+                Debug.Log("Text: The Goddess of luck igores you.");
+                break;
+        }
+    }
 }
