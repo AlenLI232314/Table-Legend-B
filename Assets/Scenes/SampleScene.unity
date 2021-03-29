@@ -813,12 +813,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7ec3c795a30492144aba67d3cad2c368,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: 3.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ec3c795a30492144aba67d3cad2c368,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.875149
+      value: 10.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ec3c795a30492144aba67d3cad2c368,
         type: 3}
@@ -1021,42 +1021,42 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1992733719}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1161.4
+      value: -7.6753187
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.349
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 672.3
+      value: 0.71692824
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
@@ -1824,7 +1824,7 @@ RectTransform:
   m_Children:
   - {fileID: 476699858919979105}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2099,7 +2099,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
@@ -2481,7 +2481,7 @@ RectTransform:
   - {fileID: 604678423}
   - {fileID: 636701883}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2503,6 +2503,7 @@ MonoBehaviour:
   cameras: {fileID: 761703899}
   sceneManage: {fileID: 1113805621}
   monster: {fileID: 623635764}
+  enemyMonster: {fileID: 0}
   combatCanvas: {fileID: 428471723}
   boardCanvas: {fileID: 718918982}
   uICanAnim: {fileID: 428471729}
@@ -2719,11 +2720,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464278683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.19, y: 1.5400001, z: 1.3251412}
-  m_LocalScale: {x: 2.614, y: 1, z: 2.7116}
+  m_LocalPosition: {x: -6.19, y: 2.08, z: 1.3251412}
+  m_LocalScale: {x: 4.8607826, y: 1.179, z: 7.7876267}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477376591
 GameObject:
@@ -3045,7 +3046,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &542611346
 GameObject:
@@ -3203,7 +3204,7 @@ PrefabInstance:
     - target: {fileID: 1444017100974796855, guid: cbd03febfd3825d4b848947c1edd3592,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 1444017100974796855, guid: cbd03febfd3825d4b848947c1edd3592,
         type: 3}
@@ -4060,7 +4061,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &636701882
 GameObject:
@@ -4230,7 +4231,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &716856906
 GameObject:
@@ -4329,7 +4330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &718918983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4406,7 +4407,7 @@ RectTransform:
   - {fileID: 1946003003}
   - {fileID: 995273086}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4863,7 +4864,7 @@ Transform:
   - {fileID: 253555271}
   - {fileID: 51024707}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &761703899
 MonoBehaviour:
@@ -5096,42 +5097,42 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1992733719}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 216.28516
+      value: -13.155001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.349
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.181
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
@@ -5581,7 +5582,7 @@ RectTransform:
   m_Children:
   - {fileID: 1038391197}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5780,7 +5781,7 @@ Transform:
   m_LocalScale: {x: 0.28922, y: 0.58367, z: 0.25403008}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &898186567
 SphereCollider:
@@ -7080,7 +7081,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140081969
 GameObject:
@@ -7174,7 +7175,7 @@ RectTransform:
   m_Children:
   - {fileID: 1781851857}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7394,7 +7395,7 @@ RectTransform:
   m_Children:
   - {fileID: 744838762}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7454,7 +7455,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 02aa01f40b88b0c4194d95f5a1e93af0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02aa01f40b88b0c4194d95f5a1e93af0,
         type: 3}
@@ -7781,7 +7782,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
         type: 3}
@@ -9275,7 +9276,7 @@ RectTransform:
   m_Children:
   - {fileID: 895326038}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9641,7 +9642,7 @@ RectTransform:
   m_Children:
   - {fileID: 275578637}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10181,7 +10182,7 @@ MonoBehaviour:
   TavernGoldText: {fileID: 284684544}
   isMoving: 0
   popUp: 
-  audioSource: {fileID: 898186572}
+  audioSource: {fileID: 1574128426}
   playerMove:
   - {fileID: 8300000, guid: f18cdeb26553b2f4f85786624510abbb, type: 3}
   - {fileID: 8300000, guid: 7abe285a73ec31149872936d6c209f10, type: 3}
@@ -10336,42 +10337,42 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1992733719}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.0057979003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 472.7
+      value: -11.668333
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.349
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.181
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
@@ -10556,14 +10557,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596554885}
-  m_LocalRotation: {x: 0.19191846, y: 0.72035354, z: -0.2196943, w: 0.6292794}
-  m_LocalPosition: {x: -135.9, y: 3.04, z: -8.52}
+  m_LocalRotation: {x: 0.07384829, y: 0.8949111, z: -0.33541855, w: 0.2849123}
+  m_LocalPosition: {x: -127.694, y: 3.327, z: -0.563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1373178362}
   m_Father: {fileID: 761703898}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 39.973003, y: 143.07501, z: -4.412}
 --- !u!114 &1596554888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10970,7 +10971,7 @@ Transform:
   m_LocalScale: {x: 18.492, y: 1, z: 28.776867}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1721262411
 PrefabInstance:
@@ -11311,7 +11312,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ac31d1b014d3ba046958c52c8eac19a5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac31d1b014d3ba046958c52c8eac19a5,
         type: 3}
@@ -12291,7 +12292,7 @@ RectTransform:
   m_Children:
   - {fileID: 773953991}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12783,7 +12784,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1943639027
 GameObject:
@@ -12828,7 +12829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1944589912
 PrefabInstance:
@@ -12840,7 +12841,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
@@ -13243,7 +13244,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
         type: 3}
@@ -13317,12 +13318,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b271b18a7a5db7b48b8e674cf2c6e347, type: 3}
---- !u!4 &1992733719 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b271b18a7a5db7b48b8e674cf2c6e347,
+--- !u!1 &1992733720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b271b18a7a5db7b48b8e674cf2c6e347,
     type: 3}
   m_PrefabInstance: {fileID: 1992733718}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1992733721
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992733720}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be59bd139fd61794ba5992974760a6ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2016324103
 GameObject:
   m_ObjectHideFlags: 0
@@ -13801,7 +13821,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 88288548cb77a37499c85a4100c59878,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 88288548cb77a37499c85a4100c59878,
         type: 3}
@@ -13987,12 +14007,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132804921}
-  m_LocalRotation: {x: -0.36793968, y: 0.008924458, z: -0.0035334553, w: -0.9298002}
-  m_LocalPosition: {x: -9.398994, y: 3.9273887, z: -1.0479999}
+  m_LocalRotation: {x: 0.07384829, y: 0.8949111, z: -0.33541855, w: 0.2849123}
+  m_LocalPosition: {x: -16.863998, y: 12.317389, z: 7.1569996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 48.981003, y: 29.339, z: -3.6190002}
 --- !u!114 &2132804926
 MonoBehaviour:
@@ -15234,9 +15254,10 @@ MonoBehaviour:
   cam: {fileID: 11300321}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -15655,7 +15676,7 @@ Transform:
   - {fileID: 3452305695511080540}
   - {fileID: 2637180388558003038}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2785285381755895039
 GameObject:
@@ -15708,9 +15729,10 @@ MonoBehaviour:
   cam: {fileID: 1785458}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -16165,9 +16187,10 @@ MonoBehaviour:
   cam: {fileID: 1297901797}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 428471723}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -16977,9 +17000,10 @@ MonoBehaviour:
   cam: {fileID: 365318464}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -17551,9 +17575,10 @@ MonoBehaviour:
   cam: {fileID: 1240567464}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -17709,9 +17734,10 @@ MonoBehaviour:
   cam: {fileID: 253555270}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 428471723}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 428471728}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 1992733721}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -17931,9 +17957,10 @@ MonoBehaviour:
   cam: {fileID: 1633905321}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 428471723}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -18089,9 +18116,10 @@ MonoBehaviour:
   cam: {fileID: 939387174}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -18247,9 +18275,10 @@ MonoBehaviour:
   cam: {fileID: 1918200640}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 428471723}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -18483,9 +18512,10 @@ MonoBehaviour:
   cam: {fileID: 1310017656}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}
@@ -18657,9 +18687,10 @@ MonoBehaviour:
   cam: {fileID: 1423290273}
   boardUI: {fileID: 1051442930}
   playerGO: {fileID: 0}
-  combatUICanvas: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  combatManager: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
+  monsterAnim: {fileID: 0}
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   originalScale: {x: 0, y: 0, z: 0}

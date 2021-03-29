@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
+
 
 public class CombatUIManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CombatUIManager : MonoBehaviour
     public CameraManagement cameras;
     public SceneManage sceneManage;
     public BasicEnemyTEST monster;
+    public GameObject enemyMonster;
 
     public GameObject combatCanvas;
     public GameObject boardCanvas;
@@ -40,6 +42,8 @@ public class CombatUIManager : MonoBehaviour
     public Text turnText;
 
     public static event System.Action<BasicEnemyTEST> monsterEvent;
+    public static event System.Action<GameObject> monsterGameObject;
+
 
     void Start()
     {
@@ -71,6 +75,7 @@ public class CombatUIManager : MonoBehaviour
             enemyHealthText.text = enemyHealth.ToString();
 
             uICanAnim.SetBool("enemyIsDamaged", true);
+            monsterGameObject?.Invoke(enemyMonster);
 
             StartCoroutine(turn());
 

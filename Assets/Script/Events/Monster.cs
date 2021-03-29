@@ -12,10 +12,13 @@ public class Monster : MonoBehaviour
     public static event  System.Action <CinemachineVirtualCamera> cameraEvent;
     public GameObject boardUI;
     public GameObject playerGO;
-    public GameObject combatUICanvas;
+    //public GameObject combatUICanvas;
     public string popUp;
 
+    public CombatUIManager combatManager;
+
     [SerializeField] private Vector3 transformOriginal;
+    public Animator monsterAnim;
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip battleStart;
@@ -31,16 +34,17 @@ public class Monster : MonoBehaviour
     void OnEnable()
     {
         CombatUIManager.monsterEvent += OnMonsterEventHeard;
+        CombatUIManager.monsterGameObject += OnMonsterDamaged;
     }
 
     void OnDisable()
     {
         CombatUIManager.monsterEvent -= OnMonsterEventHeard;
+        CombatUIManager.monsterGameObject -= OnMonsterDamaged;
     }
 
     void Start()
     {
-
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
 
@@ -49,8 +53,6 @@ public class Monster : MonoBehaviour
         playerGO = GameObject.FindGameObjectWithTag("Player");
         originalScale = playerGO.transform.localScale;
         transformOriginal = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, playerGO.transform.position.z);
-
-    
     }
 
     void Update()
@@ -64,6 +66,7 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
+            combatManager.enemyMonster = monsterAnim.gameObject;
             playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);
@@ -90,6 +93,14 @@ public class Monster : MonoBehaviour
             //new Vector3(playerGO.transform.position.x - offsetX, playerGO.transform.position.y - offsetY, playerGO.transform.position.z - offsetZ);
         playerGO.transform.localScale = originalScale;
     }
+
+    void OnMonsterDamaged(GameObject monster)
+    {
+        monsterAnim = monsterAnim.gameObject.GetComponent<Animator>();
+        monsterAnim.SetTrigger("Damaged");
+    }
+
+
 
     //void PasueGame()
     //{
