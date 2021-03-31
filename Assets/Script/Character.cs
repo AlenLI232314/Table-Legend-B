@@ -26,6 +26,7 @@ public class Character : Entity
     [SerializeField] private int diceMinRoll;
     [SerializeField] private int diceMaxRoll;
     [SerializeField] private Animator characterAnim;
+    [SerializeField] private Animator uICanAnim;
     //Player stats (aside from HP, which is defined below)
     public int gold, xp, level, turnNumber;
 
@@ -207,5 +208,10 @@ public class Character : Entity
         {
             deathCanvas.gameObject.SetActive(true);
         }
+    }
+
+    public void damageReset()
+    {
+        uICanAnim.SetBool("playerIsDamaged", false);
     }
 }

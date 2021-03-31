@@ -19,6 +19,7 @@ public class Monster : MonoBehaviour
 
     [SerializeField] private Vector3 transformOriginal;
     public Animator monsterAnim;
+    public GameObject monster;
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip battleStart;
@@ -45,6 +46,7 @@ public class Monster : MonoBehaviour
 
     void Start()
     {
+
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
 
@@ -66,7 +68,7 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
-            combatManager.enemyMonster = monsterAnim.gameObject;
+            combatManager.enemyMonster = monster;
             playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);
@@ -96,7 +98,7 @@ public class Monster : MonoBehaviour
 
     void OnMonsterDamaged(GameObject monster)
     {
-        monsterAnim = monsterAnim.gameObject.GetComponent<Animator>();
+        monsterAnim = monster.gameObject.GetComponent<Animator>();
         monsterAnim.SetTrigger("Damaged");
     }
 

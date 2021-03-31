@@ -18,6 +18,8 @@ public class CombatUIManager : MonoBehaviour
 
     public Animator uICanAnim;
 
+    public Animator playerAnim;
+
     public Text playerHealthText;
     public Text enemyHealthText;
 
@@ -43,6 +45,7 @@ public class CombatUIManager : MonoBehaviour
 
     public static event System.Action<BasicEnemyTEST> monsterEvent;
     public static event System.Action<GameObject> monsterGameObject;
+    
 
 
     void Start()
@@ -74,7 +77,7 @@ public class CombatUIManager : MonoBehaviour
             enemyHealth -= playerDamage;
             enemyHealthText.text = enemyHealth.ToString();
 
-            uICanAnim.SetBool("enemyIsDamaged", true);
+            //uICanAnim.SetBool("enemyIsDamaged", true);
             monsterGameObject?.Invoke(enemyMonster);
 
             StartCoroutine(turn());
@@ -93,6 +96,7 @@ public class CombatUIManager : MonoBehaviour
             boardCanvas.SetActive(true);
             boardUI.SetActive(true);
             monsterEvent?.Invoke(monster);
+            
 
         }
     }
