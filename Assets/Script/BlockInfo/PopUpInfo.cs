@@ -54,9 +54,11 @@ public class PopUpInfo : MonoBehaviour
         foreach (var item in table)
         {
             total += item;
+            Debug.Log("Total = " + total);
         }
 
-        randomNumber = UnityEngine.Random.Range(0, total);
+        randomNumber = UnityEngine.Random.Range(1, total);
+        Debug.Log("total");
 
         foreach (var weight in table)
         {
@@ -91,8 +93,8 @@ public class PopUpInfo : MonoBehaviour
             }
         }
 
-        Debug.Log(randomNumber);
-        randomNumber = 2;
+       //Debug.Log(randomNumber);
+        //randomNumber = 110;
         characterScript.ChanceEvent(randomNumber);
 
 
