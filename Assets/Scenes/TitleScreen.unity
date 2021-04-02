@@ -730,7 +730,6 @@ GameObject:
   - component: {fileID: 179505250}
   - component: {fileID: 179505249}
   - component: {fileID: 179505248}
-  - component: {fileID: 179505247}
   m_Layer: 0
   m_Name: B_02
   m_TagString: Untagged
@@ -752,25 +751,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &179505247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179505245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &179505248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -843,7 +823,6 @@ GameObject:
   - component: {fileID: 202119060}
   - component: {fileID: 202119059}
   - component: {fileID: 202119058}
-  - component: {fileID: 202119057}
   m_Layer: 0
   m_Name: B_13
   m_TagString: Untagged
@@ -865,25 +844,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.16800001}
---- !u!114 &202119057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202119055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &202119058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1420,7 +1380,6 @@ GameObject:
   - component: {fileID: 378022199}
   - component: {fileID: 378022198}
   - component: {fileID: 378022197}
-  - component: {fileID: 378022196}
   m_Layer: 0
   m_Name: B_16
   m_TagString: Untagged
@@ -1442,25 +1401,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &378022196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378022194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &378022197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1696,8 +1636,6 @@ GameObject:
   - component: {fileID: 733663392}
   - component: {fileID: 733663391}
   - component: {fileID: 733663390}
-  - component: {fileID: 733663389}
-  - component: {fileID: 733663388}
   m_Layer: 0
   m_Name: B_11
   m_TagString: Untagged
@@ -1719,34 +1657,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &733663388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733663386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe350b08797d5db44afa08e30704dccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionBlock: {fileID: 0}
-  boardUI: {fileID: 0}
-  audioSource: {fileID: 0}
-  OpenUI: {fileID: 0}
---- !u!114 &733663389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733663386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399ed713deafee7498ebd7018584f34b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &733663390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1820,7 +1730,6 @@ GameObject:
   - component: {fileID: 740610558}
   - component: {fileID: 740610557}
   - component: {fileID: 740610556}
-  - component: {fileID: 740610555}
   m_Layer: 0
   m_Name: B_08
   m_TagString: Untagged
@@ -1842,25 +1751,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &740610555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740610553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &740610556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2618,8 +2508,6 @@ GameObject:
   - component: {fileID: 1072998062}
   - component: {fileID: 1072998061}
   - component: {fileID: 1072998060}
-  - component: {fileID: 1072998059}
-  - component: {fileID: 1072998058}
   m_Layer: 0
   m_Name: B_15
   m_TagString: Untagged
@@ -2641,34 +2529,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1072998058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072998056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe350b08797d5db44afa08e30704dccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionBlock: {fileID: 0}
-  boardUI: {fileID: 0}
-  audioSource: {fileID: 0}
-  OpenUI: {fileID: 0}
---- !u!114 &1072998059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072998056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399ed713deafee7498ebd7018584f34b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1072998060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2963,8 +2823,6 @@ GameObject:
   - component: {fileID: 1222296230}
   - component: {fileID: 1222296229}
   - component: {fileID: 1222296228}
-  - component: {fileID: 1222296227}
-  - component: {fileID: 1222296226}
   m_Layer: 0
   m_Name: B_07
   m_TagString: Untagged
@@ -2986,34 +2844,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1222296226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222296224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe350b08797d5db44afa08e30704dccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionBlock: {fileID: 0}
-  boardUI: {fileID: 0}
-  audioSource: {fileID: 0}
-  OpenUI: {fileID: 0}
---- !u!114 &1222296227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222296224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399ed713deafee7498ebd7018584f34b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1222296228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3379,7 +3209,6 @@ GameObject:
   - component: {fileID: 1272150680}
   - component: {fileID: 1272150679}
   - component: {fileID: 1272150678}
-  - component: {fileID: 1272150677}
   m_Layer: 0
   m_Name: B_17
   m_TagString: Untagged
@@ -3401,25 +3230,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1272150677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272150675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &1272150678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3492,8 +3302,6 @@ GameObject:
   - component: {fileID: 1279963574}
   - component: {fileID: 1279963573}
   - component: {fileID: 1279963572}
-  - component: {fileID: 1279963571}
-  - component: {fileID: 1279963570}
   m_Layer: 0
   m_Name: B_06
   m_TagString: Untagged
@@ -3515,34 +3323,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1279963570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279963568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02234fba1a24ea49a82bc508c304990, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chestBlock: {fileID: 0}
-  audioSource: {fileID: 0}
-  money: []
-  boardUI: {fileID: 0}
---- !u!114 &1279963571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279963568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399ed713deafee7498ebd7018584f34b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1279963572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3744,7 +3524,6 @@ GameObject:
   - component: {fileID: 1344598359}
   - component: {fileID: 1344598358}
   - component: {fileID: 1344598357}
-  - component: {fileID: 1344598356}
   m_Layer: 0
   m_Name: B_09
   m_TagString: Untagged
@@ -3766,25 +3545,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1344598356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344598354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &1344598357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4012,7 +3772,6 @@ GameObject:
   - component: {fileID: 1514843297}
   - component: {fileID: 1514843296}
   - component: {fileID: 1514843295}
-  - component: {fileID: 1514843294}
   m_Layer: 0
   m_Name: B_10
   m_TagString: Untagged
@@ -4034,19 +3793,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1514843294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514843292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93d6f028b14283541a0fe509dbb5c062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopBlock: {fileID: 0}
 --- !u!65 &1514843295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4119,7 +3865,6 @@ GameObject:
   - component: {fileID: 1574470695}
   - component: {fileID: 1574470694}
   - component: {fileID: 1574470693}
-  - component: {fileID: 1574470692}
   m_Layer: 0
   m_Name: B_01
   m_TagString: Untagged
@@ -4141,25 +3886,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1574470692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574470690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &1574470693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4232,7 +3958,6 @@ GameObject:
   - component: {fileID: 1648884896}
   - component: {fileID: 1648884895}
   - component: {fileID: 1648884894}
-  - component: {fileID: 1648884893}
   m_Layer: 0
   m_Name: B_19
   m_TagString: Untagged
@@ -4254,25 +3979,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1648884893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648884891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &1648884894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4345,7 +4051,6 @@ GameObject:
   - component: {fileID: 1668303475}
   - component: {fileID: 1668303474}
   - component: {fileID: 1668303473}
-  - component: {fileID: 1668303472}
   m_Layer: 0
   m_Name: B_14
   m_TagString: Untagged
@@ -4367,25 +4072,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1668303472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668303470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &1668303473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4458,7 +4144,6 @@ GameObject:
   - component: {fileID: 1683763788}
   - component: {fileID: 1683763787}
   - component: {fileID: 1683763786}
-  - component: {fileID: 1683763785}
   m_Layer: 0
   m_Name: B_03
   m_TagString: Untagged
@@ -4480,25 +4165,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1683763785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683763783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!65 &1683763786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4847,8 +4513,6 @@ GameObject:
   - component: {fileID: 1745762156}
   - component: {fileID: 1745762155}
   - component: {fileID: 1745762154}
-  - component: {fileID: 1745762153}
-  - component: {fileID: 1745762152}
   m_Layer: 0
   m_Name: B_12
   m_TagString: Untagged
@@ -4870,34 +4534,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1745762152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745762150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02234fba1a24ea49a82bc508c304990, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chestBlock: {fileID: 0}
-  audioSource: {fileID: 0}
-  money: []
-  boardUI: {fileID: 0}
---- !u!114 &1745762153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745762150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399ed713deafee7498ebd7018584f34b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1745762154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5567,7 +5203,6 @@ GameObject:
   - component: {fileID: 1914395628}
   - component: {fileID: 1914395627}
   - component: {fileID: 1914395626}
-  - component: {fileID: 1914395625}
   m_Layer: 0
   m_Name: B_04
   m_TagString: Untagged
@@ -5589,22 +5224,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1914395625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914395623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe350b08797d5db44afa08e30704dccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionBlock: {fileID: 0}
-  boardUI: {fileID: 0}
-  audioSource: {fileID: 0}
-  OpenUI: {fileID: 0}
 --- !u!114 &1914395626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5947,7 +5566,6 @@ GameObject:
   - component: {fileID: 1970043486}
   - component: {fileID: 1970043490}
   - component: {fileID: 1970043489}
-  - component: {fileID: 1970043488}
   - component: {fileID: 1970043487}
   m_Layer: 0
   m_Name: B_05
@@ -5983,25 +5601,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 142.3378, y: 37.05798, z: 142.33781}
   m_Center: {x: 0, y: 15.489247, z: -0.00001253151}
---- !u!114 &1970043488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970043485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a383739650384464d8eb27e9cb9b226a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fightWarnning: {fileID: 0}
-  basicEnemyTEST: {fileID: 0}
-  cam: {fileID: 0}
-  boardUI: {fileID: 0}
-  combatUICanvas: {fileID: 0}
-  audioSource: {fileID: 0}
-  battleStart: {fileID: 0}
 --- !u!23 &1970043489
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6061,8 +5660,6 @@ GameObject:
   - component: {fileID: 2034505137}
   - component: {fileID: 2034505136}
   - component: {fileID: 2034505135}
-  - component: {fileID: 2034505134}
-  - component: {fileID: 2034505133}
   m_Layer: 0
   m_Name: B_18
   m_TagString: Untagged
@@ -6084,34 +5681,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2034505133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034505131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe350b08797d5db44afa08e30704dccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionBlock: {fileID: 0}
-  boardUI: {fileID: 0}
-  audioSource: {fileID: 0}
-  OpenUI: {fileID: 0}
---- !u!114 &2034505134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034505131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399ed713deafee7498ebd7018584f34b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2034505135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6340,7 +5909,6 @@ GameObject:
   - component: {fileID: 2142850101}
   - component: {fileID: 2142850100}
   - component: {fileID: 2142850099}
-  - component: {fileID: 2142850098}
   m_Layer: 0
   m_Name: B_20
   m_TagString: Untagged
@@ -6362,20 +5930,6 @@ Transform:
   m_Father: {fileID: 717899134}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2142850098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142850096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f5f5a12c3f81446b135433afc7d2a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finalBlock: {fileID: 0}
-  boardUI: {fileID: 0}
 --- !u!65 &2142850099
 BoxCollider:
   m_ObjectHideFlags: 0
