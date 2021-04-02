@@ -85,13 +85,17 @@ public class Monster : MonoBehaviour
         }
     }
     void OnMouseDown()
-
     {
+        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
         if (!IsPointerOverUIObject())
         {
-            PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+            if(popUp != null && !combatManager.gameObject.activeInHierarchy)
+            {
+              
 
-            pop.PopUp(popUp);
+                pop.PopUp(popUp);
+            }
+            
         }
 
     }
