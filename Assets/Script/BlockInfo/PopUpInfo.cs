@@ -42,6 +42,11 @@ public class PopUpInfo : MonoBehaviour
     public int randomNumber;
     public int total;
 
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
+
     public void DrawNumber()
     {
 
@@ -101,4 +106,6 @@ public class PopUpInfo : MonoBehaviour
 
 
     }
+
+  
 }

@@ -40,6 +40,8 @@ public class Random : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    
+
     void OnMouseDown()
 
     {
