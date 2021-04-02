@@ -17,7 +17,8 @@ public class Character : Entity
     int routePosition;
     public int health;
     public int steps;
-    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText;
+    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText, 
+        ExtraRollText;
     CapsuleCollider m_Collider;
     public bool isMoving;
     public string popUp;
@@ -32,6 +33,8 @@ public class Character : Entity
     //Player stats (aside from HP, which is defined below)
     public int gold, xp, level, turnNumber;
 
+    //Turns true when the player gets an extra roll chance event
+    private bool hasExtraRoll;
 
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
 
@@ -41,6 +44,8 @@ public class Character : Entity
         DamageDebuffPanel = GameObject.Find("Damage Debuff Panel");
         DoubleDamagePanel = GameObject.Find("Double Damage Panel");
         ExtraRollPanel = GameObject.Find("Extra Roll Panel");
+
+        extraRoll = false;
 
         turnNumber = 1;
         xp = 23;
@@ -235,6 +240,9 @@ public class Character : Entity
                 DoubleDamagePanel.SetActive(true);
                 break;
             case 3:
+                hasExtraRoll = true;
+                ExtraRollPanel.SetActive(true);
+                break;
 
 
             default:
