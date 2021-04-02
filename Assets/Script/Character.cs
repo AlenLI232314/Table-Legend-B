@@ -210,8 +210,14 @@ public class Character : Entity
         }
     }
 
-    public void damageReset()
+    void OnEnable()
     {
-        uICanAnim.SetBool("playerIsDamaged", false);
+        CombatUIManager.playerGO += OnPlayerDamaged;
     }
+    void OnPlayerDamaged(GameObject player)
+    {
+        characterAnim = player.gameObject.GetComponent<Animator>();
+        characterAnim.SetTrigger("Damaged");
+    }
+
 }

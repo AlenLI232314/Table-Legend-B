@@ -43,11 +43,13 @@ public class CombatUIManager : MonoBehaviour
 
     public GameObject boardUI;
     public GameObject playerAttack;
+    public GameObject playerCharacter;
 
     public Text turnText;
 
     public static event System.Action<BasicEnemyTEST> monsterEvent;
     public static event System.Action<GameObject> monsterGameObject;
+    public static event System.Action<GameObject> playerGO;
     #endregion
 
 
@@ -127,9 +129,7 @@ public class CombatUIManager : MonoBehaviour
         player.HP -= enemyDamage;
 
         uICanAnim.SetBool("playerIsDamaged", true);
-
-       
-
+        playerGO?.Invoke(playerCharacter);
         playerHealthText.text = player.HP.ToString();
         Debug.Log("Stop Waiting");
 
@@ -146,11 +146,6 @@ public class CombatUIManager : MonoBehaviour
 
     }
 
-    public void damageReset()
-    {
-        uICanAnim.SetBool("playerIsDamaged", false);
-    }
-
     public void enemyDamageReset()
     {
         uICanAnim.SetBool("enemyIsDamaged", false);
@@ -159,6 +154,7 @@ public class CombatUIManager : MonoBehaviour
     public void turnReset()
     {
         uICanAnim.SetBool("turnIsStarting", false);
+        uICanAnim.SetBool("playerIsDamaged", false);
     }
 
 

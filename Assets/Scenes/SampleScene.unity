@@ -2631,6 +2631,7 @@ MonoBehaviour:
   enemyHealthSlider: {fileID: 2102575621}
   boardUI: {fileID: 1051442930}
   playerAttack: {fileID: 1027004918}
+  playerCharacter: {fileID: 1379180673}
   turnText: {fileID: 636701884}
 --- !u!95 &428471729
 Animator:
@@ -3299,7 +3300,7 @@ PrefabInstance:
     - target: {fileID: 1444017100974796851, guid: cbd03febfd3825d4b848947c1edd3592,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1444017100974796855, guid: cbd03febfd3825d4b848947c1edd3592,
         type: 3}
@@ -9580,6 +9581,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1379180673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6025056119092719958, guid: 3da1dc6ba9029de4ab318d34f7327ee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6871408156695760155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1423290272
 GameObject:
   m_ObjectHideFlags: 0
@@ -9744,7 +9751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1472105875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10264,7 +10271,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 6871408156695760155}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1379180673}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee2893fcc6541604d8daf888dc5ceb56, type: 3}
@@ -17401,6 +17408,10 @@ PrefabInstance:
       propertyPath: TavernHealthText
       value: 
       objectReference: {fileID: 942232197}
+    - target: {fileID: 1574128423, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6025056119092719958, guid: 3da1dc6ba9029de4ab318d34f7327ee1,
         type: 3}
       propertyPath: m_Name
