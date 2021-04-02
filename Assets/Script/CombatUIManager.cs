@@ -7,7 +7,7 @@ using UnityEngine;
 public class CombatUIManager : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    #region Variables
     public CameraManagement cameras;
     public SceneManage sceneManage;
     public BasicEnemyTEST monster;
@@ -38,15 +38,23 @@ public class CombatUIManager : MonoBehaviour
     public Text playerDamageText;
     public Text enemyDamageText;
 
+    public Slider playerHealthSlider;
+    public Slider enemyHealthSlider;
+
     public GameObject boardUI;
     public GameObject playerAttack;
+    public GameObject playerCharacter;
 
     public Text turnText;
 
     public static event System.Action<BasicEnemyTEST> monsterEvent;
     public static event System.Action<GameObject> monsterGameObject;
+    public static event System.Action<GameObject> playerGO;
+    #endregion
     
     bool doubleDMG;
+
+
 
 
     void Start()
@@ -56,6 +64,8 @@ public class CombatUIManager : MonoBehaviour
         enemyDamageText.text = enemyHealth.ToString();
         enemyHealth = monster.HP;
         enemyHealthText.text = enemyHealth.ToString();
+        playerHealthSlider.value = player.HP;
+        enemyHealthSlider.value = enemyHealth;
 
     }
 
@@ -66,7 +76,10 @@ public class CombatUIManager : MonoBehaviour
         if (player.HP <= 0)
         {
             this.gameObject.SetActive(false);
-        } 
+        }
+
+        playerHealthSlider.value = player.HP;
+        enemyHealthSlider.value = enemyHealth;
     }
 
     public void attack()
@@ -75,9 +88,11 @@ public class CombatUIManager : MonoBehaviour
         {
             playerDamage = UnityEngine.Random.Range(playerDamageMin, playerDamageMax);
             playerDamageText.text = playerDamage.ToString();
+            playerHealthSlider.value = player.HP;
 
             enemyHealth -= playerDamage;
             enemyHealthText.text = enemyHealth.ToString();
+
 
             //uICanAnim.SetBool("enemyIsDamaged", true);
             monsterGameObject?.Invoke(enemyMonster);
@@ -111,14 +126,13 @@ public class CombatUIManager : MonoBehaviour
         turnText.text = "Enemy Turn!";
         yield return new WaitForSecondsRealtime(5f);
         enemyDamage = UnityEngine.Random.Range(enemyDamageMin, enemyDamageMax);
+        enemyHealthSlider.value = enemyHealth;
         enemyDamageText.text = enemyDamage.ToString();
 
         player.HP -= enemyDamage;
 
         uICanAnim.SetBool("playerIsDamaged", true);
-
-       
-
+        playerGO?.Invoke(playerCharacter);
         playerHealthText.text = player.HP.ToString();
         Debug.Log("Stop Waiting");
 
@@ -135,11 +149,6 @@ public class CombatUIManager : MonoBehaviour
 
     }
 
-    public void damageReset()
-    {
-        uICanAnim.SetBool("playerIsDamaged", false);
-    }
-
     public void enemyDamageReset()
     {
         uICanAnim.SetBool("enemyIsDamaged", false);
@@ -148,6 +157,7 @@ public class CombatUIManager : MonoBehaviour
     public void turnReset()
     {
         uICanAnim.SetBool("turnIsStarting", false);
+        uICanAnim.SetBool("playerIsDamaged", false);
     }
 
     //Decreases the player's max attack. Called via random event

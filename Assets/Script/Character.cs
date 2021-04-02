@@ -215,9 +215,9 @@ public class Character : Entity
         }
     }
 
-    public void damageReset()
+    void OnEnable()
     {
-        uICanAnim.SetBool("playerIsDamaged", false);
+        CombatUIManager.playerGO += OnPlayerDamaged;
     }
 
     //Handles the stat effects given to the player when they land on a chance space, based on the int passed in
@@ -240,4 +240,10 @@ public class Character : Entity
                 break;
         }
     }
+    void OnPlayerDamaged(GameObject player)
+    {
+        characterAnim = player.gameObject.GetComponent<Animator>();
+        characterAnim.SetTrigger("Damaged");
+    }
+
 }
