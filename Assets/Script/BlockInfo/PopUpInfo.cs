@@ -6,6 +6,7 @@ using TMPro;
 public class PopUpInfo : MonoBehaviour
 {
     public GameObject popUpBox, Character;
+    private Character characterScript;
     public Animator animator;
     public TMP_Text popUpText;
 
@@ -14,7 +15,8 @@ public class PopUpInfo : MonoBehaviour
 
     void Start()
     {
-        Character = GameObject.Find("Character");
+        Character = GameObject.Find("Player");
+        characterScript = Character.GetComponent<Character>();
     }
 
 
@@ -91,7 +93,7 @@ public class PopUpInfo : MonoBehaviour
 
         Debug.Log(randomNumber);
         randomNumber = 2;
-        Character.GetComponent<Character>().ChanceEvent(randomNumber);
+        characterScript.ChanceEvent(randomNumber);
 
 
 

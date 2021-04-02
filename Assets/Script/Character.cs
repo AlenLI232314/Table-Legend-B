@@ -13,7 +13,7 @@ public class Character : Entity
 
     public Route currentRoute;
 
-    [SerializeField] private GameObject CombatUICanvas, DoubleDamagePanel, DamageDebuffPanel;
+    [SerializeField] private GameObject CombatUICanvas, DoubleDamagePanel, DamageDebuffPanel, ExtraRollPanel;
     int routePosition;
     public int health;
     public int steps;
@@ -37,9 +37,10 @@ public class Character : Entity
 
      void Start()
      {
-        //CombatUICanvas = GameObject.Find("Combat UI Canvas");
-        //DamageDebuffPanel = GameObject.Find("Damage Debuff Panel");
-        //DoubleDamagePanel = GameObject.Find("Double Damage Panel");
+        CombatUICanvas = GameObject.Find("Combat UI Canvas");
+        DamageDebuffPanel = GameObject.Find("Damage Debuff Panel");
+        DoubleDamagePanel = GameObject.Find("Double Damage Panel");
+        ExtraRollPanel = GameObject.Find("Extra Roll Panel");
 
         turnNumber = 1;
         xp = 23;
@@ -233,6 +234,8 @@ public class Character : Entity
                 CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
                 DoubleDamagePanel.SetActive(true);
                 break;
+            case 3:
+
 
             default:
                 //Nothing happens
