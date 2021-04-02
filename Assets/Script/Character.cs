@@ -76,6 +76,7 @@ public class Character : Entity
     private void Update()
     {
         checkHealth();
+        UpdatePlayerStats();
     }
 
     //roll dice
