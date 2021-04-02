@@ -12,7 +12,7 @@ public class Random : MonoBehaviour
 
     [SerializeField] private AudioClip OpenUI;
     public string popUp;
-    public GameObject popUpBox;
+ 
 
 
    
