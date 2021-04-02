@@ -91,7 +91,7 @@ public class Monster : MonoBehaviour
 
     void OnMonsterEventHeard(BasicEnemyTEST monster)
     {
-        playerGO.transform.position = new Vector3(transformOriginal.x, 2.664f, transformOriginal.z);
+        playerGO.transform.position = new Vector3(transformOriginal.x, transformOriginal.y, transformOriginal.z);
             //new Vector3(playerGO.transform.position.x - offsetX, playerGO.transform.position.y - offsetY, playerGO.transform.position.z - offsetZ);
         playerGO.transform.localScale = originalScale;
     }
