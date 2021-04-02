@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Cinemachine;
+using UnityEngine.EventSystems;
 
 public class Monster : MonoBehaviour
 {
@@ -84,10 +85,26 @@ public class Monster : MonoBehaviour
         }
     }
     void OnMouseDown()
+
     {
-        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
-        pop.PopUp(popUp);
+        if (!IsPointerOverUIObject())
+        {
+            PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+
+            pop.PopUp(popUp);
+        }
+
     }
+
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
+
 
     void OnMonsterEventHeard(BasicEnemyTEST monster)
     {

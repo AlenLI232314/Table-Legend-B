@@ -14,7 +14,7 @@ public class PopUpInfo : MonoBehaviour
 
     void Start()
     {
-        Character = GameObject.Find("Character");
+        Character = GameObject.Find("Player");
     }
 
 
