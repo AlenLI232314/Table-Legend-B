@@ -174,7 +174,6 @@ public class CombatUIManager : MonoBehaviour
         {
             playerDamageMin = playerDamageMax;
         }
-        Debug.Log("hi");
     }
 
     //Doubles the player's damage (doubles the min and max rolls)

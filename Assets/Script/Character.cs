@@ -13,11 +13,13 @@ public class Character : Entity
 
     public Route currentRoute;
 
-    [SerializeField] private GameObject CombatUICanvas, DoubleDamagePanel, DamageDebuffPanel;
+    [SerializeField] private GameObject CombatUICanvas, DoubleDamagePanel, DamageDebuffPanel, ExtraRollPanel,
+        LoseMoneyPanel, GainMoneyPanel, NothingHappensPanel;
     int routePosition;
     public int health;
     public int steps;
-    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText;
+    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText, 
+        ExtraRollText;
     CapsuleCollider m_Collider;
     public bool isMoving;
     public string popUp;
@@ -30,16 +32,13 @@ public class Character : Entity
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
     //Player stats (aside from HP, which is defined below)
-    public int gold, xp, level, turnNumber;
-
+    public int gold, xp, level, turnNumber, extraRollAmount;
 
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
 
      void Start()
      {
-        //CombatUICanvas = GameObject.Find("Combat UI Canvas");
-        //DamageDebuffPanel = GameObject.Find("Damage Debuff Panel");
-        //DoubleDamagePanel = GameObject.Find("Double Damage Panel");
+        
 
         turnNumber = 1;
         xp = 23;
@@ -52,7 +51,7 @@ public class Character : Entity
         audioSource.GetComponent<AudioSource>();
 
         gold = 10;
-        TurnsText.SetText("01");
+        UpdatePlayerStats();
 
      }
 
@@ -71,11 +70,17 @@ public class Character : Entity
         LevelText.SetText(level.ToString());
 
         TurnsText.SetText(turnNumber.ToString());
+
+        
     }
 
     private void Update()
     {
         checkHealth();
+        if (extraRollAmount <= 0)
+        {
+            ExtraRollText.gameObject.SetActive(false);
+        }
         UpdatePlayerStats();
     }
 
@@ -176,9 +181,17 @@ public class Character : Entity
             }
             audioSource.PlayOneShot(playerMove[UnityEngine.Random.Range(0, playerMove.Length)]);
             yield return new WaitForSeconds(0.1f);
-            steps--;
-            DiceText.SetText(steps.ToString());
 
+            if (extraRollAmount > 0)
+            {
+                extraRollAmount--;
+                ExtraRollText.SetText("+" + extraRollAmount.ToString());
+            }
+            else
+            {
+                steps--;
+                DiceText.SetText(steps.ToString());
+            }
             routePosition++;
 
         }
@@ -234,12 +247,29 @@ public class Character : Entity
                 CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
                 DoubleDamagePanel.SetActive(true);
                 break;
+            case 3:
+            case 8:
+                extraRollAmount = 3;
+                ExtraRollPanel.SetActive(true);
+                ExtraRollText.gameObject.SetActive(true);
+                break;
+            case 4:
+            case 9:
+                gold -= 10;
+                LoseMoneyPanel.SetActive(true);
+                break;
+            case 5:
+            case 10:
+                gold += 10;
+                GainMoneyPanel.SetActive(true);
+                break;
+
 
             default:
-                //Nothing happens
-                Debug.Log("Text: The Goddess of luck igores you.");
+                NothingHappensPanel.SetActive(true);
                 break;
         }
+        UpdatePlayerStats();
     }
     void OnPlayerDamaged(GameObject player)
     {

@@ -6,6 +6,7 @@ using TMPro;
 public class PopUpInfo : MonoBehaviour
 {
     public GameObject popUpBox, Character;
+    private Character characterScript;
     public Animator animator;
     public TMP_Text popUpText;
 
@@ -14,6 +15,8 @@ public class PopUpInfo : MonoBehaviour
 
     void Start()
     {
+        Character = GameObject.Find("Player");
+        characterScript = Character.GetComponent<Character>();
         Character = GameObject.Find("Player");
     }
 
@@ -52,9 +55,11 @@ public class PopUpInfo : MonoBehaviour
         foreach (var item in table)
         {
             total += item;
+            Debug.Log("Total = " + total);
         }
 
-        randomNumber = UnityEngine.Random.Range(0, total);
+        randomNumber = UnityEngine.Random.Range(1, total);
+        Debug.Log("total");
 
         foreach (var weight in table)
         {
@@ -89,9 +94,9 @@ public class PopUpInfo : MonoBehaviour
             }
         }
 
-        Debug.Log(randomNumber);
-        randomNumber = 2;
-        Character.GetComponent<Character>().ChanceEvent(randomNumber);
+       //Debug.Log(randomNumber);
+        //randomNumber = 110;
+        characterScript.ChanceEvent(randomNumber);
 
 
 
