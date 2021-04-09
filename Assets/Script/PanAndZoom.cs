@@ -59,10 +59,18 @@ public class PanAndZoom : MonoBehaviour
         if (y >= Screen.height * .95f)
         {
             direction.z -= 1;
+            if(x <= (Screen.width/2))
+            {
+                direction.x += 1;
+            }
         }
         if (y <= Screen.height * .05f)
         {
             direction.z += 1;
+            if (x >= (Screen.width / 2))
+            {
+                direction.x -= 1;
+            }
         }
         if (x >= Screen.width * .95f)
         {
