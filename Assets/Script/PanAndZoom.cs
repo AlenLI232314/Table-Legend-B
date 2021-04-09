@@ -33,7 +33,7 @@ public class PanAndZoom : MonoBehaviour
         float x = inputProvider.GetAxisValue(0);
         float y = inputProvider.GetAxisValue(1);
         float z = inputProvider.GetAxisValue(2);
-        Debug.Log("x: "+x+" y: "+y+" z: "+z);
+        //Debug.Log("x: "+x+" y: "+y+" z: "+z);
 
         if (x != 0 || y != 0)
         {
@@ -49,7 +49,7 @@ public class PanAndZoom : MonoBehaviour
     public void ZoonScreen(float increment)
     {
         float fov = virtualCamera.m_Lens.FieldOfView;
-        float target = Mathf.Clamp(fov + increment, zoomInMax, zoomOutMax);
+        float target = Mathf.Clamp(fov - increment, zoomInMax, zoomOutMax);
         virtualCamera.m_Lens.FieldOfView = Mathf.Lerp(fov, target, zoomSpeed * Time.deltaTime);
     } 
 
@@ -58,27 +58,27 @@ public class PanAndZoom : MonoBehaviour
         Vector3 direction = Vector3.zero;
         if (y >= Screen.height * .95f)
         {
-            direction.z -= 1;
+            direction.z -= 2;
             if(x <= (Screen.width/2))
             {
-                direction.x += 1;
+                direction.x += 2;
             }
         }
         if (y <= Screen.height * .05f)
         {
-            direction.z += 1;
+            direction.z += 2;
             if (x >= (Screen.width / 2))
             {
-                direction.x -= 1;
+                direction.x -= 2;
             }
         }
         if (x >= Screen.width * .95f)
         {
-            direction.x -= 1;
+            direction.x -= 2;
         }
         if (x <= Screen.width * 0.05f)
         {
-            direction.x += 1;
+            direction.x += 2;
         }
         return direction;
     }
