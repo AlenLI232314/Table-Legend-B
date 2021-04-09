@@ -55,6 +55,8 @@ public class Monster : MonoBehaviour
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
 
+        basicEnemyTEST = FindObjectOfType<BasicEnemyTEST>();
+
         audioSource = GetComponent<AudioSource>();
 
         playerGO = GameObject.FindGameObjectWithTag("Player");
@@ -80,7 +82,8 @@ public class Monster : MonoBehaviour
             audioSource.PlayOneShot(battleStart);
             cameraEvent?.Invoke(cam);
             fightWarnning.SetActive(true);
-            //basicEnemyTEST.EnemySpawn();
+            basicEnemyTEST.EnemySpawn();
+            combatManager.enemyMonster = monster;
             boardUI.SetActive(false);
             //combatUICanvas.SetActive(true);
 
