@@ -18,6 +18,8 @@ public class CombatUIManager : MonoBehaviour
 
     public Animator uICanAnim;
 
+    public Animator uITransitions;
+
     public Animator playerAnim;
 
     public Text playerHealthText;
@@ -109,9 +111,12 @@ public class CombatUIManager : MonoBehaviour
             cameras.changeCameras();
             sceneManage.ResumeGame();
             enemyHealth = monster.HP;
+            uITransitions.SetTrigger("open");
+            //yield return new WaitForSecondsRealtime(2f);
             combatCanvas.SetActive(false);
             boardCanvas.SetActive(true);
             boardUI.SetActive(true);
+            uITransitions.ResetTrigger("Close");
             monsterEvent?.Invoke(monster);
             
 

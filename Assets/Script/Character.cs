@@ -29,6 +29,7 @@ public class Character : Entity
     [SerializeField] private Canvas deathCanvas;
     [SerializeField] private int diceMinRoll;
     [SerializeField] private int diceMaxRoll;
+    [SerializeField] private Animator uITransitions;
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
     //Player stats (aside from HP, which is defined below)
@@ -226,6 +227,7 @@ public class Character : Entity
         if(this.HP <= 0)
         {
             deathCanvas.gameObject.SetActive(true);
+
         }
     }
 
@@ -242,31 +244,37 @@ public class Character : Entity
             case 1:
                 CombatUICanvas.GetComponent<CombatUIManager>().DamageDebuff();
                 DamageDebuffPanel.SetActive(true);
+                uITransitions.SetTrigger("Open");
                 break;
             case 2:
                 CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
                 DoubleDamagePanel.SetActive(true);
+                uITransitions.SetTrigger("Open");
                 break;
             case 3:
             case 8:
                 extraRollAmount = 3;
                 ExtraRollPanel.SetActive(true);
                 ExtraRollText.gameObject.SetActive(true);
+                uITransitions.SetTrigger("Open");
                 break;
             case 4:
             case 9:
                 gold -= 10;
                 LoseMoneyPanel.SetActive(true);
+                uITransitions.SetTrigger("Open");
                 break;
             case 5:
             case 10:
                 gold += 10;
                 GainMoneyPanel.SetActive(true);
+                uITransitions.SetTrigger("Open");
                 break;
 
 
             default:
                 NothingHappensPanel.SetActive(true);
+                uITransitions.SetTrigger("Open");
                 break;
         }
         UpdatePlayerStats();
