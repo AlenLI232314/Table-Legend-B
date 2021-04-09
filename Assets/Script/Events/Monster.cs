@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using Cinemachine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using TMPro;
 
 public class Monster : MonoBehaviour
 {
@@ -24,6 +26,8 @@ public class Monster : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip battleStart;
+
+    [SerializeField] private Slider monsterSlider;
 
     [SerializeField] private Vector3 originalScale;
     [SerializeField] private Vector3 newScale;
@@ -47,7 +51,7 @@ public class Monster : MonoBehaviour
 
     void Start()
     {
-
+        combatManager.enemyHealthSlider = monsterSlider;
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
 
@@ -70,6 +74,7 @@ public class Monster : MonoBehaviour
         if (player.gameObject.tag == "Player" )
         {
             combatManager.enemyMonster = monster;
+            combatManager.enemyHealthSlider = monsterSlider;
             playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);
@@ -112,6 +117,7 @@ public class Monster : MonoBehaviour
 
     void OnMonsterEventHeard(BasicEnemyTEST monster)
     {
+        monsterAnim.SetTrigger("Died");
         playerGO.transform.position = new Vector3(transformOriginal.x, transformOriginal.y, transformOriginal.z);
             //new Vector3(playerGO.transform.position.x - offsetX, playerGO.transform.position.y - offsetY, playerGO.transform.position.z - offsetZ);
         playerGO.transform.localScale = originalScale;
