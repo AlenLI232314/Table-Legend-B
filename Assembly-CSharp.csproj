@@ -673,6 +673,9 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -694,17 +697,14 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>D:/rogth/Documents/GitHub/Table-Legend-B/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
