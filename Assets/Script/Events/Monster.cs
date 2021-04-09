@@ -75,7 +75,7 @@ public class Monster : MonoBehaviour
             audioSource.PlayOneShot(battleStart);
             cameraEvent?.Invoke(cam);
             fightWarnning.SetActive(true);
-            basicEnemyTEST.EnemySpawn();
+            //basicEnemyTEST.EnemySpawn();
             boardUI.SetActive(false);
             //combatUICanvas.SetActive(true);
 
