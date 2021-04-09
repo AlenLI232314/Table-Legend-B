@@ -139,6 +139,5 @@ public class CameraManagement : MonoBehaviour
             Time.timeScale = 1f;
             animator.Play("CombatCam11");
         }
-
     }
 }
