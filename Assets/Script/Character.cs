@@ -31,6 +31,9 @@ public class Character : Entity
     [SerializeField] private int diceMaxRoll;
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
+
+    
+
     //Player stats (aside from HP, which is defined below)
     public int gold, xp, level, turnNumber, extraRollAmount;
 
@@ -38,8 +41,6 @@ public class Character : Entity
 
      void Start()
      {
-        
-
         turnNumber = 1;
         xp = 23;
         level = 01;
@@ -53,7 +54,10 @@ public class Character : Entity
         gold = 10;
         UpdatePlayerStats();
 
-     }
+        AkSoundEngine.SetSwitch("Music_Switch", "nonCombat_switch", gameObject);
+        AkSoundEngine.PostEvent("Music_Switch", gameObject);
+
+    }
 
     //Called in the update method; assigns player UI elements to their correct values
     void UpdatePlayerStats()
@@ -232,6 +236,8 @@ public class Character : Entity
     void OnEnable()
     {
         CombatUIManager.playerGO += OnPlayerDamaged;
+        //AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
+        //AkSoundEngine.PostEvent("Music_Switch", gameObject);
     }
 
     //Handles the stat effects given to the player when they land on a chance space, based on the int passed in
