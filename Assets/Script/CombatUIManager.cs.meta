@@ -3,7 +3,28 @@ guid: 6a381a1468f3c6143af9120acc5e57ec
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cameras: {instanceID: 0}
+  - sceneManage: {instanceID: 0}
+  - monster: {instanceID: 0}
+  - enemyMonster: {instanceID: 0}
+  - combatCanvas: {instanceID: 0}
+  - boardCanvas: {instanceID: 0}
+  - uICanAnim: {instanceID: 0}
+  - playerAnim: {instanceID: 0}
+  - playerHealthText: {instanceID: 0}
+  - enemyHealthText: {instanceID: 0}
+  - player: {instanceID: 0}
+  - playerDamageText: {instanceID: 0}
+  - enemyDamageText: {instanceID: 0}
+  - playerHealthSlider: {instanceID: 0}
+  - enemyHealthSlider: {instanceID: 0}
+  - boardUI: {instanceID: 0}
+  - playerAttack: {instanceID: 0}
+  - playerCharacter: {instanceID: 0}
+  - turnText: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - takeDamage: {fileID: 8300000, guid: ca137fc0c651b5048bb2659d6335615e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
