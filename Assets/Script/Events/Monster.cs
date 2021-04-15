@@ -28,6 +28,7 @@ public class Monster : MonoBehaviour
     [SerializeField] private AudioClip battleStart;
 
     [SerializeField] private Slider monsterSlider;
+    [SerializeField] private TextMeshProUGUI monsterDamage;
 
     [SerializeField] private Vector3 originalScale;
     [SerializeField] private Vector3 newScale;
@@ -42,6 +43,7 @@ public class Monster : MonoBehaviour
         CombatUIManager.monsterEvent += OnMonsterEventHeard;
         CombatUIManager.monsterGameObject += OnMonsterDamaged;
         CombatUIManager.monsterAttack += MonsterAttack;
+        CombatUIManager.monsterDeath += MonsterDeath;
         //AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
         //AkSoundEngine.PostEvent("Music_Switch", gameObject);
     }
@@ -51,6 +53,7 @@ public class Monster : MonoBehaviour
         CombatUIManager.monsterEvent -= OnMonsterEventHeard;
         CombatUIManager.monsterGameObject -= OnMonsterDamaged;
         CombatUIManager.monsterAttack -= MonsterAttack;
+        CombatUIManager.monsterDeath -= MonsterDeath;
         
     }
 
@@ -82,6 +85,7 @@ public class Monster : MonoBehaviour
         if (player.gameObject.tag == "Player" )
         {
             combatManager.enemyMonster = monster;
+            combatManager.playerDamageText = monsterDamage;
             combatManager.enemyHealthSlider = monsterSlider;
             playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
@@ -127,7 +131,6 @@ public class Monster : MonoBehaviour
 
     void OnMonsterEventHeard(BasicEnemyTEST monster)
     {
-        monsterAnim.SetTrigger("Died");
         playerGO.transform.position = new Vector3(transformOriginal.x, transformOriginal.y, transformOriginal.z);
             //new Vector3(playerGO.transform.position.x - offsetX, playerGO.transform.position.y - offsetY, playerGO.transform.position.z - offsetZ);
         playerGO.transform.localScale = originalScale;
@@ -143,6 +146,12 @@ public class Monster : MonoBehaviour
     {
         monsterAnim = monster.gameObject.GetComponent<Animator>();
         monsterAnim.SetTrigger("Attacked");
+    }
+
+    void MonsterDeath(GameObject monster)
+    {
+        monsterAnim = monster.gameObject.GetComponent<Animator>();
+        monsterAnim.SetTrigger("Died");
     }
 
 

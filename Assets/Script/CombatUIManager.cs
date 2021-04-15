@@ -45,8 +45,10 @@ public class CombatUIManager : MonoBehaviour
     public int enemyDamageMax;
 
     //Player and enemy damage 
-    public Text playerDamageText;
-    public Text enemyDamageText;
+    //Damage Dealt By The Player
+    public TextMeshProUGUI playerDamageText;
+    //Damage Dealt By The Enemy
+    public TextMeshProUGUI enemyDamageText;
     //Sliders that contain player health and enemy health
     public Slider playerHealthSlider;
     public Slider enemyHealthSlider;
@@ -65,6 +67,7 @@ public class CombatUIManager : MonoBehaviour
     public static event System.Action<BasicEnemyTEST> monsterEvent;
     public static event System.Action<GameObject> monsterGameObject;
     public static event System.Action<GameObject> monsterAttack;
+    public static event System.Action<GameObject> monsterDeath;
     public static event System.Action<GameObject> playerGO;
     #endregion
     
@@ -78,7 +81,6 @@ public class CombatUIManager : MonoBehaviour
     {
         doubleDMG = false;
         playerHealthText.text = player.HP.ToString();
-        enemyDamageText.text = enemyHealth.ToString();
         enemyHealth = monster.HP;
         enemyHealthText.text = enemyHealth.ToString();
         playerHealthSlider.value = player.HP;
@@ -126,9 +128,11 @@ public class CombatUIManager : MonoBehaviour
             //Calls for a random damage between minimum and max.
             playerDamage = UnityEngine.Random.Range(playerDamageMin, playerDamageMax);
             //Player damage is printed to damage text.
-            playerDamageText.text = playerDamage.ToString();
+            playerDamageText.text = "-" + playerDamage.ToString();
             ////Player health slider is updated.
             //playerHealthSlider.value = player.HP;
+
+
 
             //Enemy health has player damage subtracted from it. 
             enemyHealth -= playerDamage;
@@ -149,22 +153,7 @@ public class CombatUIManager : MonoBehaviour
         {
             //Reset the turn animations for UI canvas
             turnReset();
-            //Enable Roll button.
-            playerAttack.SetActive(true);
-            //Change the camera back to the board camera view. 
-            cameras.changeCameras();
-            //Resumes the game to keep player from rolling while in combat. 
-            sceneManage.ResumeGame();
-            //Resets the enemy health to full to not conflict when changing soaces, 
-            enemyHealth = monster.HP;
-            //Turns off combat canvas
-            combatCanvas.SetActive(false);
-            //enables board canvas
-            boardCanvas.SetActive(true);
-            //Enables board UI
-            boardUI.SetActive(true);
-            //Invokes the Monster Event to reset player scale.
-            monsterEvent?.Invoke(monster);
+            StartCoroutine(enemyDeath());
             
 
         }
@@ -181,11 +170,11 @@ public class CombatUIManager : MonoBehaviour
         enemyDamage = UnityEngine.Random.Range(enemyDamageMin, enemyDamageMax);
         
         enemyHealthSlider.value = enemyHealth;
-        enemyDamageText.text = enemyDamage.ToString();
         monsterAttack?.Invoke(enemyMonster);
         
 
         player.HP -= enemyDamage;
+        enemyDamageText.text = "-" + enemyDamage.ToString();
 
         uICanAnim.SetBool("playerIsDamaged", true);
         playerGO?.Invoke(playerCharacter);
@@ -205,6 +194,28 @@ public class CombatUIManager : MonoBehaviour
 
     }
 
+    public IEnumerator enemyDeath()
+    {
+        monsterDeath?.Invoke(enemyMonster);
+        yield return new WaitForSecondsRealtime(1f);
+        //Enable Roll button.
+        playerAttack.SetActive(true);
+        //Change the camera back to the board camera view. 
+        cameras.changeCameras();
+        //Resumes the game to keep player from rolling while in combat. 
+        sceneManage.ResumeGame();
+        //Resets the enemy health to full to not conflict when changing soaces, 
+        enemyHealth = monster.HP;
+        //Turns off combat canvas
+        combatCanvas.SetActive(false);
+        //enables board canvas
+        boardCanvas.SetActive(true);
+        //Enables board UI
+        boardUI.SetActive(true);
+        //Invokes the Monster Event to reset player scale.
+        monsterEvent?.Invoke(monster);
+
+    }
     public void enemyDamageReset()
     {
         uICanAnim.SetBool("enemyIsDamaged", false);
