@@ -2,8 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Items : MonoBehaviour, IBuyable<int>, IDamageModifyable<int>, IUseable
+[CreateAssetMenu(fileName = "New Item", menuName = "Create/Item")]
+public class Items : ScriptableObject, IBuyable<int>, IDamageModifyable<int>, IUseable
 {
+    new public string Name = "Item";
+    public Sprite sprite = null;
+    public Character character;
+
+    //TODO: Make codeable Items
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +28,7 @@ public class Items : MonoBehaviour, IBuyable<int>, IDamageModifyable<int>, IUsea
     public void Use()
     {
         //will get rid of stuff from playerInv
+        //done in playerInventory
     }
 
     public void Buy(int buyPrice)
@@ -33,12 +43,12 @@ public class Items : MonoBehaviour, IBuyable<int>, IDamageModifyable<int>, IUsea
 
     public void DamageReduce(int damageReduce)
     {
-        //armor reduces dmg (-1 dmg w/ basic armor etc)
+        this.character.HP += damageReduce;
     }
 
     public void DamageEnhance(int damageEnhance)
     {
-        //not sure if I should keep this (+1 to dmg w/ sword enchant or etc)
+        this.character.diceSides.GenericResult += 1;
     }
 
     public void DamageChangeDice()
