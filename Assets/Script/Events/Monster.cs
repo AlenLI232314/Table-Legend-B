@@ -41,12 +41,15 @@ public class Monster : MonoBehaviour
     {
         CombatUIManager.monsterEvent += OnMonsterEventHeard;
         CombatUIManager.monsterGameObject += OnMonsterDamaged;
+        //AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
+        //AkSoundEngine.PostEvent("Music_Switch", gameObject);
     }
 
     void OnDisable()
     {
         CombatUIManager.monsterEvent -= OnMonsterEventHeard;
         CombatUIManager.monsterGameObject -= OnMonsterDamaged;
+        
     }
 
     void Start()
@@ -62,6 +65,7 @@ public class Monster : MonoBehaviour
         playerGO = GameObject.FindGameObjectWithTag("Player");
         originalScale = playerGO.transform.localScale;
         transformOriginal = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, playerGO.transform.position.z);
+   
     }
 
     void Update()
@@ -88,6 +92,7 @@ public class Monster : MonoBehaviour
             //combatUICanvas.SetActive(true);
 
             audioSource.PlayOneShot(battleStart);
+            
 
             //PasueGame();
         }

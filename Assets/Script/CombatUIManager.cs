@@ -68,7 +68,8 @@ public class CombatUIManager : MonoBehaviour
     #endregion
     
     bool doubleDMG;
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip takeDamage;
 
 
 
@@ -80,6 +81,7 @@ public class CombatUIManager : MonoBehaviour
         enemyHealth = monster.HP;
         enemyHealthText.text = enemyHealth.ToString();
         playerHealthSlider.value = player.HP;
+        audioSource = GetComponent<AudioSource>();
 
         if (enemyHealthSlider != null)
         {
@@ -129,6 +131,7 @@ public class CombatUIManager : MonoBehaviour
 
             //Enemy health has player damage subtracted from it. 
             enemyHealth -= playerDamage;
+            
             enemyHealthText.text = enemyHealth.ToString();
 
             //Calls for the monster game object event to be invoked. 
@@ -176,6 +179,7 @@ public class CombatUIManager : MonoBehaviour
         enemyDamage = UnityEngine.Random.Range(enemyDamageMin, enemyDamageMax);
         enemyHealthSlider.value = enemyHealth;
         enemyDamageText.text = enemyDamage.ToString();
+        
 
         player.HP -= enemyDamage;
 
@@ -200,6 +204,7 @@ public class CombatUIManager : MonoBehaviour
     public void enemyDamageReset()
     {
         uICanAnim.SetBool("enemyIsDamaged", false);
+        
     }
 
     public void turnReset()

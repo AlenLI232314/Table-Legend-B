@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3791779620">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2724869341" Language="SFX" Hash="131359486">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music_Switch</ObjectPath>
+			<ShortName>Music_Switch</ShortName>
+			<Path>Music_Switch.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2724869341" Name="Music_Switch" ObjectPath="\Events\Default Work Unit\Music_Switch" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="409733037" Language="SFX">
+							<ShortName>TBL_InGame_NonCombat_v02.wav</ShortName>
+							<Path>SFX\TBL_InGame_NonCombat_v02_D79FB2B7.wem</Path>
+						</File>
+						<File Id="497736455" Language="SFX">
+							<ShortName>TBL_InGame_Combat_v02.wav</ShortName>
+							<Path>SFX\TBL_InGame_Combat_v02_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{923F8D58-099A-4722-A2AC-621584D8624B}">
+							<Media>
+								<File Id="497736455"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C563A914-3D78-4CAA-98EE-5D64984D55E0}">
+							<Media>
+								<File Id="409733037"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="2724869341" Name="Music_Switch" ObjectPath="\Switches\Default Work Unit\Music_Switch">
+					<Switches>
+						<Switch Id="534574109" Name="nonCombat_switch" ObjectPath="\Switches\Default Work Unit\Music_Switch\nonCombat_switch"/>
+						<Switch Id="1313000764" Name="combat_switch" ObjectPath="\Switches\Default Work Unit\Music_Switch\combat_switch"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
