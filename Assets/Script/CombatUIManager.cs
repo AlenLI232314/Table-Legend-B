@@ -64,6 +64,7 @@ public class CombatUIManager : MonoBehaviour
     //Variables that house the events and subscriptions
     public static event System.Action<BasicEnemyTEST> monsterEvent;
     public static event System.Action<GameObject> monsterGameObject;
+    public static event System.Action<GameObject> monsterAttack;
     public static event System.Action<GameObject> playerGO;
     #endregion
     
@@ -137,6 +138,7 @@ public class CombatUIManager : MonoBehaviour
             //Calls for the monster game object event to be invoked. 
             monsterGameObject?.Invoke(enemyMonster);
 
+
             //Begin turn Coroutine.
             StartCoroutine(turn());
 
@@ -177,8 +179,10 @@ public class CombatUIManager : MonoBehaviour
         turnText.text = "Enemy Turn!";
         yield return new WaitForSecondsRealtime(5f);
         enemyDamage = UnityEngine.Random.Range(enemyDamageMin, enemyDamageMax);
+        
         enemyHealthSlider.value = enemyHealth;
         enemyDamageText.text = enemyDamage.ToString();
+        monsterAttack?.Invoke(enemyMonster);
         
 
         player.HP -= enemyDamage;

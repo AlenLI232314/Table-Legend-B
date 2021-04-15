@@ -41,6 +41,7 @@ public class Monster : MonoBehaviour
     {
         CombatUIManager.monsterEvent += OnMonsterEventHeard;
         CombatUIManager.monsterGameObject += OnMonsterDamaged;
+        CombatUIManager.monsterAttack += MonsterAttack;
         //AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
         //AkSoundEngine.PostEvent("Music_Switch", gameObject);
     }
@@ -49,6 +50,7 @@ public class Monster : MonoBehaviour
     {
         CombatUIManager.monsterEvent -= OnMonsterEventHeard;
         CombatUIManager.monsterGameObject -= OnMonsterDamaged;
+        CombatUIManager.monsterAttack -= MonsterAttack;
         
     }
 
@@ -135,6 +137,12 @@ public class Monster : MonoBehaviour
     {
         monsterAnim = monster.gameObject.GetComponent<Animator>();
         monsterAnim.SetTrigger("Damaged");
+    }
+
+    void MonsterAttack(GameObject monster)
+    {
+        monsterAnim = monster.gameObject.GetComponent<Animator>();
+        monsterAnim.SetTrigger("Attacked");
     }
 
 
