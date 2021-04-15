@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInventory : MonoBehaviour
+public class Apple : FoodItems
 {
-    public Character character;
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.foodHeal = 4;
     }
 
     // Update is called once per frame
