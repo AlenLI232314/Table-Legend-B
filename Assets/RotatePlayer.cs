@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class RotatePlayer : MonoBehaviour
 {
     [SerializeField] private GameObject playerGameObject;
-    [SerializeField] private int rotationOffset;
+    [SerializeField] private float rotationOffset;
 
 
     private void Start()
