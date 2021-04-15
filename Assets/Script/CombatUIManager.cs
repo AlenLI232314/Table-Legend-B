@@ -53,7 +53,8 @@ public class CombatUIManager : MonoBehaviour
     #endregion
     
     bool doubleDMG;
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip takeDamage;
 
 
 
@@ -66,7 +67,7 @@ public class CombatUIManager : MonoBehaviour
         enemyHealthText.text = enemyHealth.ToString();
         playerHealthSlider.value = player.HP;
         enemyHealthSlider.value = enemyHealth;
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -89,8 +90,9 @@ public class CombatUIManager : MonoBehaviour
             playerDamage = UnityEngine.Random.Range(playerDamageMin, playerDamageMax);
             playerDamageText.text = playerDamage.ToString();
             playerHealthSlider.value = player.HP;
-
+           
             enemyHealth -= playerDamage;
+            
             enemyHealthText.text = enemyHealth.ToString();
 
 
@@ -109,6 +111,7 @@ public class CombatUIManager : MonoBehaviour
             cameras.changeCameras();
             sceneManage.ResumeGame();
             enemyHealth = monster.HP;
+
             combatCanvas.SetActive(false);
             boardCanvas.SetActive(true);
             boardUI.SetActive(true);
@@ -128,6 +131,7 @@ public class CombatUIManager : MonoBehaviour
         enemyDamage = UnityEngine.Random.Range(enemyDamageMin, enemyDamageMax);
         enemyHealthSlider.value = enemyHealth;
         enemyDamageText.text = enemyDamage.ToString();
+        
 
         player.HP -= enemyDamage;
 
@@ -152,6 +156,7 @@ public class CombatUIManager : MonoBehaviour
     public void enemyDamageReset()
     {
         uICanAnim.SetBool("enemyIsDamaged", false);
+        
     }
 
     public void turnReset()
