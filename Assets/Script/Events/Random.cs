@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.EventSystems;
 
 public class Random : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Random : MonoBehaviour
 
     [SerializeField] private AudioClip OpenUI;
     public string popUp;
-
+ 
 
 
    
@@ -39,14 +40,27 @@ public class Random : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    
+
     void OnMouseDown()
 
     {
+        if (!IsPointerOverUIObject())
+        {
+            PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
 
-        PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
+            pop.PopUp(popUp);
+        }
+    
+    }
 
-        pop.PopUp(popUp);
-
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
     }
 
 

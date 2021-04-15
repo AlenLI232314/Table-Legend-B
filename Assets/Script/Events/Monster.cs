@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Cinemachine;
+using UnityEngine.EventSystems;
 
 public class Monster : MonoBehaviour
 {
@@ -36,12 +37,15 @@ public class Monster : MonoBehaviour
     {
         CombatUIManager.monsterEvent += OnMonsterEventHeard;
         CombatUIManager.monsterGameObject += OnMonsterDamaged;
+        //AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
+        //AkSoundEngine.PostEvent("Music_Switch", gameObject);
     }
 
     void OnDisable()
     {
         CombatUIManager.monsterEvent -= OnMonsterEventHeard;
         CombatUIManager.monsterGameObject -= OnMonsterDamaged;
+        
     }
 
     void Start()
@@ -55,6 +59,7 @@ public class Monster : MonoBehaviour
         playerGO = GameObject.FindGameObjectWithTag("Player");
         originalScale = playerGO.transform.localScale;
         transformOriginal = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, playerGO.transform.position.z);
+   
     }
 
     void Update()
@@ -74,11 +79,12 @@ public class Monster : MonoBehaviour
             audioSource.PlayOneShot(battleStart);
             cameraEvent?.Invoke(cam);
             fightWarnning.SetActive(true);
-            basicEnemyTEST.EnemySpawn();
+            //basicEnemyTEST.EnemySpawn();
             boardUI.SetActive(false);
             //combatUICanvas.SetActive(true);
 
             audioSource.PlayOneShot(battleStart);
+            
 
             //PasueGame();
         }
@@ -86,12 +92,32 @@ public class Monster : MonoBehaviour
     void OnMouseDown()
     {
         PopUpInfo pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpInfo>();
-        pop.PopUp(popUp);
+        if (!IsPointerOverUIObject())
+        {
+            if(popUp != null && !combatManager.gameObject.activeInHierarchy)
+            {
+              
+
+                pop.PopUp(popUp);
+            }
+            
+        }
+
     }
+
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
+
 
     void OnMonsterEventHeard(BasicEnemyTEST monster)
     {
-        playerGO.transform.position = new Vector3(transformOriginal.x, 2.664f, transformOriginal.z);
+        playerGO.transform.position = new Vector3(transformOriginal.x, transformOriginal.y, transformOriginal.z);
             //new Vector3(playerGO.transform.position.x - offsetX, playerGO.transform.position.y - offsetY, playerGO.transform.position.z - offsetZ);
         playerGO.transform.localScale = originalScale;
     }
