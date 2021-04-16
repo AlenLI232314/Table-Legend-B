@@ -13,7 +13,7 @@ public class ToolTipTrigger : MonoBehaviour,IPointerEnterHandler,IPointerExitHan
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        LeanTween.delayedCall(0.5f, () =>
+        LeanTween.delayedCall(1f, () =>
         {
             ToolTipSystem.Show(content, header);
         });
