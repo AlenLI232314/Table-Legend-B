@@ -18,12 +18,13 @@ public class CameraManagement : MonoBehaviour
     void Start()
     {
 
+        Time.timeScale = 1f;
+        animator.Play("IntroCam");
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
     void OnEnable()
@@ -138,6 +139,14 @@ public class CameraManagement : MonoBehaviour
 
             Time.timeScale = 1f;
             animator.Play("CombatCam11");
+        }
+
+        if (worldCamera && cam.gameObject.name == "IntroCam")
+        {
+            worldCamera = !worldCamera;
+
+            Time.timeScale = 1f;
+            animator.Play("IntroCam");
         }
     }
 }
