@@ -10,6 +10,8 @@ public class CameraManagement : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private bool worldCamera = true;
+
+    public CinemachineVirtualCamera IntroCam;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -18,8 +20,8 @@ public class CameraManagement : MonoBehaviour
     void Start()
     {
 
-        //Time.timeScale = 1f;
-        //animator.Play("IntroCam");
+        Time.timeScale = 1f;
+        animator.Play("IntroCam");
     }
 
     // Update is called once per frame
@@ -49,9 +51,17 @@ public class CameraManagement : MonoBehaviour
 
     }
 
+    public void resetCamera()
+    {
+        Debug.Log("called reset");
+        Time.timeScale = 1f;
+        animator.Play("WorldCamera");
+        worldCamera = true;
+    }
+
     void OnCameraEventHeard(CinemachineVirtualCamera cam)
     {
-
+        
         cam.gameObject.SetActive(true);
 
         if (worldCamera && cam.gameObject.name == "CombatCam1")
@@ -142,12 +152,12 @@ public class CameraManagement : MonoBehaviour
             animator.Play("CombatCam11");
         }
 
-        //if (worldCamera && cam.gameObject.name == "IntroCam")
-        //{
-        //    worldCamera = !worldCamera;
+        if (worldCamera && cam.gameObject.name == "IntroCam")
+        {
+            worldCamera = !worldCamera;
 
-        //    Time.timeScale = 1f;
-        //    animator.Play("IntroCam");
-        //}
+            Time.timeScale = 1f;
+            animator.Play("IntroCam");
+        }
     }
 }

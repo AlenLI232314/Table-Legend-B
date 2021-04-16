@@ -13,6 +13,8 @@ public class MapView : MonoBehaviour
     private Button thisButton;
     private GameManager gameManager;
 
+    public CameraManagement camManagement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +26,8 @@ public class MapView : MonoBehaviour
     }
 
     //Called when this button is clicked
-    void Clicked()
+    public void Clicked()
     {
-        gameManager.changeView();
+        camManagement.resetCamera();
     }
 }
