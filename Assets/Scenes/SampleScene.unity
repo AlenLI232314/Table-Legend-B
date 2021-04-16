@@ -12364,6 +12364,7 @@ MonoBehaviour:
   diceMaxRoll: 1
   characterAnim: {fileID: 0}
   uICanAnim: {fileID: 0}
+  cameras: {fileID: 0}
   gold: 0
   xp: 0
   level: 0
@@ -32500,6 +32501,10 @@ PrefabInstance:
       propertyPath: XPText
       value: 
       objectReference: {fileID: 1853242576}
+    - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
+      propertyPath: cameras
+      value: 
+      objectReference: {fileID: 761703899}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: DiceText
       value: 

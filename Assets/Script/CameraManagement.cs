@@ -18,8 +18,8 @@ public class CameraManagement : MonoBehaviour
     void Start()
     {
 
-        Time.timeScale = 1f;
-        animator.Play("IntroCam");
+        //Time.timeScale = 1f;
+        //animator.Play("IntroCam");
     }
 
     // Update is called once per frame
@@ -39,6 +39,7 @@ public class CameraManagement : MonoBehaviour
 
     public void changeCameras()
     {
+        Debug.Log("ding dogn");
         if (!worldCamera)
         {
             Time.timeScale = 1f;
@@ -141,12 +142,12 @@ public class CameraManagement : MonoBehaviour
             animator.Play("CombatCam11");
         }
 
-        if (worldCamera && cam.gameObject.name == "IntroCam")
-        {
-            worldCamera = !worldCamera;
+        //if (worldCamera && cam.gameObject.name == "IntroCam")
+        //{
+        //    worldCamera = !worldCamera;
 
-            Time.timeScale = 1f;
-            animator.Play("IntroCam");
-        }
+        //    Time.timeScale = 1f;
+        //    animator.Play("IntroCam");
+        //}
     }
 }

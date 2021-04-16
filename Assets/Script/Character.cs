@@ -32,7 +32,7 @@ public class Character : Entity
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
 
-    
+
 
     //Player stats (aside from HP, which is defined below)
     public int gold, xp, level, turnNumber, extraRollAmount;
