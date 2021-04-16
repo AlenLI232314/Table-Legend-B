@@ -454,11 +454,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585830754862034870
     List: []
-  ExpandedItems:
-  - /baer_tableLegendWwise
-  - /baer_tableLegendWwise/Events
-  - /baer_tableLegendWwise/Events/Default Work Unit
-  - /baer_tableLegendWwise/SoundBanks
-  - /baer_tableLegendWwise/SoundBanks/Default Work Unit
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

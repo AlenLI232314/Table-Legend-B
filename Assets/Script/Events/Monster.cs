@@ -20,6 +20,8 @@ public class Monster : MonoBehaviour
 
     public CombatUIManager combatManager;
 
+    public GameObject toolTipUI;
+
     [SerializeField] private Vector3 transformOriginal;
     public Animator monsterAnim;
     public GameObject monster;
@@ -98,7 +100,7 @@ public class Monster : MonoBehaviour
             //combatUICanvas.SetActive(true);
 
             audioSource.PlayOneShot(battleStart);
-            
+            toolTipUI.SetActive(false);
 
             //PasueGame();
         }
@@ -152,6 +154,7 @@ public class Monster : MonoBehaviour
     {
         monsterAnim = monster.gameObject.GetComponent<Animator>();
         monsterAnim.SetTrigger("Died");
+        toolTipUI.SetActive(true);
     }
 
 
