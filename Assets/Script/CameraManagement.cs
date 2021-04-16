@@ -59,6 +59,21 @@ public class CameraManagement : MonoBehaviour
         worldCamera = true;
     }
 
+    public void mapView()
+    {
+        Time.timeScale = 1f;
+        if (worldCamera)
+        {
+            animator.Play("MapView");
+            
+        }
+        else
+        {
+            animator.Play("WorldCamera");
+        }
+        worldCamera = !worldCamera;
+    }
+
     void OnCameraEventHeard(CinemachineVirtualCamera cam)
     {
         

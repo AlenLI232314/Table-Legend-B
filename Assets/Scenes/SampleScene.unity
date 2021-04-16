@@ -10449,6 +10449,7 @@ GameObject:
   - component: {fileID: 735754115}
   - component: {fileID: 735754114}
   - component: {fileID: 735754113}
+  - component: {fileID: 735754116}
   m_Layer: 5
   m_Name: Map Button
   m_TagString: Untagged
@@ -10520,7 +10521,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 761703899}
-        m_MethodName: resetCamera
+        m_MethodName: mapView
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 735754116}
+        m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10567,6 +10579,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735754111}
   m_CullTransparentMesh: 0
+--- !u!114 &735754116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735754111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6bd78813b92ef45a300b450190d697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapCam: {fileID: 1500091332}
+  boardCam: {fileID: 1596554886}
 --- !u!1 &740433071
 GameObject:
   m_ObjectHideFlags: 0
@@ -11252,8 +11278,8 @@ MonoBehaviour:
     m_VirtualCamera: {fileID: 1115928872}
     m_ActivateAfter: 1
     m_MinDuration: 1
-  - m_FullHash: 798937018
-    m_VirtualCamera: {fileID: 1115928872}
+  - m_FullHash: 311889887
+    m_VirtualCamera: {fileID: 1500091332}
     m_ActivateAfter: 1
     m_MinDuration: 1
   m_DefaultBlend:
@@ -11294,6 +11320,8 @@ MonoBehaviour:
   - m_Hash: 1928589805
     m_ParentHash: 756556552
   - m_Hash: 798937018
+    m_ParentHash: 756556552
+  - m_Hash: 311889887
     m_ParentHash: 756556552
 --- !u!4 &761703898
 Transform:
@@ -21971,9 +21999,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1500091328}
   - component: {fileID: 1500091332}
-  - component: {fileID: 1500091331}
-  - component: {fileID: 1500091330}
-  - component: {fileID: 1500091329}
   m_Layer: 0
   m_Name: MapView
   m_TagString: Untagged
@@ -21988,62 +22013,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500091327}
-  m_LocalRotation: {x: 0.026820432, y: 0.6740606, z: -0.7372655, w: 0.03691296}
-  m_LocalPosition: {x: -120.885, y: 7.863, z: -11.162}
+  m_LocalRotation: {x: 0.0035059582, y: 0.72333056, z: -0.6904667, w: 0.0060315244}
+  m_LocalPosition: {x: -119.45, y: 9.14, z: -8.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1367754181}
   m_Father: {fileID: 761703898}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 84.812004, y: 6.4870005, z: -168.34201}
---- !u!114 &1500091329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500091327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ConfineMode: 1
-  m_BoundingVolume: {fileID: 449876298}
-  m_BoundingShape2D: {fileID: 0}
-  m_ConfineScreenEdges: 1
-  m_Damping: 0.4
---- !u!114 &1500091330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500091327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b618b06e0919d2748bcf536490cd0d3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panSpeed: 2
-  zoomSpeed: 5
-  zoomInMax: 5
-  zoomOutMax: 40
---- !u!114 &1500091331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500091327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerIndex: -1
-  XYAxis: {fileID: 8411766450726045205, guid: 034e223c7564ea140a25bc8ec2b8066c, type: 3}
-  ZAxis: {fileID: -1764785016608383881, guid: 034e223c7564ea140a25bc8ec2b8066c, type: 3}
+  m_LocalEulerAnglesHint: {x: 87.329, y: 175.219, z: -4.008}
 --- !u!114 &1500091332
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class MapView : MonoBehaviour
 {
@@ -13,21 +14,30 @@ public class MapView : MonoBehaviour
     private Button thisButton;
     private GameManager gameManager;
 
-    public CameraManagement camManagement;
+
+    public CinemachineVirtualCamera mapCam, boardCam;
+    public static event System.Action<CinemachineVirtualCamera> cameraEvent;
+    bool onMapCam;
 
     // Start is called before the first frame update
     void Start()
     {
-        //assigns the button (which you attatch this script to) and the gamemanager
-        thisButton = GetComponent<Button>();
-
-        thisButton.onClick.AddListener(Clicked);
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        mapCam.gameObject.SetActive(false);
+        onMapCam = false;
     }
 
     //Called when this button is clicked
     public void Clicked()
     {
-        camManagement.resetCamera();
+        Debug.Log("map view clicked");
+        if (!onMapCam)
+        {
+           cameraEvent?.Invoke(mapCam);
+        }
+        else
+        {
+            cameraEvent?.Invoke(boardCam);
+        }
+        onMapCam = !onMapCam;
     }
 }
