@@ -12,10 +12,10 @@ public class Random : MonoBehaviour
 
     [SerializeField] private AudioClip OpenUI;
     public string popUp;
- 
+    public GameObject toolTipUI;
 
 
-   
+
 
 
     void Start()
@@ -33,6 +33,7 @@ public class Random : MonoBehaviour
             boardUI.SetActive(false);
             audioSource.PlayOneShot(OpenUI);
             PasueGame();
+            toolTipUI.SetActive(false);
         }
     }
     void PasueGame()

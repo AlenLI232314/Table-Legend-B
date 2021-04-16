@@ -8,6 +8,8 @@ public class Shop : MonoBehaviour
     public GameObject shopBlock;
     public GameObject boardUI;
     public string popUp;
+    public GameObject toolTipUI;
+
 
 
 
@@ -25,6 +27,7 @@ public class Shop : MonoBehaviour
             boardUI.SetActive(false);
             shopBlock.SetActive(true);
             //PauseGame();
+            toolTipUI.SetActive(false);
         }
     }
     void OnMouseDown()

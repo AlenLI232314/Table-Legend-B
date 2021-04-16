@@ -8,6 +8,7 @@ public class FinalBlock : MonoBehaviour
     public GameObject finalBlock;
     public GameObject boardUI;
     public string popUp;
+    public GameObject toolTipUI;
 
 
 
@@ -24,6 +25,7 @@ public class FinalBlock : MonoBehaviour
             finalBlock.SetActive(true);
             PasueGame();
             boardUI.SetActive(false);
+            toolTipUI.SetActive(false);
         }
 
 
