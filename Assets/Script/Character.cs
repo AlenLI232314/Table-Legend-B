@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using System;
 
 public class Character : Entity
@@ -37,9 +39,12 @@ public class Character : Entity
     //Player stats (aside from HP, which is defined below)
     public int gold, xp, level, turnNumber, extraRollAmount;
 
+    public static event System.Action<GameObject> rotationCube;
+
+
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
 
-     void Start()
+    void Start()
      {
         turnNumber = 1;
         xp = 23;
@@ -130,7 +135,19 @@ public class Character : Entity
     //    }
     //}
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "RotationTrigger" )
+        {
+            rotationCube?.Invoke(this.gameObject);
+            Debug.Log("Rotation Invoked");
+        }
 
+        if(other.tag == "Player")
+        {
+            //
+        }
+    }
 
 
     public void Roll()
