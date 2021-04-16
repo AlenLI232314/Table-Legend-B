@@ -63,6 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LeanTween\Framework\LTDescr.cs" />
+    <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
+    <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
+    <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
+    <Compile Include="Assets\LeanTween\Framework\LeanSmooth.cs" />
+    <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
+    <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
+    <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\RotatePlayer.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\3rdPersonWithAimMode\ActivateOnKeypress.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.6.3\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerLookAt.cs" />
@@ -118,6 +126,7 @@
     <Compile Include="Assets\Script\HealthBar.cs" />
     <Compile Include="Assets\Script\Interfaces.cs" />
     <Compile Include="Assets\Script\Items.cs" />
+    <Compile Include="Assets\Script\MapCamSwitch.cs" />
     <Compile Include="Assets\Script\PanAndZoom.cs" />
     <Compile Include="Assets\Script\PlayerInventory.cs" />
     <Compile Include="Assets\Script\RollDice.cs" />
@@ -126,7 +135,10 @@
     <Compile Include="Assets\Script\SceneManage.cs" />
     <Compile Include="Assets\Script\TitleScreen\ButtonEvents.cs" />
     <Compile Include="Assets\Script\TitleScreen\TitleScreenDiceSpin.cs" />
+    <Compile Include="Assets\Script\ToolTips\ObjectToolTipTrigger.cs" />
     <Compile Include="Assets\Script\ToolTips\ToolTipSystem.cs" />
+    <Compile Include="Assets\Script\ToolTips\ToolTipTrigger.cs" />
+    <Compile Include="Assets\Script\ToolTips\Tooltip.cs" />
     <Compile Include="Assets\Script\TurnManager.cs" />
     <Compile Include="Assets\Script\UIUpdate.cs" />
     <Compile Include="Assets\Script\Weapons.cs" />
@@ -349,8 +361,10 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Wwise\Version.txt" />
+    <None Include="Assets\LeanTween\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\LeanTween\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
