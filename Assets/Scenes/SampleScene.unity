@@ -3654,6 +3654,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 295527665}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &295527669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8816456048110437092, guid: ec19815dbf7cea046926b9b1feef50ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 295527665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &302597846
 GameObject:
   m_ObjectHideFlags: 0
@@ -6741,7 +6753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450534516}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.772, y: 2.825, z: 0.617}
+  m_LocalPosition: {x: -10.772, y: 2.92, z: 0.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6760,7 +6772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGameObject: {fileID: 0}
-  rotationOffset: 180
+  rotationOffset: -90
 --- !u!4 &453864285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c60af729ea018e547a7d91bd74d720aa,
@@ -10331,6 +10343,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 706132024}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &706132028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8816456048110437092, guid: ec19815dbf7cea046926b9b1feef50ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 706132024}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &707714233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10503,6 +10527,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 707714233}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &707714237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8816456048110437092, guid: ec19815dbf7cea046926b9b1feef50ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 707714233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &715870571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30318,7 +30354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGameObject: {fileID: 0}
-  rotationOffset: 180
+  rotationOffset: -180
 --- !u!1 &2014356525
 GameObject:
   m_ObjectHideFlags: 0
@@ -31086,6 +31122,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2050725905}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2050725909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8816456048110437092, guid: ec19815dbf7cea046926b9b1feef50ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2050725905}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2065633801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33692,7 +33740,7 @@ MonoBehaviour:
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   monsterSlider: {fileID: 1623323377}
-  monsterDamage: {fileID: 0}
+  monsterDamage: {fileID: 295527669}
   originalScale: {x: 0, y: 0, z: 0}
   newScale: {x: 0.003474374, y: 0.003474374, z: 0.003474374}
   offsetX: -0.3
@@ -34172,7 +34220,7 @@ MonoBehaviour:
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   monsterSlider: {fileID: 999668593}
-  monsterDamage: {fileID: 0}
+  monsterDamage: {fileID: 706132028}
   originalScale: {x: 0, y: 0, z: 0}
   newScale: {x: 0.003474374, y: 0.003474374, z: 0.003474374}
   offsetX: 0
@@ -35471,7 +35519,7 @@ MonoBehaviour:
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   monsterSlider: {fileID: 1826047749}
-  monsterDamage: {fileID: 0}
+  monsterDamage: {fileID: 2050725909}
   originalScale: {x: 0, y: 0, z: 0}
   newScale: {x: 0.003474374, y: 0.003474374, z: 0.003474374}
   offsetX: -0.3
@@ -35619,11 +35667,11 @@ PrefabInstance:
       objectReference: {fileID: 1472105877}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMaxRoll
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMinRoll
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: cameraManage
@@ -35703,7 +35751,7 @@ PrefabInstance:
     - target: {fileID: 3493903209670371892, guid: 3da1dc6ba9029de4ab318d34f7327ee1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4206611221238398684, guid: 3da1dc6ba9029de4ab318d34f7327ee1,
         type: 3}
@@ -36941,7 +36989,7 @@ MonoBehaviour:
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   monsterSlider: {fileID: 661025258}
-  monsterDamage: {fileID: 0}
+  monsterDamage: {fileID: 707714237}
   originalScale: {x: 0, y: 0, z: 0}
   newScale: {x: 0.003474374, y: 0.003474374, z: 0.003474374}
   offsetX: 0
