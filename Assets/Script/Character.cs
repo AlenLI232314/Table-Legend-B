@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System;
+using Cinemachine;
 
 public class Character : Entity
 {
@@ -34,7 +35,9 @@ public class Character : Entity
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
 
-    
+    public CameraManagement cameraManage;
+    public CinemachineVirtualCamera IntroCam;
+    public static event System.Action<CinemachineVirtualCamera> cameraEvent;
 
     //Player stats (aside from HP, which is defined below)
     public int gold, xp, level, turnNumber, extraRollAmount;
@@ -61,7 +64,9 @@ public class Character : Entity
 
         AkSoundEngine.SetSwitch("Music_Switch", "nonCombat_switch", gameObject);
         AkSoundEngine.PostEvent("Music_Switch", gameObject);
+        IntroCam.gameObject.SetActive(false);
 
+        cameraEvent?.Invoke(IntroCam);
     }
 
     //Called in the update method; assigns player UI elements to their correct values
@@ -152,6 +157,9 @@ public class Character : Entity
 
     public void Roll()
     {
+        IntroCam.gameObject.SetActive(false);
+        cameraManage.resetCamera();
+
         UpdatePlayerStats();
         //steps = DiceNumText.diceNumber;
         audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
