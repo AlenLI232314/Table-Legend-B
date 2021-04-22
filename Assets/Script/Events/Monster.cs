@@ -91,7 +91,6 @@ public class Monster : MonoBehaviour
             monsterAnim.SetTrigger("Spawning");
             combatManager.enemyMonster = monster;
             combatManager.playerDamageText = monsterDamage;
-            combatManager.enemyHealthSlider = monsterSlider;
             playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);

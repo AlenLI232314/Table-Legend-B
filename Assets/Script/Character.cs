@@ -320,6 +320,7 @@ public class Character : Entity
 
     void OnPlayerDeath(GameObject player)
     {
+        characterAnim = player.gameObject.GetComponent<Animator>();
         characterAnim.SetTrigger("Died");
         isAlive = false;
     }
