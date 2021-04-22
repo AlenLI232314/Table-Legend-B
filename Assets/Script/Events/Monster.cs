@@ -87,7 +87,8 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
-            
+            monsterAnim = monster.gameObject.GetComponent<Animator>();
+            monsterAnim.SetTrigger("Spawning");
             combatManager.enemyMonster = monster;
             combatManager.playerDamageText = monsterDamage;
             combatManager.enemyHealthSlider = monsterSlider;
@@ -159,8 +160,7 @@ public class Monster : MonoBehaviour
         toolTipUI.SetActive(true);
     }
 
-
-
+  
     //void PasueGame()
     //{
     //    Time.timeScale = 0;
