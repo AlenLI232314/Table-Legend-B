@@ -35,6 +35,8 @@ public class Random : MonoBehaviour
             PasueGame();
             toolTipUI.SetActive(false);
         }
+
+        return;
     }
     void PasueGame()
     {

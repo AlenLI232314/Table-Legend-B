@@ -46,8 +46,7 @@ public class Monster : MonoBehaviour
         CombatUIManager.monsterGameObject += OnMonsterDamaged;
         CombatUIManager.monsterAttack += MonsterAttack;
         CombatUIManager.monsterDeath += MonsterDeath;
-        //AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
-        //AkSoundEngine.PostEvent("Music_Switch", gameObject);
+        
     }
 
     void OnDisable()
@@ -57,10 +56,12 @@ public class Monster : MonoBehaviour
         CombatUIManager.monsterAttack -= MonsterAttack;
         CombatUIManager.monsterDeath -= MonsterDeath;
         
+
     }
 
     void Start()
     {
+        
         combatManager.enemyHealthSlider = monsterSlider;
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
@@ -86,6 +87,7 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
+            
             combatManager.enemyMonster = monster;
             combatManager.playerDamageText = monsterDamage;
             combatManager.enemyHealthSlider = monsterSlider;

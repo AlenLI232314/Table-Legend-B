@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 811c81a4ab8b774db93330ce0d5694db
     GuidInternal: 
-    m_lastTime: -8585830607968131690
+    m_lastTime: -8585825430554128081
     List:
     - name: Music_Switch
       guid: 90db98ffa6739c409b5b580a6f872286
@@ -249,7 +249,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b328835abfd1146b302d6a08dc1b681
     GuidInternal: 
-    m_lastTime: -8585830607973347698
+    m_lastTime: -8585825326336919318
     List:
     - name: Music_Switch
       guid: 6828540f5d4fe848900ff13c2550eb8d
@@ -454,6 +454,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585830607968131690
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /baer_tableLegendWwise
+  - /baer_tableLegendWwise/SoundBanks
+  - /baer_tableLegendWwise/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
