@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class RouteTriggerTest : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
-
-    //set trigger on when player enter the collider
 
     void OnTriggerEnter(Collider other)
     {
