@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Event Name="Music_Switch" ID="{0F542868-4F5D-48E8-900F-F13C2550EB8D}">
 					<ChildrenList>
-						<Action Name="" ID="{D7B50B68-1F76-44BA-A8F4-EB2B653A4536}" ShortID="944641709">
+						<Action Name="" ID="{3547F122-8CC3-44BD-8DFD-7AED8677DE23}" ShortID="731549795">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Music_Switch" ID="{E13B41C4-D26B-4D6B-9DD3-4486476954B0}" WorkUnitID="{2F89156C-76DA-49CC-8E65-9F1EE03381C5}"/>

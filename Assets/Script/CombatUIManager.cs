@@ -79,6 +79,7 @@ public class CombatUIManager : MonoBehaviour
 
     void Start()
     {
+        AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
         doubleDMG = false;
         playerHealthText.text = player.HP.ToString();
         enemyHealth = monster.HP;

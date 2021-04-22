@@ -7,6 +7,8 @@ TagManager:
   - GameManager
   - Trigger
   - RotationTrigger
+  - Music Trigger
+  - NonCombatMusicTrigger
   layers:
   - Default
   - TransparentFX
