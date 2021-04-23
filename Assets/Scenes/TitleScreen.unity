@@ -2500,7 +2500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 2125519820}
-  m_PathPosition: 1.6979041
+  m_PathPosition: 0.52139616
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 2.8
@@ -9727,8 +9727,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197490677}
-  m_LocalRotation: {x: 0.005180842, y: 0.99017996, z: -0.13438639, w: 0.038173255}
-  m_LocalPosition: {x: -8.273943, y: 4.1731358, z: 2.1326566}
+  m_LocalRotation: {x: -0.005039583, y: -0.99020404, z: 0.13451569, w: -0.037097648}
+  m_LocalPosition: {x: -8.263074, y: 4.1731358, z: 2.1287484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 243510011}
@@ -10473,8 +10473,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271473499}
-  m_LocalRotation: {x: 0.005180842, y: 0.99017996, z: -0.13438639, w: 0.038173255}
-  m_LocalPosition: {x: -8.273943, y: 4.1731358, z: 2.1326566}
+  m_LocalRotation: {x: -0.005039583, y: -0.99020404, z: 0.13451569, w: -0.037097648}
+  m_LocalPosition: {x: -8.263074, y: 4.1731358, z: 2.1287484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18935,11 +18935,11 @@ MonoBehaviour:
     pathColor: {r: 0, g: 1, b: 0, a: 1}
     inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     width: 0.2
-  m_Looped: 1
+  m_Looped: 0
   m_Waypoints:
-  - position: {x: 3.9003024, y: 0, z: 5.1077204}
+  - position: {x: 6.185895, y: 0, z: 5.1077204}
     roll: 0
-  - position: {x: -7.9974346, y: 0, z: 5}
+  - position: {x: -9.246769, y: 0, z: 5}
     roll: 0
 --- !u!4 &2125519821
 Transform:
