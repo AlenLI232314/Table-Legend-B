@@ -87,10 +87,10 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
-            
+            monsterAnim = monster.gameObject.GetComponent<Animator>();
+            monsterAnim.SetTrigger("Spawning");
             combatManager.enemyMonster = monster;
             combatManager.playerDamageText = monsterDamage;
-            combatManager.enemyHealthSlider = monsterSlider;
             playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);
@@ -159,8 +159,7 @@ public class Monster : MonoBehaviour
         toolTipUI.SetActive(true);
     }
 
-
-
+  
     //void PasueGame()
     //{
     //    Time.timeScale = 0;

@@ -69,6 +69,7 @@ public class CombatUIManager : MonoBehaviour
     public static event System.Action<GameObject> monsterAttack;
     public static event System.Action<GameObject> monsterDeath;
     public static event System.Action<GameObject> playerGO;
+    public static event System.Action<GameObject> playerDeath;
     #endregion
     
     bool doubleDMG;
@@ -104,6 +105,8 @@ public class CombatUIManager : MonoBehaviour
         if (player.HP <= 0)
         {
             this.gameObject.SetActive(false);
+           
+            
         }
 
         //Updates player health slider based on player HP.
@@ -181,8 +184,9 @@ public class CombatUIManager : MonoBehaviour
         playerGO?.Invoke(playerCharacter);
         playerHealthText.text = player.HP.ToString();
         Debug.Log("Stop Waiting");
-
-        turnReset();
+        if(player.HP > 0)
+        {
+         turnReset();
 
         yield return new WaitForSecondsRealtime(1f);
 
@@ -193,6 +197,13 @@ public class CombatUIManager : MonoBehaviour
         turnReset();
         playerAttack.SetActive(true);
 
+        }
+
+        if(player.HP <= 0)
+        {
+            playerDeath?.Invoke(playerCharacter);
+        }
+       
     }
 
     public IEnumerator enemyDeath()
