@@ -47,6 +47,7 @@ public class Character : Entity
 
 
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
+    
 
     void Start()
     {
@@ -270,6 +271,8 @@ public class Character : Entity
     void OnEnable()
     {
         CombatUIManager.playerGO += OnPlayerDamaged;
+        CombatUIManager.playerDeath += OnPlayerDeath;
+
     }
 
     //Handles the stat effects given to the player when they land on a chance space, based on the int passed in
@@ -313,6 +316,13 @@ public class Character : Entity
     {
         characterAnim = player.gameObject.GetComponent<Animator>();
         characterAnim.SetTrigger("Damaged");
+    }
+
+    void OnPlayerDeath(GameObject player)
+    {
+        characterAnim = player.gameObject.GetComponent<Animator>();
+        characterAnim.SetTrigger("Died");
+        isAlive = false;
     }
 
    
