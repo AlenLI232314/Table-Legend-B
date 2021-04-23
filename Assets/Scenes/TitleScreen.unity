@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 2125519820}
-  m_PathPosition: 1.6979041
+  m_PathPosition: 0.5661015
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 2.8
@@ -9991,8 +9991,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197490677}
-  m_LocalRotation: {x: 0.005180842, y: 0.99017996, z: -0.13438639, w: 0.038173255}
-  m_LocalPosition: {x: -8.273943, y: 4.1731358, z: 2.1326566}
+  m_LocalRotation: {x: -0.0050905445, y: -0.9901748, z: 0.13463412, w: -0.03743872}
+  m_LocalPosition: {x: -8.2660675, y: 4.1731358, z: 2.1239333}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 243510011}
@@ -10811,8 +10811,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271473499}
-  m_LocalRotation: {x: 0.005180842, y: 0.99017996, z: -0.13438639, w: 0.038173255}
-  m_LocalPosition: {x: -8.273943, y: 4.1731358, z: 2.1326566}
+  m_LocalRotation: {x: -0.0050905445, y: -0.9901748, z: 0.13463412, w: -0.03743872}
+  m_LocalPosition: {x: -8.2660675, y: 4.1731358, z: 2.1239333}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19878,9 +19878,9 @@ MonoBehaviour:
     pathColor: {r: 0, g: 1, b: 0, a: 1}
     inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     width: 0.2
-  m_Looped: 1
+  m_Looped: 0
   m_Waypoints:
-  - position: {x: 3.9003024, y: 0, z: 5.1077204}
+  - position: {x: 6.139071, y: 0, z: 5.1077204}
     roll: 0
   - position: {x: -7.9974346, y: 0, z: 5}
     roll: 0
