@@ -126,6 +126,7 @@
     <Compile Include="Assets\Script\Foods\Apple.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
     <Compile Include="Assets\Script\Interfaces.cs" />
+    <Compile Include="Assets\Script\InvisCameraTracker.cs" />
     <Compile Include="Assets\Script\Items.cs" />
     <Compile Include="Assets\Script\MapCamSwitch.cs" />
     <Compile Include="Assets\Script\PanAndZoom.cs" />
