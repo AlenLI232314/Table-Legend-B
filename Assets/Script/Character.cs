@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using System;
+using Cinemachine;
 
 public class Character : Entity
 {
@@ -13,12 +16,13 @@ public class Character : Entity
 
     public Route currentRoute;
 
-    [SerializeField] private GameObject CombatUICanvas, DoubleDamagePanel, DamageDebuffPanel, ExtraRollPanel,
+    [SerializeField]
+    private GameObject CombatUICanvas, DoubleDamagePanel, DamageDebuffPanel, ExtraRollPanel,
         LoseMoneyPanel, GainMoneyPanel, NothingHappensPanel;
     int routePosition;
     public int health;
     public int steps;
-    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText, 
+    public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText,
         ExtraRollText;
     CapsuleCollider m_Collider;
     public bool isMoving;
@@ -32,15 +36,22 @@ public class Character : Entity
     [SerializeField] private Animator uITransitions;
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
+
+    public CameraManagement cameraManage;
+    public CinemachineVirtualCamera IntroCam;
+    public static event System.Action<CinemachineVirtualCamera> cameraEvent;
+
     //Player stats (aside from HP, which is defined below)
     public int gold, xp, level, turnNumber, extraRollAmount;
 
+    public static event System.Action<GameObject> rotationCube;
+
+
     //The event are triggerEnter,so I will only enable the collider after the chatacter done moving
+    
 
-     void Start()
-     {
-        
-
+    void Start()
+    {
         turnNumber = 1;
         xp = 23;
         level = 01;
@@ -54,7 +65,13 @@ public class Character : Entity
         gold = 10;
         UpdatePlayerStats();
 
-     }
+        IntroCam.gameObject.SetActive(false);
+
+        cameraEvent?.Invoke(IntroCam);
+
+        AkSoundEngine.SetSwitch("Music_Switch", "nonCombat_Switch", gameObject);
+        AkSoundEngine.PostEvent("Music_Switch", gameObject);
+    }
 
     //Called in the update method; assigns player UI elements to their correct values
     void UpdatePlayerStats()
@@ -72,7 +89,7 @@ public class Character : Entity
 
         TurnsText.SetText(turnNumber.ToString());
 
-        
+
     }
 
     private void Update()
@@ -127,18 +144,40 @@ public class Character : Entity
     //    }
     //}
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "RotationTrigger")
+        {
+            rotationCube?.Invoke(this.gameObject);
+            Debug.Log("Rotation Invoked");
+        }
 
+        if (other.tag == "Player")
+        {
+            //
+        }
+
+        if (other.tag == "Music Trigger")
+            AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
+
+        if(other.tag == "NonCombatMusicTrigger")
+            AkSoundEngine.SetSwitch("Music_Switch", "nonCombat_switch", gameObject);
+
+    }
 
 
     public void Roll()
     {
+        IntroCam.gameObject.SetActive(false);
+        cameraManage.resetCamera();
+
         UpdatePlayerStats();
         //steps = DiceNumText.diceNumber;
         audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
 
         steps = UnityEngine.Random.Range(diceMinRoll, diceMaxRoll);
         DiceText.SetText(steps.ToString());
-       
+
 
         if (routePosition + steps < currentRoute.childSquareList.Count)
         {
@@ -164,15 +203,15 @@ public class Character : Entity
         isMoving = true;
         if (isMoving == true)
         {
-            
+
 
             m_Collider.enabled = false;
         }
-        
+
         //moving method
         while (steps > 0)
         {
-            
+
             Vector3 nextPos = currentRoute.childSquareList[routePosition + 1].position;
             while (MovingToNext(nextPos))
             {
@@ -196,7 +235,7 @@ public class Character : Entity
             routePosition++;
 
         }
-        
+
         isMoving = false;
 
         if (isMoving == false)
@@ -224,7 +263,7 @@ public class Character : Entity
 
     public void checkHealth()
     {
-        if(this.HP <= 0)
+        if (this.HP <= 0)
         {
             deathCanvas.gameObject.SetActive(true);
 
@@ -234,12 +273,14 @@ public class Character : Entity
     void OnEnable()
     {
         CombatUIManager.playerGO += OnPlayerDamaged;
+        CombatUIManager.playerDeath += OnPlayerDeath;
+
     }
 
     //Handles the stat effects given to the player when they land on a chance space, based on the int passed in
     public void ChanceEvent(int eventNum)
     {
-        switch(eventNum)
+        switch (eventNum)
         {
             case 1:
                 CombatUICanvas.GetComponent<CombatUIManager>().DamageDebuff();
@@ -284,5 +325,14 @@ public class Character : Entity
         characterAnim = player.gameObject.GetComponent<Animator>();
         characterAnim.SetTrigger("Damaged");
     }
+
+    void OnPlayerDeath(GameObject player)
+    {
+        characterAnim = player.gameObject.GetComponent<Animator>();
+        characterAnim.SetTrigger("Died");
+        isAlive = false;
+    }
+
+   
 
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using Cinemachine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using TMPro;
 
 public class Monster : MonoBehaviour
 {
@@ -18,12 +20,17 @@ public class Monster : MonoBehaviour
 
     public CombatUIManager combatManager;
 
+    public GameObject toolTipUI;
+
     [SerializeField] private Vector3 transformOriginal;
     public Animator monsterAnim;
     public GameObject monster;
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip battleStart;
+
+    [SerializeField] private Slider monsterSlider;
+    [SerializeField] private TextMeshProUGUI monsterDamage;
 
     [SerializeField] private Vector3 originalScale;
     [SerializeField] private Vector3 newScale;
@@ -37,25 +44,36 @@ public class Monster : MonoBehaviour
     {
         CombatUIManager.monsterEvent += OnMonsterEventHeard;
         CombatUIManager.monsterGameObject += OnMonsterDamaged;
+        CombatUIManager.monsterAttack += MonsterAttack;
+        CombatUIManager.monsterDeath += MonsterDeath;
+        
     }
 
     void OnDisable()
     {
         CombatUIManager.monsterEvent -= OnMonsterEventHeard;
         CombatUIManager.monsterGameObject -= OnMonsterDamaged;
+        CombatUIManager.monsterAttack -= MonsterAttack;
+        CombatUIManager.monsterDeath -= MonsterDeath;
+        
+
     }
 
     void Start()
     {
-
+        
+        combatManager.enemyHealthSlider = monsterSlider;
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
+
+        basicEnemyTEST = FindObjectOfType<BasicEnemyTEST>();
 
         audioSource = GetComponent<AudioSource>();
 
         playerGO = GameObject.FindGameObjectWithTag("Player");
         originalScale = playerGO.transform.localScale;
         transformOriginal = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, playerGO.transform.position.z);
+   
     }
 
     void Update()
@@ -69,17 +87,22 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
+            monsterAnim = monster.gameObject.GetComponent<Animator>();
+            monsterAnim.SetTrigger("Spawning");
             combatManager.enemyMonster = monster;
+            combatManager.playerDamageText = monsterDamage;
             playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);
             cameraEvent?.Invoke(cam);
             fightWarnning.SetActive(true);
-            //basicEnemyTEST.EnemySpawn();
+            basicEnemyTEST.EnemySpawn();
+            combatManager.enemyMonster = monster;
             boardUI.SetActive(false);
             //combatUICanvas.SetActive(true);
 
             audioSource.PlayOneShot(battleStart);
+            toolTipUI.SetActive(false);
 
             //PasueGame();
         }
@@ -123,8 +146,20 @@ public class Monster : MonoBehaviour
         monsterAnim.SetTrigger("Damaged");
     }
 
+    void MonsterAttack(GameObject monster)
+    {
+        monsterAnim = monster.gameObject.GetComponent<Animator>();
+        monsterAnim.SetTrigger("Attacked");
+    }
 
+    void MonsterDeath(GameObject monster)
+    {
+        monsterAnim = monster.gameObject.GetComponent<Animator>();
+        monsterAnim.SetTrigger("Died");
+        toolTipUI.SetActive(true);
+    }
 
+  
     //void PasueGame()
     //{
     //    Time.timeScale = 0;

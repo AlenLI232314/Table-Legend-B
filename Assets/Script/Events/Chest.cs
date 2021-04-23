@@ -12,6 +12,8 @@ public class Chest : MonoBehaviour
     public string popUp;
     [SerializeField] private Character character;
     [SerializeField] private int goldCount;
+    public GameObject toolTipUI;
+
 
 
 
@@ -32,6 +34,7 @@ public class Chest : MonoBehaviour
             audioSource.PlayOneShot(money[UnityEngine.Random.Range(0, money.Length)]);
             boardUI.SetActive(false);
             character.gold += goldCount;
+            toolTipUI.SetActive(false);
 
         }
     }
