@@ -116,6 +116,7 @@ public class CombatUIManager : MonoBehaviour
         if (enemyHealthSlider != null)
         {
             enemyHealthSlider.value = enemyHealth;
+            
 
         }
 
@@ -140,6 +141,8 @@ public class CombatUIManager : MonoBehaviour
 
             //Enemy health has player damage subtracted from it. 
             enemyHealth -= playerDamage;
+            Debug.Log(enemyHealth);
+            Debug.Log(enemyHealthSlider.value);
             
             enemyHealthText.text = enemyHealth.ToString();
 

@@ -98,6 +98,7 @@ public class Monster : MonoBehaviour
             fightWarnning.SetActive(true);
             basicEnemyTEST.EnemySpawn();
             combatManager.enemyMonster = monster;
+            combatManager.enemyHealthSlider = monsterSlider;
             boardUI.SetActive(false);
             //combatUICanvas.SetActive(true);
 
