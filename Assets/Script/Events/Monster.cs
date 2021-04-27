@@ -68,6 +68,7 @@ public class Monster : MonoBehaviour
 
         basicEnemyTEST = FindObjectOfType<BasicEnemyTEST>();
 
+
         audioSource = GetComponent<AudioSource>();
 
         playerGO = GameObject.FindGameObjectWithTag("Player");
