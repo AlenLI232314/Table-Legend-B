@@ -134,6 +134,8 @@ public class CombatUIManager : MonoBehaviour
             playerDamage = UnityEngine.Random.Range(playerDamageMin, playerDamageMax);
             //Player damage is printed to damage text.
             playerDamageText.text = "-" + playerDamage.ToString();
+
+            playerAnim.SetTrigger("Attack");
             ////Player health slider is updated.
             //playerHealthSlider.value = player.HP;
 
