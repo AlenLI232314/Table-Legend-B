@@ -69,8 +69,8 @@ public class Character : Entity
 
         cameraEvent?.Invoke(IntroCam);
 
-        AkSoundEngine.SetSwitch("Music_Switch", "nonCombat_Switch", gameObject);
-        AkSoundEngine.PostEvent("Music_Switch", gameObject);
+        AkSoundEngine.SetSwitch("Music_Switch_Pro", "nonCombat_Switch", gameObject);
+        AkSoundEngine.PostEvent("Music_Switch_Pro", gameObject);
     }
 
     //Called in the update method; assigns player UI elements to their correct values
@@ -158,10 +158,10 @@ public class Character : Entity
         }
 
         if (other.tag == "Music Trigger")
-            AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
+            AkSoundEngine.SetSwitch("Music_Switch_Pro", "combat_switch", gameObject);
 
         if(other.tag == "NonCombatMusicTrigger")
-            AkSoundEngine.SetSwitch("Music_Switch", "nonCombat_switch", gameObject);
+            AkSoundEngine.SetSwitch("Music_Switch_Pro", "nonCombat_switch", gameObject);
 
     }
 

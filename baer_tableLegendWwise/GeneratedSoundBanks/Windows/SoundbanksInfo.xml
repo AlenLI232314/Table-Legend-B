@@ -11,6 +11,66 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="405316193" Language="SFX" Hash="3234496463">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music_Switch_Pro</ObjectPath>
+			<ShortName>Music_Switch_Pro</ShortName>
+			<Path>Music_Switch_Pro.bnk</Path>
+			<IncludedEvents>
+				<Event Id="405316193" Name="Music_Switch_Pro" ObjectPath="\Events\Default Work Unit\Music_Switch_Pro" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="34244644" Language="SFX">
+							<ShortName>Music\TBL_NonCombat_00MIXNODRUMS.wav</ShortName>
+							<Path>SFX\Music\TBL_NonCombat_00MIXNODRUMS_D79FB2B7.wem</Path>
+						</File>
+						<File Id="90156096" Language="SFX">
+							<ShortName>Music\TBL_Combat_04CELLO.wav</ShortName>
+							<Path>SFX\Music\TBL_Combat_04CELLO_D79FB2B7.wem</Path>
+						</File>
+						<File Id="290635533" Language="SFX">
+							<ShortName>Music\TBL_Combat_03BASSES.wav</ShortName>
+							<Path>SFX\Music\TBL_Combat_03BASSES_D79FB2B7.wem</Path>
+						</File>
+						<File Id="529657738" Language="SFX">
+							<ShortName>Music\TBL_NonCombat_01HANDDRUMS.wav</ShortName>
+							<Path>SFX\Music\TBL_NonCombat_01HANDDRUMS_D79FB2B7.wem</Path>
+						</File>
+						<File Id="594320942" Language="SFX">
+							<ShortName>Music\TBL_Combat_02LEADVIOLIN.wav</ShortName>
+							<Path>SFX\Music\TBL_Combat_02LEADVIOLIN_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1005003788" Language="SFX">
+							<ShortName>Music\TBL_Combat_01HEAVYDRUMS.wav</ShortName>
+							<Path>SFX\Music\TBL_Combat_01HEAVYDRUMS_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{F18DB9C8-5805-49BD-9AE1-347D8AA306F4}">
+							<Media>
+								<File Id="34244644"/>
+								<File Id="90156096"/>
+								<File Id="290635533"/>
+								<File Id="594320942"/>
+								<File Id="1005003788"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{20A5B77A-3E11-4D03-B344-A9973DAA5616}">
+							<Media>
+								<File Id="34244644"/>
+								<File Id="529657738"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="405316193" Name="Music_Switch_Pro" ObjectPath="\Switches\Default Work Unit\Music_Switch_Pro">
+					<Switches>
+						<Switch Id="534574109" Name="nonCombat_switch" ObjectPath="\Switches\Default Work Unit\Music_Switch_Pro\nonCombat_switch"/>
+						<Switch Id="1313000764" Name="combat_switch" ObjectPath="\Switches\Default Work Unit\Music_Switch_Pro\combat_switch"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="3791779620">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>

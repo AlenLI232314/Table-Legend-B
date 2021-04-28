@@ -10,6 +10,13 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Music_Switch_Pro" ID="{AD814711-2EA4-4649-A00D-D50915BBBAF8}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Music_Switch_Pro" ID="{D86E2809-8F37-4A2A-82A2-E33F1ACE3C53}" WorkUnitID="{3588325B-FDAB-4611-B302-D6A08DC1B681}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
