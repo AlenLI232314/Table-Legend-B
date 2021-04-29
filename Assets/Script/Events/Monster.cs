@@ -38,6 +38,8 @@ public class Monster : MonoBehaviour
     [SerializeField] private float offsetY;
     [SerializeField] private float offsetZ;
 
+    
+
     [SerializeField] private float returnOffSety;
 
     void OnEnable()

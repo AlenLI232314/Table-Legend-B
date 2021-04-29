@@ -5,9 +5,13 @@ using UnityEngine;
 public class BasicEnemyTEST : Entity
 {
     // Start is called before the first frame update
+
+    public new int HP = 4; 
     void Start()
     {
-        
+        this.HP = 4;
+        this.isAlive = true;
+
     }
 
     // Update is called once per frame
@@ -20,5 +24,6 @@ public class BasicEnemyTEST : Entity
     {
         this.HP = 4;
         this.isAlive = true;
+
     }
 }

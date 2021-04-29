@@ -7513,7 +7513,7 @@ MonoBehaviour:
   cameras: {fileID: 761703899}
   sceneManage: {fileID: 1113805621}
   monster: {fileID: 1734987155}
-  enemyMonster: {fileID: 0}
+  enemyMonster: {fileID: 1734987154}
   combatCanvas: {fileID: 428471723}
   boardCanvas: {fileID: 718918982}
   uICanAnim: {fileID: 428471729}
@@ -7521,7 +7521,7 @@ MonoBehaviour:
   playerHealthText: {fileID: 1526948430}
   enemyHealthText: {fileID: 32896846}
   player: {fileID: 509281126}
-  enemyHealth: 10
+  enemyHealth: 4
   playerDamage: 0
   enemyDamage: 0
   playerDamageMin: 1
@@ -41376,11 +41376,11 @@ PrefabInstance:
       objectReference: {fileID: 1472105877}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMaxRoll
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMinRoll
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: cameraManage

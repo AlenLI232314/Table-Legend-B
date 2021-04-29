@@ -72,7 +72,7 @@ public class CombatUIManager : MonoBehaviour
     public static event System.Action<GameObject> playerDeath;
     #endregion
     
-    bool doubleDMG;
+    //bool doubleDMG;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip takeDamage;
 
@@ -81,12 +81,18 @@ public class CombatUIManager : MonoBehaviour
     void Start()
     {
         AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
-        doubleDMG = false;
-        playerHealthText.text = player.HP.ToString();
+
+       
         enemyHealth = monster.HP;
+        Debug.Log(enemyHealth);
+
+        //doubleDMG = false;
+        playerHealthText.text = player.HP.ToString();
         enemyHealthText.text = enemyHealth.ToString();
         playerHealthSlider.value = player.HP;
         audioSource = GetComponent<AudioSource>();
+
+        
 
         if (enemyHealthSlider != null)
         {
@@ -264,7 +270,7 @@ public class CombatUIManager : MonoBehaviour
     //Doubles the player's damage (doubles the min and max rolls)
     public void DoubleDamage()
     {
-        doubleDMG = true;
+        //doubleDMG = true;
         playerDamageMax *= 2;
         playerDamageMin *= 2;
     }
