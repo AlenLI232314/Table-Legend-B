@@ -9,8 +9,10 @@ public class Random : MonoBehaviour
     public GameObject questionBlock;
     public GameObject boardUI;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private int RandomRoll; 
 
     [SerializeField] private AudioClip OpenUI;
+    [SerializeField] private Animator randomAnimator;
     public string popUp;
     public GameObject toolTipUI;
 
@@ -21,6 +23,7 @@ public class Random : MonoBehaviour
     void Start()
     {
         questionBlock.SetActive(false);
+        randomAnimator = questionBlock.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -30,9 +33,10 @@ public class Random : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             questionBlock.SetActive(true);
+            randomAnimator.SetTrigger("Open");
             boardUI.SetActive(false);
             audioSource.PlayOneShot(OpenUI);
-            PasueGame();
+            //PasueGame();
             toolTipUI.SetActive(false);
         }
 
@@ -44,6 +48,10 @@ public class Random : MonoBehaviour
     }
 
     
+    void DiceRoll()
+    {
+        RandomRoll = UnityEngine.Random.Range(1, 100);
+    }
 
     void OnMouseDown()
 
