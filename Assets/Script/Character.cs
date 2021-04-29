@@ -146,11 +146,11 @@ public class Character : Entity
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "RotationTrigger")
-        {
-            rotationCube?.Invoke(this.gameObject);
-            Debug.Log("Rotation Invoked");
-        }
+        //if (other.tag == "RotationTrigger")
+        //{
+        //    rotationCube?.Invoke(this.gameObject);
+        //    Debug.Log("Rotation Invoked");
+        //}
 
         if (other.tag == "Player")
         {

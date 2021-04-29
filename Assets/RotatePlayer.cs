@@ -15,6 +15,20 @@ public class RotatePlayer : MonoBehaviour
         playerGameObject = GameObject.FindGameObjectWithTag("Player");
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+
+                AdjustPlayerRotation(playerGameObject);
+                Debug.Log(rotationOffset);
+                
+            
+            
+        }
+    }
+
     private void OnEnable()
     {
         Character.rotationCube += AdjustPlayerRotation;
@@ -29,7 +43,7 @@ public class RotatePlayer : MonoBehaviour
     {
         player.transform.eulerAngles = new Vector3(
             player.transform.eulerAngles.x,
-            player.transform.eulerAngles.y + rotationOffset,
+            player.transform.eulerAngles.y + this.rotationOffset,
             player.transform.eulerAngles.z);
     }
 }

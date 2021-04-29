@@ -3020,7 +3020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGameObject: {fileID: 0}
-  rotationOffset: 180
+  rotationOffset: -90
 --- !u!1 &240458999
 GameObject:
   m_ObjectHideFlags: 0
@@ -5497,7 +5497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -794.7492}
+  m_AnchoredPosition: {x: 960, y: -946.66675}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356745414
@@ -7944,7 +7944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGameObject: {fileID: 0}
-  rotationOffset: -90
+  rotationOffset: 90
 --- !u!4 &453864285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c60af729ea018e547a7d91bd74d720aa,
@@ -13608,7 +13608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &773953991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15878,7 +15878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -192.94984}
+  m_AnchoredPosition: {x: 960, y: -223.33334}
   m_SizeDelta: {x: 500, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879058964
@@ -18815,7 +18815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -538.84955}
+  m_AnchoredPosition: {x: 960, y: -630}
   m_SizeDelta: {x: 1200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049471807
@@ -18906,7 +18906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -654.84955}
+  m_AnchoredPosition: {x: 960, y: -746}
   m_SizeDelta: {x: 1200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049843277
@@ -19911,6 +19911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1099264995}
+  - component: {fileID: 1099264996}
   m_Layer: 0
   m_Name: Canvas Organizer
   m_TagString: Untagged
@@ -19944,6 +19945,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1099264996
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099264994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e90d793aebf76734d821f4fa7b3cdc9f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1113474205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26600,7 +26620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.36872917, y: 0.56111115}
   m_AnchorMax: {x: 0.36872917, y: 0.56111115}
-  m_AnchoredPosition: {x: 1, y: 8.3}
+  m_AnchoredPosition: {x: 1, y: 8.299988}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526948430
@@ -26763,7 +26783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -833.4159}
+  m_AnchoredPosition: {x: 960, y: -985.3333}
   m_SizeDelta: {x: 1926.9287, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531176521
@@ -29991,6 +30011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAlive: 0
+  HP: 4
 --- !u!4 &1734987156
 Transform:
   m_ObjectHideFlags: 0
@@ -32304,7 +32325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1860835586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35279,8 +35300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9910d3cfc9fef4ea539c099f6682c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGameObject: {fileID: 0}
-  rotationOffset: -180
+  playerGameObject: {fileID: 509281125}
+  rotationOffset: -90
 --- !u!1 &2014356525
 GameObject:
   m_ObjectHideFlags: 0
@@ -36018,7 +36039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -270.28317}
+  m_AnchoredPosition: {x: 960, y: -300.66666}
   m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044897960
@@ -38864,7 +38885,9 @@ MonoBehaviour:
   questionBlock: {fileID: 1860835585}
   boardUI: {fileID: 1051442930}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: cbf922894ff41374e931d1fbb8eff819, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!82 &1014674484732054616
@@ -39659,7 +39682,9 @@ MonoBehaviour:
   questionBlock: {fileID: 1860835585}
   boardUI: {fileID: 1051442930}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: cbf922894ff41374e931d1fbb8eff819, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!82 &2409330849542895585
@@ -40624,7 +40649,9 @@ MonoBehaviour:
   questionBlock: {fileID: 1860835585}
   boardUI: {fileID: 1051442930}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: cbf922894ff41374e931d1fbb8eff819, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!82 &4431870863594686635
@@ -41376,11 +41403,11 @@ PrefabInstance:
       objectReference: {fileID: 1472105877}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMaxRoll
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMinRoll
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: cameraManage
@@ -41847,7 +41874,9 @@ MonoBehaviour:
   questionBlock: {fileID: 1860835585}
   boardUI: {fileID: 1051442930}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: cbf922894ff41374e931d1fbb8eff819, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 1470342892}
 --- !u!82 &6925671638065007837
@@ -42062,7 +42091,9 @@ MonoBehaviour:
   questionBlock: {fileID: 1860835585}
   boardUI: {fileID: 1051442930}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: cbf922894ff41374e931d1fbb8eff819, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!82 &7048696142976810665
