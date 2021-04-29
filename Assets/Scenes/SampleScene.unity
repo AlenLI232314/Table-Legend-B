@@ -16439,6 +16439,7 @@ MonoBehaviour:
   uITransitions: {fileID: 0}
   characterAnim: {fileID: 0}
   uICanAnim: {fileID: 0}
+  deathCanvasAnim: {fileID: 0}
   cameraManage: {fileID: 0}
   IntroCam: {fileID: 0}
   gold: 0
@@ -29923,7 +29924,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1733885638}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1113805621}
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1733885638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41367,7 +41379,7 @@ PrefabInstance:
       objectReference: {fileID: 1853242576}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: health
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: isAlive
@@ -41407,11 +41419,11 @@ PrefabInstance:
       objectReference: {fileID: 1472105877}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMaxRoll
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMinRoll
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: cameraManage
@@ -41453,6 +41465,10 @@ PrefabInstance:
       propertyPath: TavernGoldText
       value: 
       objectReference: {fileID: 284684544}
+    - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
+      propertyPath: deathCanvasAnim
+      value: 
+      objectReference: {fileID: 1472105880}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: TavernHealthText
       value: 

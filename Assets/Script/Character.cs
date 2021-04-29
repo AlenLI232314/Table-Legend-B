@@ -36,6 +36,7 @@ public class Character : Entity
     [SerializeField] private Animator uITransitions;
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
+    [SerializeField] private Animator deathCanvasAnim;
 
     public CameraManagement cameraManage;
     public CinemachineVirtualCamera IntroCam;
@@ -266,6 +267,8 @@ public class Character : Entity
         if (this.HP <= 0)
         {
             deathCanvas.gameObject.SetActive(true);
+            deathCanvasAnim.SetTrigger("Death Open");
+            
 
         }
     }
