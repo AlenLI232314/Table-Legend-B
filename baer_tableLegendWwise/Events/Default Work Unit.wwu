@@ -14,6 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Music_Switch_Pro" ID="{D86E2809-8F37-4A2A-82A2-E33F1ACE3C53}">
+					<ChildrenList>
+						<Action Name="" ID="{E9F3BD62-838F-4342-B8F8-6F71597692D8}" ShortID="16287385">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Switch_Pro" ID="{03AE1821-42A4-451F-A76A-FB1948741F7A}" WorkUnitID="{2F89156C-76DA-49CC-8E65-9F1EE03381C5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

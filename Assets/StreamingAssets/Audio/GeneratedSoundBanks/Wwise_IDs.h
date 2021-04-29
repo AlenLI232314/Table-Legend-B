@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID MUSIC_SWITCH = 2724869341U;
+        static const AkUniqueID MUSIC_SWITCH_PRO = 405316193U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -28,6 +29,17 @@ namespace AK
                 static const AkUniqueID NONCOMBAT_SWITCH = 534574109U;
             } // namespace SWITCH
         } // namespace MUSIC_SWITCH
+
+        namespace MUSIC_SWITCH_PRO
+        {
+            static const AkUniqueID GROUP = 405316193U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID COMBAT_SWITCH = 1313000764U;
+                static const AkUniqueID NONCOMBAT_SWITCH = 534574109U;
+            } // namespace SWITCH
+        } // namespace MUSIC_SWITCH_PRO
 
     } // namespace SWITCHES
 
@@ -51,6 +63,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MUSIC_SWITCH = 2724869341U;
+        static const AkUniqueID MUSIC_SWITCH_PRO = 405316193U;
     } // namespace BANKS
 
     namespace BUSSES
