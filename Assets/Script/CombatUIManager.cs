@@ -71,8 +71,8 @@ public class CombatUIManager : MonoBehaviour
     public static event System.Action<GameObject> playerGO;
     public static event System.Action<GameObject> playerDeath;
     #endregion
-    
-    //bool doubleDMG;
+
+    bool doubleDMG;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip takeDamage;
 
@@ -86,7 +86,7 @@ public class CombatUIManager : MonoBehaviour
         enemyHealth = monster.HP;
         Debug.Log(enemyHealth);
 
-        //doubleDMG = false;
+        doubleDMG = false;
         playerHealthText.text = player.HP.ToString();
         enemyHealthText.text = enemyHealth.ToString();
         playerHealthSlider.value = player.HP;

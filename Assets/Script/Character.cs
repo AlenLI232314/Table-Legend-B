@@ -285,37 +285,37 @@ public class Character : Entity
             case 1:
                 CombatUICanvas.GetComponent<CombatUIManager>().DamageDebuff();
                 DamageDebuffPanel.SetActive(true);
-                uITransitions.SetTrigger("Open");
+                uITransitions.SetTrigger("Double Damage Open");
                 break;
             case 2:
                 CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
                 DoubleDamagePanel.SetActive(true);
-                uITransitions.SetTrigger("Open");
+                uITransitions.SetTrigger("Double Damage Open");
                 break;
             case 3:
             case 8:
                 extraRollAmount = 3;
                 ExtraRollPanel.SetActive(true);
                 ExtraRollText.gameObject.SetActive(true);
-                uITransitions.SetTrigger("Open");
+                uITransitions.SetTrigger("Extra Roll Open");
                 break;
             case 4:
             case 9:
                 gold -= 10;
                 LoseMoneyPanel.SetActive(true);
-                uITransitions.SetTrigger("Open");
+                uITransitions.SetTrigger("Lose Money Open");
                 break;
             case 5:
             case 10:
                 gold += 10;
                 GainMoneyPanel.SetActive(true);
-                uITransitions.SetTrigger("Open");
+                uITransitions.SetTrigger("Gain Money Open");
                 break;
 
 
             default:
                 NothingHappensPanel.SetActive(true);
-                uITransitions.SetTrigger("Open");
+                uITransitions.SetTrigger("Nothing Happens Open");
                 break;
         }
         UpdatePlayerStats();

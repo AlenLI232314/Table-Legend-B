@@ -23,6 +23,7 @@ public class Random : MonoBehaviour
     void Start()
     {
         questionBlock.SetActive(false);
+        randomAnimator = questionBlock.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -32,9 +33,10 @@ public class Random : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             questionBlock.SetActive(true);
+            randomAnimator.SetTrigger("Open");
             boardUI.SetActive(false);
             audioSource.PlayOneShot(OpenUI);
-            PasueGame();
+            //PasueGame();
             toolTipUI.SetActive(false);
         }
 
