@@ -1,0 +1,18 @@
+Event	ID	Name			Wwise Object Path	Notes
+	405316193	Music_Switch_Pro			\Default Work Unit\Music_Switch_Pro	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	405316193	Music_Switch_Pro			\Default Work Unit\Music_Switch_Pro	
+
+Switch	ID	Name	Switch Group			Notes
+	534574109	nonCombat_switch	Music_Switch_Pro			
+	1313000764	combat_switch	Music_Switch_Pro			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	34244644	TBL_NonCombat_00MIXNODRUMS	C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\.cache\Windows\SFX\Music\TBL_NonCombat_00MIXNODRUMS_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch_Pro\Combat\Combat\TBL_NonCombat_00MIXNODRUMS		8580480
+	90156096	TBL_Combat_04CELLO	C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\.cache\Windows\SFX\Music\TBL_Combat_04CELLO_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch_Pro\Combat\Combat\TBL_Combat_04CELLO		8580480
+	290635533	TBL_Combat_03BASSES	C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\.cache\Windows\SFX\Music\TBL_Combat_03BASSES_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch_Pro\Combat\Combat\TBL_Combat_03BASSES		8580480
+	529657738	TBL_NonCombat_01HANDDRUMS	C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\.cache\Windows\SFX\Music\TBL_NonCombat_01HANDDRUMS_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch_Pro\Non Combat\Non Combat\TBL_NonCombat_01HANDDRUMS		8580480
+	594320942	TBL_Combat_02LEADVIOLIN	C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\.cache\Windows\SFX\Music\TBL_Combat_02LEADVIOLIN_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch_Pro\Combat\Combat\TBL_Combat_02LEADVIOLIN		8580480
+	1005003788	TBL_Combat_01HEAVYDRUMS	C:\Users\carle\Desktop\TableLegendRepo\Table-Legend-B\baer_tableLegendWwise\.cache\Windows\SFX\Music\TBL_Combat_01HEAVYDRUMS_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Switch_Pro\Combat\Combat\TBL_Combat_01HEAVYDRUMS		8580480
+

@@ -18,6 +18,9 @@ public class Monster : MonoBehaviour
     //public GameObject combatUICanvas;
     public string popUp;
 
+    [SerializeField] private Animator fightWarnAnim;
+
+
     public CombatUIManager combatManager;
 
     public GameObject toolTipUI;
@@ -37,6 +40,8 @@ public class Monster : MonoBehaviour
     [SerializeField] private float offsetX;
     [SerializeField] private float offsetY;
     [SerializeField] private float offsetZ;
+
+    
 
     [SerializeField] private float returnOffSety;
 
@@ -61,12 +66,13 @@ public class Monster : MonoBehaviour
 
     void Start()
     {
-        
+        fightWarnAnim = fightWarnning.GetComponent<Animator>();
         combatManager.enemyHealthSlider = monsterSlider;
         fightWarnning.SetActive(false);
         cam.gameObject.SetActive(false);
 
         basicEnemyTEST = FindObjectOfType<BasicEnemyTEST>();
+
 
         audioSource = GetComponent<AudioSource>();
 
@@ -87,15 +93,23 @@ public class Monster : MonoBehaviour
     {
         if (player.gameObject.tag == "Player" )
         {
+            fightWarnning.SetActive(true);
             monsterAnim = monster.gameObject.GetComponent<Animator>();
             monsterAnim.SetTrigger("Spawning");
+            fightWarnAnim = fightWarnning.GetComponent<Animator>();
+
+            if(fightWarnAnim.runtimeAnimatorController != null)
+            {
+                fightWarnAnim.SetTrigger("Active");
+
+            }
+
             combatManager.enemyMonster = monster;
             combatManager.playerDamageText = monsterDamage;
             playerGO.transform.localScale = newScale;
             playerGO.transform.position = new Vector3(playerGO.transform.position.x + offsetX,playerGO.transform.position.y + offsetY, playerGO.transform.position.z + offsetZ);
             audioSource.PlayOneShot(battleStart);
             cameraEvent?.Invoke(cam);
-            fightWarnning.SetActive(true);
             basicEnemyTEST.EnemySpawn();
             combatManager.enemyMonster = monster;
             combatManager.enemyHealthSlider = monsterSlider;

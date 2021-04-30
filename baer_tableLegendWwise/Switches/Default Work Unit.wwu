@@ -9,6 +9,12 @@
 						<Switch Name="combat_switch" ID="{923F8D58-099A-4722-A2AC-621584D8624B}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Music_Switch_Pro" ID="{E8306AAA-9F14-456A-94FE-2C7058F04B20}">
+					<ChildrenList>
+						<Switch Name="nonCombat_switch" ID="{20A5B77A-3E11-4D03-B344-A9973DAA5616}"/>
+						<Switch Name="combat_switch" ID="{F18DB9C8-5805-49BD-9AE1-347D8AA306F4}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

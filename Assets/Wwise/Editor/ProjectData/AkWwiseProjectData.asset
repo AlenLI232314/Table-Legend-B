@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 811c81a4ab8b774db93330ce0d5694db
     GuidInternal: 
-    m_lastTime: -8585818801840518991
+    m_lastTime: -8585818657764110829
     List:
     - name: Music_Switch
       guid: 90db98ffa6739c409b5b580a6f872286
@@ -241,6 +241,15 @@ MonoBehaviour:
       - ElementName: Music_Switch
         ObjectType: 7
       Path: Default Work Unit\Music_Switch
+    - name: Music_Switch_Pro
+      guid: 114781ada42e4946a00dd50915bbbaf8
+      id: 405316193
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Switch_Pro
+        ObjectType: 7
+      Path: Default Work Unit\Music_Switch_Pro
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -249,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5b328835abfd1146b302d6a08dc1b681
     GuidInternal: 
-    m_lastTime: -8585818801840528995
+    m_lastTime: -8585818657786895406
     List:
     - name: Music_Switch
       guid: 6828540f5d4fe848900ff13c2550eb8d
@@ -260,6 +269,18 @@ MonoBehaviour:
       - ElementName: Music_Switch
         ObjectType: 3
       Path: Default Work Unit\Music_Switch
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music_Switch_Pro
+      guid: 09286ed8378f2a4a82a2e33f1ace3c53
+      id: 405316193
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Switch_Pro
+        ObjectType: 3
+      Path: Default Work Unit\Music_Switch_Pro
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -417,7 +438,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 588088114371874da8620bdbe52d58c4
     GuidInternal: 
-    m_lastTime: -8585818801840518991
+    m_lastTime: -8585818657764110829
     List:
     - name: Music_Switch
       guid: 76c3692579b64a4dbf055de7d1ca464f
@@ -444,6 +465,31 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: Music_Switch_Pro
+      guid: aa6a30e8149f6a4594fe2c7058f04b20
+      id: 405316193
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Switch_Pro
+        ObjectType: 11
+      Path: Default Work Unit\Music_Switch_Pro
+      values:
+      - name: combat_switch
+        guid: c8b98df10558bd499ae1347d8aa306f4
+        id: 1313000764
+        PathAndIcons:
+        - ElementName: combat_switch
+          ObjectType: 10
+      - name: nonCombat_switch
+        guid: 7ab7a520113e034db344a9973daa5616
+        id: 534574109
+        PathAndIcons:
+        - ElementName: nonCombat_switch
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -454,9 +500,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585824052008275822
     List: []
-  ExpandedItems:
-  - /baer_tableLegendWwise
-  - /baer_tableLegendWwise/SoundBanks
-  - /baer_tableLegendWwise/SoundBanks/Default Work Unit
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
