@@ -48,7 +48,7 @@ public class Tooltip : MonoBehaviour
             int contentLength = contentField.text.Length;
             layoutElement.enabled = (headerLength > characterWarpLimit || contentLength > characterWarpLimit) ? true : false;
         }
-        //here is telling the tooltips follow the mouse position
+        //here is telling the tooltips follow the mouse position also make sure it won't go out of the screen
         Vector2 position = Input.mousePosition;
         float pivotX = position.x / Screen.width;
         float pivotY = position.y / Screen.height;

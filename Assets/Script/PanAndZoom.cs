@@ -7,7 +7,7 @@ public class PanAndZoom : MonoBehaviour
     private CinemachineInputProvider inputProvider;
     private CinemachineVirtualCamera virtualCamera;
     private Transform cameraTransform;
-
+    
     [SerializeField]
     private float panSpeed = 2f;
     [SerializeField]
