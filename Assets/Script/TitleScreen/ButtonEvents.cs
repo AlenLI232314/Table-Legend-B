@@ -11,7 +11,7 @@ public class ButtonEvents : MonoBehaviour
     ///
 
     //The options and credits menu UI panels
-    public GameObject OptionsMenu, Credits;
+    public GameObject OptionsMenu, Credits, CreditsScreen2;
 
     //Called when the start button is pressed, changes the scene to the one passed, whether that be the first level
     //or a later one (if we end up implementing saving)
@@ -35,6 +35,15 @@ public class ButtonEvents : MonoBehaviour
     //Opens or closes the credits display
     public void CreditsButton()
     {
-        Credits.SetActive(!Credits.activeInHierarchy);
+        
+
+        if(CreditsScreen2.activeInHierarchy)
+        {
+            CreditsScreen2.SetActive(false);
+        }
+        else
+        {
+           Credits.SetActive(!Credits.activeInHierarchy);
+        }
     }
 }

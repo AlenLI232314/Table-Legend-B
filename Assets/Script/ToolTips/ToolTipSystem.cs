@@ -7,6 +7,8 @@ public class ToolTipSystem : MonoBehaviour
     private static ToolTipSystem current;
     public Tooltip tooltip;
 
+
+
     public void Awake()
     {
         current = this;
@@ -20,8 +22,9 @@ public class ToolTipSystem : MonoBehaviour
 
     public static void Hide()
     {
-        current.tooltip.gameObject.SetActive(false);
+        current.tooltip.gameObject.SetActive(false);       
 
     }
+
 
 }

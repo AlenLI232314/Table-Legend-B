@@ -37,14 +37,18 @@ public class Tooltip : MonoBehaviour
         layoutElement.enabled = (headerLength > characterWarpLimit || contentLength > characterWarpLimit) ? true : false;
     }
 
+
+    //This update function is to make the tool tips resize base on the content
     private void Update()
     {
+        //Because the layout component will set the background limit to its max value, so here I made it set off if the content size didn't go over a size
         if (Application.isEditor)
         {
             int headerLength = headerField.text.Length;
             int contentLength = contentField.text.Length;
             layoutElement.enabled = (headerLength > characterWarpLimit || contentLength > characterWarpLimit) ? true : false;
         }
+        //here is telling the tooltips follow the mouse position also make sure it won't go out of the screen
         Vector2 position = Input.mousePosition;
         float pivotX = position.x / Screen.width;
         float pivotY = position.y / Screen.height;
