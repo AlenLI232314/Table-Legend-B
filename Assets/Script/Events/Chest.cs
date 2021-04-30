@@ -32,7 +32,7 @@ public class Chest : MonoBehaviour
         {
             chestBlock.SetActive(true); 
             chestController.SetTrigger("Chest Open");
-            PasueGame();
+            //PasueGame();
             audioSource.PlayOneShot(money[UnityEngine.Random.Range(0, money.Length)]);
             boardUI.SetActive(false);
             character.gold += goldCount;

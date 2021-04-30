@@ -16,6 +16,7 @@ public class FinalBlock : MonoBehaviour
     void Start()
     {
         finalBlock.SetActive(false);
+        finalEventController = finalBlock.GetComponent<Animator>();
     }
 
 
@@ -24,8 +25,8 @@ public class FinalBlock : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             finalBlock.SetActive(true);
-
-            PauseGame();
+            finalEventController.SetTrigger("Final Event Open");
+            //PauseGame();
             boardUI.SetActive(false);
             toolTipUI.SetActive(false);
         }
