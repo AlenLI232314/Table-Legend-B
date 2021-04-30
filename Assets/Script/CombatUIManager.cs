@@ -71,7 +71,7 @@ public class CombatUIManager : MonoBehaviour
     public static event System.Action<GameObject> playerGO;
     public static event System.Action<GameObject> playerDeath;
     #endregion
-    
+
     bool doubleDMG;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip takeDamage;
@@ -81,12 +81,18 @@ public class CombatUIManager : MonoBehaviour
     void Start()
     {
         AkSoundEngine.SetSwitch("Music_Switch", "combat_switch", gameObject);
+
+       
+        enemyHealth = monster.HP;
+        Debug.Log(enemyHealth);
+
         doubleDMG = false;
         playerHealthText.text = player.HP.ToString();
-        enemyHealth = monster.HP;
         enemyHealthText.text = enemyHealth.ToString();
         playerHealthSlider.value = player.HP;
         audioSource = GetComponent<AudioSource>();
+
+        
 
         if (enemyHealthSlider != null)
         {
@@ -116,6 +122,7 @@ public class CombatUIManager : MonoBehaviour
         if (enemyHealthSlider != null)
         {
             enemyHealthSlider.value = enemyHealth;
+            
 
         }
 
@@ -133,6 +140,8 @@ public class CombatUIManager : MonoBehaviour
             playerDamage = UnityEngine.Random.Range(playerDamageMin, playerDamageMax);
             //Player damage is printed to damage text.
             playerDamageText.text = "-" + playerDamage.ToString();
+
+            playerAnim.SetTrigger("Attack");
             ////Player health slider is updated.
             //playerHealthSlider.value = player.HP;
 
@@ -140,6 +149,8 @@ public class CombatUIManager : MonoBehaviour
 
             //Enemy health has player damage subtracted from it. 
             enemyHealth -= playerDamage;
+            Debug.Log(enemyHealth);
+            Debug.Log(enemyHealthSlider.value);
             
             enemyHealthText.text = enemyHealth.ToString();
 
@@ -259,7 +270,7 @@ public class CombatUIManager : MonoBehaviour
     //Doubles the player's damage (doubles the min and max rolls)
     public void DoubleDamage()
     {
-        doubleDMG = true;
+        //doubleDMG = true;
         playerDamageMax *= 2;
         playerDamageMin *= 2;
     }
