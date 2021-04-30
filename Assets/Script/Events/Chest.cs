@@ -13,7 +13,7 @@ public class Chest : MonoBehaviour
     [SerializeField] private Character character;
     [SerializeField] private int goldCount;
     public GameObject toolTipUI;
-
+    [SerializeField] private Animator chestController;
 
 
 
@@ -29,7 +29,8 @@ public class Chest : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
-            chestBlock.SetActive(true);
+            chestBlock.SetActive(true); 
+            chestController.SetTrigger("Chest Open");
             PasueGame();
             audioSource.PlayOneShot(money[UnityEngine.Random.Range(0, money.Length)]);
             boardUI.SetActive(false);

@@ -9,6 +9,7 @@ public class FinalBlock : MonoBehaviour
     public GameObject boardUI;
     public string popUp;
     public GameObject toolTipUI;
+    [SerializeField] private Animator finalEventController;
 
 
 
@@ -23,7 +24,8 @@ public class FinalBlock : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             finalBlock.SetActive(true);
-            PasueGame();
+
+            PauseGame();
             boardUI.SetActive(false);
             toolTipUI.SetActive(false);
         }
@@ -51,7 +53,7 @@ public class FinalBlock : MonoBehaviour
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
     }
-    void PasueGame()
+    void PauseGame()
     {
         Time.timeScale = 0;
     }

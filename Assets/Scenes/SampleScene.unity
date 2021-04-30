@@ -38040,6 +38040,7 @@ MonoBehaviour:
   boardUI: {fileID: 1051442930}
   popUp: There is an evil atmosphere here, and there are more powerful enemies ahead.
   toolTipUI: {fileID: 1470342892}
+  finalEventController: {fileID: 1188573256}
 --- !u!1 &1014674484732054612
 GameObject:
   m_ObjectHideFlags: 0
@@ -38445,6 +38446,7 @@ MonoBehaviour:
   character: {fileID: 0}
   goldCount: 30
   toolTipUI: {fileID: 0}
+  chestController: {fileID: 0}
 --- !u!82 &1829022729332829183
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40093,6 +40095,7 @@ MonoBehaviour:
   character: {fileID: 0}
   goldCount: 25
   toolTipUI: {fileID: 1470342892}
+  chestController: {fileID: 859912665}
 --- !u!82 &4969363120314905391
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40202,7 +40205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Chest
-  content: A ttreasure chest!!
+  content: A treasure chest!!
 --- !u!4 &5029388170732739114
 Transform:
   m_ObjectHideFlags: 0
@@ -40614,11 +40617,11 @@ PrefabInstance:
       objectReference: {fileID: 1472105877}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMaxRoll
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMinRoll
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: cameraManage
