@@ -19,7 +19,7 @@ public class InvisCameraTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.gameObject.transform.position.x >= -.5 || this.gameObject.transform.position.x <= -15.2)
+        if (this.gameObject.transform.position.x >= -.5 || this.gameObject.transform.position.x <= -16.2)
         {
             direction *= -1;
         }
