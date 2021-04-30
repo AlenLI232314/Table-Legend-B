@@ -288,7 +288,7 @@ public class Character : Entity
             case 1:
                 CombatUICanvas.GetComponent<CombatUIManager>().DamageDebuff();
                 DamageDebuffPanel.SetActive(true);
-                uITransitions.SetTrigger("Double Damage Open");
+                uITransitions.SetTrigger("Damage Debuff Open");
                 break;
             case 2:
                 CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
