@@ -22,6 +22,7 @@ public class Chest : MonoBehaviour
         chestBlock.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         character = FindObjectOfType<Character>();
+        chestController = chestBlock.GetComponent<Animator>();
     }
 
 
