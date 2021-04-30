@@ -7498,7 +7498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 252.38193, y: -332}
+  m_AnchoredPosition: {x: 252.38193, y: -286}
   m_SizeDelta: {x: 504.76385, y: 352.384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861680087
@@ -7522,12 +7522,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Design --------------
 
-    Programming --------------
+    Programming ----------
 
     Art --------------
 
     Sound
-    Design --------------
+    Design -------
 
     Music --------------'
   m_isRightToLeft: 0
@@ -7557,10 +7557,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.5
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -7593,7 +7593,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -135.88826}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -16665,7 +16665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 242.4, y: -31.1}
+  m_AnchoredPosition: {x: 242.4, y: 18}
   m_SizeDelta: {x: 484.75946, y: 352.43304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891164393
@@ -16687,21 +16687,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Jake Reilly, Roger Bucio, Ryan Ruocco
-
-
-    Shilian Li, Alex Enriquex
-
-
-    Ansen
-    Zhu
-
-
-    Carley Thompson, Aaron Baer
-
-
-    Casey Stone, William Brueggemann,
-    Alexander Rybak'
+  m_text: "Jake Reilly, Roger Bucio, Ryan Ruocco\n\nShilian Li, Alex Enriquex\n\nAnsen
+    Zhu\n\nCarley Thompson\n\nCasey Stone, William Brueggemann, Alexander Rybak,
+    \nAaron Baer (Programming)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcd201dc21561f2429cd4cf23cb1ca29, type: 2}
   m_sharedMaterial: {fileID: -4139879888522190189, guid: bcd201dc21561f2429cd4cf23cb1ca29,
@@ -16729,7 +16717,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.05
+  m_fontSize: 32.1
   m_fontSizeBase: 71
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16765,7 +16753,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -167.08612}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
