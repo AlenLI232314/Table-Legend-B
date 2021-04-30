@@ -9,7 +9,7 @@ public class Shop : MonoBehaviour
     public GameObject boardUI;
     public string popUp;
     public GameObject toolTipUI;
-
+    [SerializeField] private Animator shopAnimator;
 
 
 
@@ -17,6 +17,7 @@ public class Shop : MonoBehaviour
     void Start()
     {
         shopBlock.SetActive(false);
+        shopAnimator = shopBlock.GetComponent<Animator>();
     }
 
 
@@ -26,6 +27,7 @@ public class Shop : MonoBehaviour
         {
             boardUI.SetActive(false);
             shopBlock.SetActive(true);
+            shopAnimator.SetTrigger("Shop Event Open");
             //PauseGame();
             toolTipUI.SetActive(false);
         }
