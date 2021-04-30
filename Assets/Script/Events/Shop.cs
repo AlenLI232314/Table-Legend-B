@@ -27,7 +27,7 @@ public class Shop : MonoBehaviour
         {
             boardUI.SetActive(false);
             shopBlock.SetActive(true);
-            shopAnimator.SetTrigger("Shop Event Open");
+            shopAnimator.SetTrigger("Tavern Open");
             //PauseGame();
             toolTipUI.SetActive(false);
         }

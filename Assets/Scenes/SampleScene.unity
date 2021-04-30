@@ -41308,6 +41308,10 @@ PrefabInstance:
       value: UnityEngine.AudioClip, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1086818509, guid: 2ee4ac4a2a9172d41820df5d3243d6c9, type: 3}
+      propertyPath: m_text
+      value: Spend 5$
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086818509, guid: 2ee4ac4a2a9172d41820df5d3243d6c9, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: bcd201dc21561f2429cd4cf23cb1ca29,
@@ -41420,7 +41424,27 @@ PrefabInstance:
     - target: {fileID: 379421880948417796, guid: 2ee4ac4a2a9172d41820df5d3243d6c9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 379421880948417798, guid: 2ee4ac4a2a9172d41820df5d3243d6c9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 379421880948417798, guid: 2ee4ac4a2a9172d41820df5d3243d6c9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.3019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 379421880948417798, guid: 2ee4ac4a2a9172d41820df5d3243d6c9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 379421880948417798, guid: 2ee4ac4a2a9172d41820df5d3243d6c9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7647059
       objectReference: {fileID: 0}
     - target: {fileID: 379421880948417799, guid: 2ee4ac4a2a9172d41820df5d3243d6c9,
         type: 3}
@@ -44654,7 +44678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMinRoll
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: cameraManage
@@ -45048,7 +45072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d6f028b14283541a0fe509dbb5c062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopBlock: {fileID: 1349883892}
+  shopBlock: {fileID: 309815713}
   boardUI: {fileID: 1051442930}
   popUp: You can hear people bargaining here, it should be a shop.
   toolTipUI: {fileID: 1470342892}
