@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -560,7 +560,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &67193587
 GameObject:
@@ -870,6 +870,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -1040,7 +1041,7 @@ RectTransform:
   - {fileID: 1920644583}
   - {fileID: 468939662}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1290,7 +1291,9 @@ MonoBehaviour:
   questionBlock: {fileID: 0}
   boardUI: {fileID: 0}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!114 &105257766
@@ -2872,7 +2875,9 @@ MonoBehaviour:
   questionBlock: {fileID: 0}
   boardUI: {fileID: 0}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!114 &245431976
@@ -3170,7 +3175,9 @@ MonoBehaviour:
   questionBlock: {fileID: 0}
   boardUI: {fileID: 0}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!114 &261099998
@@ -3739,6 +3746,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -4058,7 +4066,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
@@ -4439,6 +4447,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -4783,7 +4792,7 @@ Transform:
   - {fileID: 1373689053}
   - {fileID: 9369966}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &464075141
 GameObject:
@@ -4834,7 +4843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &468939662
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5151,7 +5160,9 @@ MonoBehaviour:
   questionBlock: {fileID: 0}
   boardUI: {fileID: 0}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!114 &511276489
@@ -6301,7 +6312,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
@@ -6761,6 +6772,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -7484,9 +7496,9 @@ RectTransform:
   m_Father: {fileID: 468939662}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252.38, y: -31.125}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 252.38193, y: -332}
   m_SizeDelta: {x: 504.76385, y: 352.384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861680087
@@ -7508,23 +7520,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Jake Reilly
+  m_text: 'Design --------------
 
-    Aaron Baer
+    Programming --------------
 
-    Ansen Zhu
+    Art --------------
 
-    Ryan Ruocco'
+    Sound
+    Design --------------
+
+    Music --------------'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bcd201dc21561f2429cd4cf23cb1ca29, type: 2}
+  m_sharedMaterial: {fileID: -4139879888522190189, guid: bcd201dc21561f2429cd4cf23cb1ca29,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7541,7 +7557,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 52.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8549,7 +8565,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
@@ -8698,7 +8714,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
@@ -8950,7 +8966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 504.74, y: -92.5}
+  m_AnchoredPosition: {x: 504.74463, y: -92.53496}
   m_SizeDelta: {x: 1009.48926, y: 185.06992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059724136
@@ -8974,8 +8990,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: --TEAM TABLE LEGEND--
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bcd201dc21561f2429cd4cf23cb1ca29, type: 2}
+  m_sharedMaterial: {fileID: -4139879888522190189, guid: bcd201dc21561f2429cd4cf23cb1ca29,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9005,7 +9022,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 3
+  m_fontStyle: 7
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -9218,7 +9235,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
@@ -9812,7 +9829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1171034603
 GameObject:
@@ -10118,7 +10135,7 @@ Transform:
   m_Children:
   - {fileID: 243510011}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1228878182
 GameObject:
@@ -10352,7 +10369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1237066790
 MonoBehaviour:
@@ -10481,7 +10498,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ac31d1b014d3ba046958c52c8eac19a5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac31d1b014d3ba046958c52c8eac19a5,
         type: 3}
@@ -11262,6 +11279,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -12228,6 +12246,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -13037,8 +13056,77 @@ Transform:
   - {fileID: 1566280194}
   - {fileID: 1354121738}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1475627395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.316097
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.6644654
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 94cf1131abfaf8947bd2bccc1b29e089,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94cf1131abfaf8947bd2bccc1b29e089, type: 3}
 --- !u!1 &1475967116
 GameObject:
   m_ObjectHideFlags: 0
@@ -13587,6 +13675,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -13904,6 +13993,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -14592,7 +14682,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1692149489
 GameObject:
@@ -15041,7 +15131,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a86da6576b046d4c876f4ca3ef436b5,
         type: 3}
@@ -15342,7 +15432,7 @@ Transform:
   m_LocalScale: {x: 6.323266, y: 1, z: 9.307056}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771315457
 GameObject:
@@ -15840,6 +15930,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -16409,7 +16500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.93333334, g: 0.827451, b: 0.5294118, a: 0.4117647}
+  m_Color: {r: 0.93333334, g: 0.827451, b: 0.5294118, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16596,23 +16687,32 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Carley Thompson
+  m_text: 'Jake Reilly, Roger Bucio, Ryan Ruocco
 
-    Shilian Li
 
-    Roger Bucio
+    Shilian Li, Alex Enriquex
 
-    Alex Enriquex'
+
+    Ansen
+    Zhu
+
+
+    Carley Thompson, Aaron Baer
+
+
+    Casey Stone, William Brueggemann,
+    Alexander Rybak'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bcd201dc21561f2429cd4cf23cb1ca29, type: 2}
+  m_sharedMaterial: {fileID: -4139879888522190189, guid: bcd201dc21561f2429cd4cf23cb1ca29,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16629,7 +16729,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.6
+  m_fontSize: 26.05
   m_fontSizeBase: 71
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17430,7 +17530,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1956056357
 GameObject:
@@ -18369,7 +18469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2039334884
 GameObject:
@@ -19133,6 +19233,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -19673,7 +19774,9 @@ MonoBehaviour:
   questionBlock: {fileID: 0}
   boardUI: {fileID: 0}
   audioSource: {fileID: 0}
+  RandomRoll: 0
   OpenUI: {fileID: 8300000, guid: 00f3541b5cb9bd94fb6da95258f5b006, type: 3}
+  randomAnimator: {fileID: 0}
   popUp: This looks like a temple, what secrets are hidden in it?
   toolTipUI: {fileID: 0}
 --- !u!114 &2100454261
@@ -19914,6 +20017,7 @@ MonoBehaviour:
   boardUI: {fileID: 0}
   playerGO: {fileID: 0}
   popUp: This place seems dangerous. You might have to fight you way out.
+  fightWarnAnim: {fileID: 0}
   combatManager: {fileID: 0}
   toolTipUI: {fileID: 0}
   transformOriginal: {x: 0, y: 0, z: 0}
@@ -20041,7 +20145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126641822
 GameObject:
