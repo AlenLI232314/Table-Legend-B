@@ -3588,6 +3588,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 256748817}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &256748821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8816456048110437092, guid: ec19815dbf7cea046926b9b1feef50ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 256748817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &260030727
 GameObject:
   m_ObjectHideFlags: 0
@@ -45571,7 +45583,7 @@ MonoBehaviour:
   audioSource: {fileID: 2103391855928914969}
   battleStart: {fileID: 8300000, guid: a3331f5f8b431df44b190253ea0806ab, type: 3}
   monsterSlider: {fileID: 1222100464}
-  monsterDamage: {fileID: 0}
+  monsterDamage: {fileID: 256748821}
   originalScale: {x: 0, y: 0, z: 0}
   newScale: {x: 0.003474374, y: 0.003474374, z: 0.003474374}
   offsetX: -0.3
