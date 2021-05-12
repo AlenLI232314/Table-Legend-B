@@ -37,7 +37,9 @@ public class Character : Entity
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
     [SerializeField] private Animator deathCanvasAnim;
+    [SerializeField] private ParticleSystem debuffParticles;
     [SerializeField] private ParticleSystem buffParticles;
+
 
     public CameraManagement cameraManage;
     public CinemachineVirtualCamera IntroCam;
@@ -63,7 +65,7 @@ public class Character : Entity
         this.isAlive = true;
 
         audioSource.GetComponent<AudioSource>();
-        buffParticles = GetComponent<ParticleSystem>();
+        
 
         gold = 10;
         UpdatePlayerStats();
@@ -72,6 +74,7 @@ public class Character : Entity
 
         cameraEvent?.Invoke(IntroCam);
 
+        debuffParticles.gameObject.SetActive(false);
         buffParticles.gameObject.SetActive(false);
 
         AkSoundEngine.SetSwitch("Music_Switch_Pro", "nonCombat_Switch", gameObject);
@@ -294,11 +297,22 @@ public class Character : Entity
                 CombatUICanvas.GetComponent<CombatUIManager>().DamageDebuff();
                 DamageDebuffPanel.SetActive(true);
                 uITransitions.SetTrigger("Damage Debuff Open");
+                if (buffParticles.gameObject.activeInHierarchy)
+                {
+                    buffParticles.gameObject.SetActive(false);
+                }
+                debuffParticles.gameObject.SetActive(true);
+               
                 break;
             case 2:
                 CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
                 DoubleDamagePanel.SetActive(true);
                 uITransitions.SetTrigger("Double Damage Open");
+                if (debuffParticles.gameObject.activeInHierarchy)
+                {
+                    debuffParticles.gameObject.SetActive(false);
+                }
+                buffParticles.gameObject.SetActive(true);
                 break;
             case 3:
             case 8:

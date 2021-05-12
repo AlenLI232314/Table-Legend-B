@@ -17708,6 +17708,7 @@ MonoBehaviour:
   characterAnim: {fileID: 0}
   uICanAnim: {fileID: 0}
   deathCanvasAnim: {fileID: 0}
+  debuffParticles: {fileID: 0}
   buffParticles: {fileID: 0}
   cameraManage: {fileID: 0}
   IntroCam: {fileID: 0}
@@ -44719,11 +44720,11 @@ PrefabInstance:
       objectReference: {fileID: 1472105877}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMaxRoll
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMinRoll
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: cameraManage
@@ -44773,6 +44774,10 @@ PrefabInstance:
       propertyPath: deathCanvasAnim
       value: 
       objectReference: {fileID: 1472105880}
+    - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
+      propertyPath: debuffParticles
+      value: 
+      objectReference: {fileID: 6871408156695760157}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: TavernHealthText
       value: 
@@ -45075,6 +45080,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &6871408156695760157 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5756384065241783986, guid: 3da1dc6ba9029de4ab318d34f7327ee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6871408156695760155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6915904626203451470
 GameObject:
   m_ObjectHideFlags: 0
