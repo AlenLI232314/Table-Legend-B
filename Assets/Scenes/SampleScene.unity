@@ -1060,7 +1060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1034.1696, y: -287.75726}
+  m_AnchoredPosition: {x: 960, y: -300.66666}
   m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &79088123
@@ -6694,7 +6694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1034.1696, y: -707.2718}
+  m_AnchoredPosition: {x: 960, y: -746}
   m_SizeDelta: {x: 1220, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399200339
@@ -14451,7 +14451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &773953991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16597,20 +16597,20 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e48ea8cf099a7e448b8ce2f148482400, type: 3}
-    m_FontSize: 58
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 58
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: You are the most handsome carpenter in the town, and you dream of becoming
-    a knight. So you learned to roll the dice. Press the Big Dice button On the Bottom
-    Left and go have you great adventure now!
+    a knight. In your desire to be more, you learned to roll the dice. Press the
+    Big Dice button on the Bottom Left to begin your quest!
 --- !u!222 &866026230
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23769,7 +23769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1272766011
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24841,7 +24841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1107.3218, y: -674.1566}
+  m_AnchoredPosition: {x: 960, y: -746}
   m_SizeDelta: {x: 1200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308791424
@@ -24876,9 +24876,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You found a treasure chest!
-
-    EXP + 100, gold + 50'
+  m_Text: "You found a treasure chest!\n Gold + 50"
 --- !u!222 &1308791425
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25295,7 +25293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1107.3218, y: -865.59436}
+  m_AnchoredPosition: {x: 960, y: -985.3333}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1315925867
@@ -32717,7 +32715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1034.1696, y: -920.7863}
+  m_AnchoredPosition: {x: 960, y: -985.3333}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733885636
@@ -35273,7 +35271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1860835586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35844,7 +35842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1107.3218, y: -276.71887}
+  m_AnchoredPosition: {x: 960, y: -300.66666}
   m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889443305
@@ -36140,8 +36138,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You have entered the temple of Goddess of Luck, where everything is possible.
-    You may be rewarded by Goddess of Luck, or you may get a prank from her?
+  m_Text: You have entered the temple of the Goddess of Luck, where anything is possible.
+    Will you be rewarded? Or will you be punished? Will you take that chance?
 --- !u!222 &1906931929
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42535,7 +42533,7 @@ MonoBehaviour:
   boardUI: {fileID: 1051442930}
   popUp: 
   character: {fileID: 0}
-  goldCount: 30
+  goldCount: 50
   toolTipUI: {fileID: 0}
   chestController: {fileID: 0}
 --- !u!82 &1829022729332829183
@@ -44191,7 +44189,7 @@ MonoBehaviour:
   boardUI: {fileID: 1051442930}
   popUp: Aha! A treasure chest!
   character: {fileID: 0}
-  goldCount: 25
+  goldCount: 50
   toolTipUI: {fileID: 1470342892}
   chestController: {fileID: 859912665}
 --- !u!82 &4969363120314905391
@@ -44720,11 +44718,11 @@ PrefabInstance:
       objectReference: {fileID: 1472105877}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMaxRoll
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: diceMinRoll
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: cameraManage
