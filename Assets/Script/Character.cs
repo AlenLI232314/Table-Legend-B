@@ -37,6 +37,7 @@ public class Character : Entity
     [SerializeField] private Animator characterAnim;
     [SerializeField] private Animator uICanAnim;
     [SerializeField] private Animator deathCanvasAnim;
+    [SerializeField] private ParticleSystem buffParticles;
 
     public CameraManagement cameraManage;
     public CinemachineVirtualCamera IntroCam;
@@ -62,6 +63,7 @@ public class Character : Entity
         this.isAlive = true;
 
         audioSource.GetComponent<AudioSource>();
+        buffParticles = GetComponent<ParticleSystem>();
 
         gold = 10;
         UpdatePlayerStats();
@@ -70,8 +72,11 @@ public class Character : Entity
 
         cameraEvent?.Invoke(IntroCam);
 
+        buffParticles.gameObject.SetActive(false);
+
         AkSoundEngine.SetSwitch("Music_Switch_Pro", "nonCombat_Switch", gameObject);
         AkSoundEngine.PostEvent("Music_Switch_Pro", gameObject);
+
     }
 
     //Called in the update method; assigns player UI elements to their correct values

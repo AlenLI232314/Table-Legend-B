@@ -17708,6 +17708,7 @@ MonoBehaviour:
   characterAnim: {fileID: 0}
   uICanAnim: {fileID: 0}
   deathCanvasAnim: {fileID: 0}
+  buffParticles: {fileID: 0}
   cameraManage: {fileID: 0}
   IntroCam: {fileID: 0}
   gold: 0
@@ -17906,6 +17907,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e76e15de0d6498841b978c4c197a9747,
     type: 3}
   m_PrefabInstance: {fileID: 930517560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &931824624 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3289823484893875042, guid: 3da1dc6ba9029de4ab318d34f7327ee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6871408156695760155}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &936071568
 PrefabInstance:
@@ -30692,6 +30699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b618b06e0919d2748bcf536490cd0d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boardCanvas: {fileID: 1051442930}
   panSpeed: 2
   zoomSpeed: 5
   zoomInMax: 5
@@ -44729,6 +44737,10 @@ PrefabInstance:
       propertyPath: ExtraRollText
       value: 
       objectReference: {fileID: 1033439675}
+    - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
+      propertyPath: buffParticles
+      value: 
+      objectReference: {fileID: 931824624}
     - target: {fileID: 1574128421, guid: 3da1dc6ba9029de4ab318d34f7327ee1, type: 3}
       propertyPath: characterAnim
       value: 
