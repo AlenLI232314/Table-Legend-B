@@ -19,7 +19,7 @@ public class ToolTipTrigger : MonoBehaviour,IPointerEnterHandler,IPointerExitHan
     {
         //FadeIn();
         //ToolTipSystem.Show(content, header);
-        LeanTween.delayedCall(1f, () =>
+        LeanTween.delayedCall(2f, () =>
         {
             ToolTipSystem.Show(content, header);
 

@@ -14,7 +14,7 @@ public class ObjectToolTipTrigger : MonoBehaviour
     public void OnMouseEnter()
     {
         {
-            LeanTween.delayedCall(0.5f, () =>
+            LeanTween.delayedCall(2f, () =>
             {
                 ToolTipSystem.Show(content, header);
             });
