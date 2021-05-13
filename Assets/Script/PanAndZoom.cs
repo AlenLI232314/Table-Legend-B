@@ -7,6 +7,7 @@ public class PanAndZoom : MonoBehaviour
     private CinemachineInputProvider inputProvider;
     private CinemachineVirtualCamera virtualCamera;
     private Transform cameraTransform;
+    public GameObject boardCanvas;
     
     [SerializeField]
     private float panSpeed = 2f;
@@ -30,20 +31,24 @@ public class PanAndZoom : MonoBehaviour
 
     void Update()
     {
-        float x = inputProvider.GetAxisValue(0);
-        float y = inputProvider.GetAxisValue(1);
-        float z = inputProvider.GetAxisValue(2);
-        //Debug.Log("x: "+x+" y: "+y+" z: "+z);
-
-        if (x != 0 || y != 0)
+        if(boardCanvas.activeInHierarchy == true)
         {
-            PanScreen(x, y);
-        }
+            float x = inputProvider.GetAxisValue(0);
+            float y = inputProvider.GetAxisValue(1);
+            float z = inputProvider.GetAxisValue(2);
+            //Debug.Log("x: "+x+" y: "+y+" z: "+z);
 
-        if (z != 0)
-        {
-            ZoonScreen(z);
+            if (x != 0 || y != 0)
+            {
+                PanScreen(x, y);
+            }
+
+            if (z != 0)
+            {
+                ZoonScreen(z);
+            }
         }
+       
     }
 
     public void ZoonScreen(float increment)
