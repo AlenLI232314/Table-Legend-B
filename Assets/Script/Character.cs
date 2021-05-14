@@ -20,6 +20,10 @@ public class Character : Entity
     private GameObject CombatUICanvas, DoubleDamagePanel, DamageDebuffPanel, ExtraRollPanel,
         LoseMoneyPanel, GainMoneyPanel, NothingHappensPanel;
     int routePosition;
+    
+    //stores how many more turns an effect will last
+    int effectRemaining;
+
     public int health;
     public int steps;
     public TextMeshProUGUI DiceText, HealthText, GoldText, TurnsText, XPText, LevelText, TavernHealthText, TavernGoldText,
@@ -63,6 +67,8 @@ public class Character : Entity
         characterAnim = GetComponent<Animator>();
         this.HP = health;
         this.isAlive = true;
+
+        extraRollAmount = 0;
 
         audioSource.GetComponent<AudioSource>();
         
@@ -184,7 +190,10 @@ public class Character : Entity
         //steps = DiceNumText.diceNumber;
         audioSource.PlayOneShot(diceRolls[UnityEngine.Random.Range(0, diceRolls.Length)]);
 
-        steps = UnityEngine.Random.Range(diceMinRoll, diceMaxRoll);
+        //Extra Roll Amount is normally set to zero, but when it isnt, (AKA when the player has the extra roll buff) 
+        //it gets added to the regular roll here
+        steps = extraRollAmount + UnityEngine.Random.Range(diceMinRoll, diceMaxRoll);
+        
         DiceText.SetText(steps.ToString());
 
 
@@ -231,16 +240,9 @@ public class Character : Entity
             audioSource.PlayOneShot(playerMove[UnityEngine.Random.Range(0, playerMove.Length)]);
             yield return new WaitForSeconds(0.1f);
 
-            if (extraRollAmount > 0)
-            {
-                extraRollAmount--;
-                ExtraRollText.SetText("+" + extraRollAmount.ToString());
-            }
-            else
-            {
-                steps--;
-                DiceText.SetText(steps.ToString());
-            }
+            steps--;
+            DiceText.SetText(steps.ToString());
+
             routePosition++;
 
         }
@@ -249,8 +251,19 @@ public class Character : Entity
 
         if (isMoving == false)
         {
+            extraRollAmount = 0;
             DiceText.SetText("Roll!");
             m_Collider.enabled = true;
+
+            if (effectRemaining > 0)
+            {
+                effectRemaining--;
+                if (effectRemaining == 0)
+                {
+                   debuffParticles.gameObject.SetActive(false);
+                   buffParticles.gameObject.SetActive(false);
+                }
+            }
         }
 
     }
@@ -291,55 +304,69 @@ public class Character : Entity
     //Handles the stat effects given to the player when they land on a chance space, based on the int passed in
     public void ChanceEvent(int eventNum)
     {
-        switch (eventNum)
+        effectRemaining = 2;
+
+        CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
+        DoubleDamagePanel.SetActive(true);
+        uITransitions.SetTrigger("Double Damage Open");
+        if (debuffParticles.gameObject.activeInHierarchy)
         {
-            case 1:
-                CombatUICanvas.GetComponent<CombatUIManager>().DamageDebuff();
-                DamageDebuffPanel.SetActive(true);
-                uITransitions.SetTrigger("Damage Debuff Open");
-                if (buffParticles.gameObject.activeInHierarchy)
-                {
-                    buffParticles.gameObject.SetActive(false);
-                }
-                debuffParticles.gameObject.SetActive(true);
-               
-                break;
-            case 2:
-                CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
-                DoubleDamagePanel.SetActive(true);
-                uITransitions.SetTrigger("Double Damage Open");
-                if (debuffParticles.gameObject.activeInHierarchy)
-                {
-                    debuffParticles.gameObject.SetActive(false);
-                }
-                buffParticles.gameObject.SetActive(true);
-                break;
-            case 3:
-            case 8:
-                extraRollAmount = 3;
-                ExtraRollPanel.SetActive(true);
-                ExtraRollText.gameObject.SetActive(true);
-                uITransitions.SetTrigger("Extra Roll Open");
-                break;
-            case 4:
-            case 9:
-                gold -= 10;
-                LoseMoneyPanel.SetActive(true);
-                uITransitions.SetTrigger("Lose Money Open");
-                break;
-            case 5:
-            case 10:
-                gold += 10;
-                GainMoneyPanel.SetActive(true);
-                uITransitions.SetTrigger("Gain Money Open");
-                break;
-
-
-            default:
-                NothingHappensPanel.SetActive(true);
-                uITransitions.SetTrigger("Nothing Happens Open");
-                break;
+            debuffParticles.gameObject.SetActive(false);
         }
+        buffParticles.gameObject.SetActive(true);
+
+        //switch (eventNum)
+        //{
+        //    case 1:
+        //    case 6:
+        //        CombatUICanvas.GetComponent<CombatUIManager>().DamageDebuff();
+        //        DamageDebuffPanel.SetActive(true);
+        //        uITransitions.SetTrigger("Damage Debuff Open");
+        //        if (buffParticles.gameObject.activeInHierarchy)
+        //        {
+        //            buffParticles.gameObject.SetActive(false);
+        //        }
+        //        debuffParticles.gameObject.SetActive(true);
+
+        //        break;
+        //    case 2:
+        //    case 7:
+        //        CombatUICanvas.GetComponent<CombatUIManager>().DoubleDamage();
+        //        DoubleDamagePanel.SetActive(true);
+        //        uITransitions.SetTrigger("Double Damage Open");
+        //        if (debuffParticles.gameObject.activeInHierarchy)
+        //        {
+        //            debuffParticles.gameObject.SetActive(false);
+        //        }
+        //        buffParticles.gameObject.SetActive(true);
+        //        break;
+        //    case 3:
+        //        extraRollAmount = 3;
+        //        ExtraRollPanel.SetActive(true);
+        //        ExtraRollText.gameObject.SetActive(true);
+        //        uITransitions.SetTrigger("Extra Roll Open");
+        //        effectRemaining = 1;
+        //        buffParticles.gameObject.SetActive(true);
+        //        break;
+        //    case 4:
+        //    case 9:
+        //        gold -= 10;
+        //        LoseMoneyPanel.SetActive(true);
+        //        uITransitions.SetTrigger("Lose Money Open");
+        //        break;
+        //    case 5:
+        //    case 10:
+        //        gold += 10;
+        //        GainMoneyPanel.SetActive(true);
+        //        uITransitions.SetTrigger("Gain Money Open");
+        //        break;
+
+
+        //    default:
+        //        NothingHappensPanel.SetActive(true);
+        //        uITransitions.SetTrigger("Nothing Happens Open");
+        //        break;
+        //}
         UpdatePlayerStats();
     }
     void OnPlayerDamaged(GameObject player)

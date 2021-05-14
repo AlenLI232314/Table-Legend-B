@@ -63,6 +63,8 @@ public class CombatUIManager : MonoBehaviour
     //Text object that indicates player turns
     public Text turnText;
 
+    int effectRemaining;
+
     //Variables that house the events and subscriptions
     public static event System.Action<BasicEnemyTEST> monsterEvent;
     public static event System.Action<GameObject> monsterGameObject;
@@ -72,7 +74,7 @@ public class CombatUIManager : MonoBehaviour
     public static event System.Action<GameObject> playerDeath;
     #endregion
 
-    bool doubleDMG;
+    bool doubleDMG, DMGdebuff;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip takeDamage;
 
@@ -87,6 +89,7 @@ public class CombatUIManager : MonoBehaviour
         Debug.Log(enemyHealth);
 
         doubleDMG = false;
+        DMGdebuff = false;
         playerHealthText.text = player.HP.ToString();
         enemyHealthText.text = enemyHealth.ToString();
         playerHealthSlider.value = player.HP;
@@ -133,11 +136,24 @@ public class CombatUIManager : MonoBehaviour
 
     public void attack()
     {
+        int debuff = 0;
 
         if (enemyHealth > 0)
         {
             //Calls for a random damage between minimum and max.
-            playerDamage = UnityEngine.Random.Range(playerDamageMin, playerDamageMax);
+
+            if (DMGdebuff)
+            {
+                debuff = 2;
+            }
+
+            playerDamage = UnityEngine.Random.Range(playerDamageMin, playerDamageMax - debuff);
+
+            if (doubleDMG)
+            {
+                playerDamage *= 2;
+            }
+
             //Player damage is printed to damage text.
             playerDamageText.text = "-" + playerDamage.ToString();
 
@@ -249,30 +265,24 @@ public class CombatUIManager : MonoBehaviour
     {
         uICanAnim.SetBool("turnIsStarting", false);
         uICanAnim.SetBool("playerIsDamaged", false);
+        if (effectRemaining > 0)
+        {
+            effectRemaining--;
+        }
     }
 
     //Decreases the player's max attack. Called via random event
     public void DamageDebuff()
     {
-        playerDamageMax -= UnityEngine.Random.Range(1, 3);
-        
-       if (playerDamageMax <= 0)
-        {
-            playerDamageMax = 1;
-        }
-
-        if (playerDamageMin > playerDamageMax)
-        {
-            playerDamageMin = playerDamageMax;
-        }
+        DMGdebuff = true;
+        effectRemaining = 2;
     }
 
-    //Doubles the player's damage (doubles the min and max rolls)
+    //Doubles the player's damage
     public void DoubleDamage()
     {
-        //doubleDMG = true;
-        playerDamageMax *= 2;
-        playerDamageMin *= 2;
+        doubleDMG = true;
+        effectRemaining = 2;
     }
 
 
